@@ -1,5 +1,9 @@
 public class MedicinaAsociada {
 	private String codigo;
 	private String nombre;
-	private String tipoMedicamento; // hay que inventarse algo no
+	private TipoMedicamento tipoMedicamento;
+
+	public MedicinaAsociada(String codigo, String nombre, TipoMedicamento tipo) {
+		// ...
+	}
 }
