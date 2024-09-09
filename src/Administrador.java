@@ -7,6 +7,7 @@ public class Administrador extends Usuario{
 	}
 	@Override
 	public void consultarDatos(){
+		//Implementa método de la interfaz IConsultable
 		//Sería bueno que el administrador tuviera atributos propios
 	}
 	public void registrarEmpleado(Empleado empleado){
