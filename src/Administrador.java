@@ -7,7 +7,7 @@ public class Administrador extends Usuario{
 	}
 
 	void registrarEmpleado();         //Registra empleado en la base de datos
-	void modificarEstadoEmpleado(int id,EstadoUsuario estadoUsuario);      //Modifica datos del empleado en la base de datos
+	void modificarEstadoEmpleado(int idUsuario,EstadoUsuario estadoUsuario);      //Modifica datos del empleado en la base de datos
 	void editarPerfilPropio();         
 	void editarPerfilEmpleado();
 	void consultarRendimientoEmpleados();
