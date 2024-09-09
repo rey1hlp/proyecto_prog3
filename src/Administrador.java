@@ -4,5 +4,5 @@ public class Administrador extends Usuario{
 	void editarPerfilPropio();
 	void editarPerfilEmpleado();
 	void consultarRendimientoEmpleados();
-
+	a
 }
