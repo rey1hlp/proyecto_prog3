@@ -6,12 +6,12 @@ public abstract class Usuario{
 	private int telefono;
 	private EstadoUsuario estado;
 
+	public Usuario(int DNI,String nombre,String apellidoPaterno,String apellidoMaterno,int telefono,EstadoUsuario estado){
+		
+	}
+
 	void llenarDatosPersonalesUsuario();
 	void mostrarDatosPersonalesUsuario();
 	void iniciarSesion();
-
-	public Usuario(int DNI,String nombre,String apellidoPaterno,String apellidoMaterno,int telefono){
-		
-	}
 	
 }
