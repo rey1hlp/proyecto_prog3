@@ -3,8 +3,9 @@ public class Tecnico extends Empleado{
 	private FarmaciaPropia farmacia;
 	private ArrayList<PedidoPropio> pedidosGenerados;
 
-	public Tecnico() {
-		super();
+	public Tecnico(int DNI, String nombre, String apellidoPaterno, String apellidoMaterno,
+		      int telefono, EstadoUsuario estado) {
+		super(DNI,nombre,apellidoPaterno,apellidoMaterno,telefono,estado);
 	}
 
 	public void atenderPedido(int ID);
