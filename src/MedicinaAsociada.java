@@ -1,4 +1,4 @@
-public class MedicinaAsociada {
+public class MedicinaAsociada implements IConsultable {
 	private String codigo;
 	private String nombre;
 	private TipoMedicamento tipoMedicamento;
