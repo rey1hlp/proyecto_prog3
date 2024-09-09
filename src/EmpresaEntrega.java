@@ -4,6 +4,4 @@ public abstract class EmpresaEntrega implements IConsultable {
 	private Departamento departamento;
 	private String direccion;
 	private int telefono;
-
-	public void mostrarInformacionFarmacia();
 }
