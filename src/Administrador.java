@@ -9,8 +9,12 @@ public class Administrador extends Usuario{
 	void consultarDatos(){
 		//Sería bueno que el administrador tuviera atributos propios
 	}
-	void registrarEmpleado();         //Registra empleado en la base de datos
-	void modificarEstadoEmpleado(int idUsuario,EstadoUsuario estadoUsuario);      //Modifica datos del empleado en la base de datos
+	void registrarEmpleado(Empleado empleado){
+		//Registra empleado en la base de datos
+	}
+	void modificarEstadoEmpleado(int idUsuario,EstadoUsuario estadoUsuario){
+		//Cambia el estado del empleado como activo o inactivo
+	}
 	void editarPerfilPropio(Administrador administrador){
 		//El objeto administrador encapsula los datos a modificar del admin
 		//Aquí se hace los setter o un 
