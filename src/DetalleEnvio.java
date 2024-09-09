@@ -3,11 +3,15 @@ import java.time.LocalTime;
 
 public class DetalleEnvio {
 	private Direccion direccion;
-	private char estado;
+	private EstadoEnvio estado;
 	private Date fechaEntrega;
 	private LocalTime horaEntrega;
 
-	public DetalleEnvio() {
-		
+	public DetalleEnvio(Direccion direccion, EstadoEnvio estado, Date fechaEntrega,
+			   LocalTime horaEntrega) {
+		this.direccion = direccion;
+		this.estado = estado;
+		this.fechaEntrega = fechaEntrega;
+		this.horaEntrega = horaEntrega;
 	}
 }
