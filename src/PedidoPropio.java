@@ -20,7 +20,7 @@ public class PedidoPropio {
 		//...
 	}
 	
-	public void determinarMontos();
-	public double getMontoTotal();
-	public double getMontoCubierto();
+	public void determinarMontos(); // determina el monto total y el monto cubierto por poliza
+	public double getMontoTotal(); // obtener el monto total
+	public double getMontoCubierto(); // obtener el monto cubierto
 }
