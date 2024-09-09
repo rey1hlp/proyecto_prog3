@@ -12,4 +12,9 @@ public class PedidoPropio {
 	private double montoTotal;
 	private double montoCubierto;
 	private DocumentoPago pago;
+
+
+	public void determinarMontos();
+	public double getMontoTotal();
+	public double getMontoCubierto();
 }
