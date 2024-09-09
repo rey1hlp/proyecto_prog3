@@ -14,6 +14,10 @@ public class FarmaciaAsociada extends EmpresaEntrega {
 	public void consultarDatos(){
 		//Devuelve los datos más importantes de contacto de una empresa de entrega
 	}
-	void contactarFarmaciaAsociada();
-	void delegarSolicitudPedido();
+	void contactarFarmaciaAsociada(){
+		
+	}
+	void delegarSolicitudPedido(){
+		//FALTA TERMINAR
+	}
 }
