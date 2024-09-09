@@ -6,4 +6,8 @@ public class DetalleEnvio {
 	private char estado;
 	private Date fechaEntrega;
 	private LocalTime horaEntrega;
+
+	public DetalleEnvio() {
+		
+	}
 }
