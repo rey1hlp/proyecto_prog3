@@ -3,6 +3,10 @@ public class Tecnico extends Empleado{
 	private FarmaciaPropia farmacia;
 	private ArrayList<PedidoPropio> pedidosGenerados;
 
+	public Tecnico() {
+		super();
+	}
+
 	public void atenderPedido(int ID);
 	public void descartarPedido(int ID);
 	public void llenarMedicinas();
