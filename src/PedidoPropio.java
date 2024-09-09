@@ -13,7 +13,13 @@ public class PedidoPropio {
 	private double montoCubierto;
 	private DocumentoPago pago;
 
-
+	public PedidoPropio(Solicitud solicitudAsociada, int ID, FarmaciaPropia farmaciaEncargada,
+			   Tecnico tecnicoEncargado, ArrayList<MedicinaPropia> medicinasPedidas,
+			   Date fechaPropuestaEnvio, LocalTime horarioEnvio, double montoTotal,
+			   double montoCubierto, DocumentoPago pago) {
+		//...
+	}
+	
 	public void determinarMontos();
 	public double getMontoTotal();
 	public double getMontoCubierto();
