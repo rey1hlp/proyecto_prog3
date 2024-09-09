@@ -10,12 +10,14 @@ public abstract class Usuario implements IConsultable{
 		
 	}
 	
-	void consultarDatos();
-	void llenarDatosPersonalesUsuario(){
+	public void consultarDatos(){
+		//Implementa método de la interfaz IConsultable
+	}
+	public void llenarDatosPersonalesUsuario(){
 		//Esta función sirve para llenar los datos de un nuevo perfil de usuario y también para modificarlo
 	}
-	void iniciarSesion(int DNI,String password){   //Un usuario utiliza su DNI y password (creado por el administrador) para iniciar sesión
-		
+	public void iniciarSesion(int DNI,String password){   
+		//Un usuario utiliza su DNI y password (creado por el administrador) para iniciar sesión
 	}
 	
 }
