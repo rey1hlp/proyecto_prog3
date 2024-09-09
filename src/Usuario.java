@@ -11,7 +11,6 @@ public abstract class Usuario{
 	}
 
 	void llenarDatosPersonalesUsuario();
-	void mostrarDatosPersonalesUsuario();
-	void iniciarSesion();
+	void iniciarSesion(int DNI,String password);     //Un usuario utiliza su DNI y password (creado por el administrador) para iniciar sesión
 	
 }
