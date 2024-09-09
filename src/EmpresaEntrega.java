@@ -4,4 +4,9 @@ public abstract class EmpresaEntrega implements IConsultable {
 	private Departamento departamento;
 	private String direccion;
 	private int telefono;
+
+	public EmpresaEntrega(int ID, String nombre, Departamento departamento,
+			     String direccion, int telefono) {
+		// ...
+	}
 }
