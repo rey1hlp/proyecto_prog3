@@ -5,4 +5,15 @@ public class Direccion {
 	private String calle;
 	private String referencia;
 	private String codigoPostal;
+
+	public Direccion(String departamento, String provincia, String distrito, String calle,
+			String referencia, String codigoPostal) {
+		this.departamento = departamento;
+		this.provincia = provincia;
+		this.distrito = distrito;
+		this.calle = calle;
+		this.referencia = referencia;
+		this.codigoPostal = codigoPostal;
+	}
+	
 }
