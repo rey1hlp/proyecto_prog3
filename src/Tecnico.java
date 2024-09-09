@@ -15,4 +15,7 @@ public class Tecnico extends Empleado{
 	public void consultarDatosPoliza();
 	public void registrarDireccionEnvio();
 	public void subirDocumentoPago();
+
+	@Override
+	void consultarDatos();
 }
