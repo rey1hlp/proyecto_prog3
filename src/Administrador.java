@@ -23,5 +23,7 @@ public class Administrador extends Usuario{
 		//Buscara en el array de empleados y editará la info de un empleado
 		//El objeto empleado enviado lleva los datos a editra del iésimo empleado
 	}
-	void consultarRendimientoEmpleados();
+	void consultarRendimientoEmpleados(Date fechaInicio, Date fechaFin){
+		//Genera el reporte de empleados según una fecha de inicio y una fecha final establecidas
+	}
 }
