@@ -27,7 +27,4 @@ public class Cliente implements IConsultable {
 	public boolean subirArchivos(){
 		//Sube los archivos de receta médica y póliza asignados a un cliente y se devuelve un boolean: válidos o inválidos
 	}
-	public void sugerirCambiosMedicamentos(){
-		//Guarda la 
-	}
 }
