@@ -10,8 +10,11 @@ public class FarmaciaPropia extends EmpresaEntrega {
 		// ....
 	}
 
-	public agregarPedido(Solicitud solicitud) {
+	public void agregarPedido(Solicitud solicitud) {
 		// toma una solicitud y la transforma a un pedido que será procesado
 		// por la farmacia y atendido por un técnico de esta
+	}
+	public void descontarStock(PedidoPropio pedidoPropio){
+		//Se descuenta el stock de las medicinas asociadas al 
 	}
 }
