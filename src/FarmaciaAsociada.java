@@ -1,11 +1,5 @@
 public class FarmaciaAsociada extends EmpresaEntrega {
 	
-	//private int ID;
-	//private String nombre;
-	//private Departamento departamento;
-	//private String direccion;
-	//private int telefono;
-
 	public FarmaciaAsociada(){
 		
 	}
@@ -14,10 +8,10 @@ public class FarmaciaAsociada extends EmpresaEntrega {
 	public void consultarDatos(){
 		//Devuelve los datos más importantes de contacto de una empresa de entrega
 	}
-	void contactarFarmaciaAsociada(){
-		
+	public void mostrarFarmaciaAsociada(){   //AAAA
+		//Muestra los datos de contacto de la farmacia asociada para que le operario C2 pueda delegar el pedido
 	}
-	void delegarSolicitudPedido(){
-		//FALTA TERMINAR
+	public void delegarSolicitudPedido(PedidoPropio pedidoPropio){   //AAAA
+		//Envia el pedido propio a la farmacia asociada para que lo tiendan ellos 
 	}
 }
