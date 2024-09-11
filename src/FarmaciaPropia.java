@@ -14,7 +14,10 @@ public class FarmaciaPropia extends EmpresaEntrega {
 		// toma una solicitud y la transforma a un pedido que será procesado
 		// por la farmacia y atendido por un técnico de esta
 	}
-	public void descontarStock(PedidoPropio pedidoPropio){
-		//Se descuenta el stock de las medicinas asociadas al 
+	public void procesarPedido(int ID){    //AAAA
+		//El técnico llama a la función de procesar el pedido cuando se ha confirmado el pago
+	}
+	public void descontarStock(PedidoPropio pedidoPropio){    //AAAA
+		//Se descuenta el stock de las medicinas asociadas al pedido
 	}
 }
