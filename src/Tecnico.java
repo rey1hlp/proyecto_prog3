@@ -17,7 +17,9 @@ public class Tecnico extends Empleado{
 	public void subirDocumentoPago();
 
 	@Override
-	void consultarDatos();
+	public void consultarDatos(){
+		//Implementa método de la interfaz IConsultable
+	}
 	public void modificarDetalleEnvio(int ID, DetalleEnvio detalleEnvio){   //AAA
 		//EL técnico puede modificar el detalle de envío de un pedido -> ID
 	}
