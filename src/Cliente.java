@@ -21,10 +21,10 @@ public class Cliente implements IConsultable {
 	public void consultarDatos(){
 		//Consulta datos de un cliente
 	}
-	public Poliza consultarPoliza(){
+	public Poliza consultarPoliza(){    //AAA
 		//Devuelve la poliza del paciente o un objeto vacio en caso de no contar con poliza
 	}
-	public boolean subirArchivos(){
+	public boolean subirArchivos(){   //AAAA
 		//Sube los archivos de receta médica y póliza asignados a un cliente y se devuelve un boolean: válidos o inválidos
 	}
 }
