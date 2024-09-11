@@ -14,4 +14,7 @@ public class DetalleEnvio {
 		this.fechaEntrega = fechaEntrega;
 		this.horaEntrega = horaEntrega;
 	}
+	public void modificarDetalleEnvio(DetalleEnvio detalleEnvio){
+		//Un técnico C3 llama a esta función pasando un nuevo Detalle de Envío y copia este nuevo
+	}
 }
