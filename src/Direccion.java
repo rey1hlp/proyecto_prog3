@@ -15,5 +15,7 @@ public class Direccion {
 		this.referencia = referencia;
 		this.codigoPostal = codigoPostal;
 	}
-	
+	public void modificarDireccion(Direccion direccion){
+		//Asigna una nueva dirección con los datos que envie el C3
+	}
 }
