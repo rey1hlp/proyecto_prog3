@@ -27,4 +27,7 @@ public class Administrador extends Usuario{
 	public void consultarRendimientoEmpleados(Date fechaInicio, Date fechaFin){
 		//Genera el reporte de empleados según una fecha de inicio y una fecha final establecidas
 	}
+	public void consultarReporteMedicamentos(Date fechaInicio, Date fechaFin){        //A
+		//Genera el reporte de medicamentos según una fecha de inicio y una fecha final establecidas
+	}
 }
