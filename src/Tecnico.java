@@ -19,6 +19,6 @@ public class Tecnico extends Empleado{
 	@Override
 	void consultarDatos();
 	public void modificarDetalleEnvio(int idPedidoPropio, DetalleEnvio detalleEnvio){   //AAA
-		//EL técnico puede modificar el detalle de envío de un pedido
+		//EL técnico puede modificar el detalle de envío de un pedido 
 	}
 }
