@@ -5,7 +5,9 @@ public class Receptor extends Empleado{
 	public Receptor(int DNI,String nombre,String apellidoPaterno,String apellidoMaterno,int telefono,EstadoUsuario estado){
 		
 	}
-
+	public void consultarDatos(){     //AAA
+		//Implementa método de la interfaz IConsultable
+	}
 	public void generaSolicitud(Solicitud solicitud); 
 	public void atenderSolicitud(int ID);
 	public void eliminarSolicitud(int ID);
