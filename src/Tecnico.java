@@ -21,7 +21,7 @@ public class Tecnico extends Empleado{
 	public void modificarDetalleEnvio(int ID, DetalleEnvio detalleEnvio){   //AAA
 		//EL técnico puede modificar el detalle de envío de un pedido -> ID
 	}
-	public void modificarDireccion(Direccion direccion){             //AAA
+	public void modificarDireccion(int ID, Direccion direccion){             //AAA
 		//EL técnico puede modificar la dirección de envío de un pedido -> ID
 	}
 }
