@@ -20,7 +20,7 @@ public class Tecnico extends Empleado{
 	public void consultarDatos(){
 		//Implementa método de la interfaz IConsultable
 	}
-	public boolean validarPago(int ID){
+	public boolean validarPago(int ID){     //AAAA
 		//Valida el pago de un pedido con los documentos proporcionados
 	}
 	public void modificarDetalleEnvio(int ID, DetalleEnvio detalleEnvio){   //AAA
