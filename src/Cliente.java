@@ -16,5 +16,18 @@ public class Cliente implements IConsultable {
 		this.nombre = nombre;
 		this.apellidoPaterno = apellidoPaterno;
 		this.apellidoMaterno = apellidoMaterno;
-	}	
+	}
+
+	public void consultarDatos(){
+		//Consulta datos de un cliente
+	}
+	public Poliza consultarPoliza(){
+		//Devuelve la poliza del paciente o un objeto vacio en caso de no contar con poliza
+	}
+	public boolean subirArchivos(){
+		//Sube los archivos de receta médica y póliza asignados a un cliente y se devuelve un boolean: válidos o inválidos
+	}
+	public void sugerirCambiosMedicamentos(){
+		//Guarda la 
+	}
 }
