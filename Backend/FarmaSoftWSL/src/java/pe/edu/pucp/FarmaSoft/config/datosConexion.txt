@@ -1,0 +1,5 @@
+hostname=
+user=admin
+password=prog320242labs
+port=3306
+database=farmasoftdb

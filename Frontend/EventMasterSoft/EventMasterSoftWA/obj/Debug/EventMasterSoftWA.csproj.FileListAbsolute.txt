@@ -1,0 +1,14 @@
+C:\Users\PC_Lima\OneDrive\LP2\2024-2\Laboratorio 09\Frontend\EventMasterSoft\EventMasterSoftWA\bin\EventMasterSoftWA.dll.config
+C:\Users\PC_Lima\OneDrive\LP2\2024-2\Laboratorio 09\Frontend\EventMasterSoft\EventMasterSoftWA\bin\EventMasterSoftWA.dll
+C:\Users\PC_Lima\OneDrive\LP2\2024-2\Laboratorio 09\Frontend\EventMasterSoft\EventMasterSoftWA\bin\EventMasterSoftWA.pdb
+C:\Users\PC_Lima\OneDrive\LP2\2024-2\Laboratorio 09\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.csproj.AssemblyReference.cache
+C:\Users\PC_Lima\OneDrive\LP2\2024-2\Laboratorio 09\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.csproj.CoreCompileInputs.cache
+C:\Users\PC_Lima\OneDrive\LP2\2024-2\Laboratorio 09\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.dll
+C:\Users\PC_Lima\OneDrive\LP2\2024-2\Laboratorio 09\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.pdb
+C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\Laboratorio 09 - 2024 - 2 - A\Frontend\EventMasterSoft\EventMasterSoftWA\bin\EventMasterSoftWA.dll.config
+C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\Laboratorio 09 - 2024 - 2 - A\Frontend\EventMasterSoft\EventMasterSoftWA\bin\EventMasterSoftWA.dll
+C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\Laboratorio 09 - 2024 - 2 - A\Frontend\EventMasterSoft\EventMasterSoftWA\bin\EventMasterSoftWA.pdb
+C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\Laboratorio 09 - 2024 - 2 - A\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.csproj.AssemblyReference.cache
+C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\Laboratorio 09 - 2024 - 2 - A\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.csproj.CoreCompileInputs.cache
+C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\Laboratorio 09 - 2024 - 2 - A\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.dll
+C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\Laboratorio 09 - 2024 - 2 - A\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.pdb
