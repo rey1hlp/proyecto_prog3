@@ -12,3 +12,10 @@ C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\Laboratorio 09 - 2024 - 2 - A\Fro
 C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\Laboratorio 09 - 2024 - 2 - A\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.csproj.CoreCompileInputs.cache
 C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\Laboratorio 09 - 2024 - 2 - A\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.dll
 C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\Laboratorio 09 - 2024 - 2 - A\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.pdb
+C:\Users\User\Desktop\GitHub\proyecto_prog3\Frontend\EventMasterSoft\EventMasterSoftWA\bin\EventMasterSoftWA.dll.config
+C:\Users\User\Desktop\GitHub\proyecto_prog3\Frontend\EventMasterSoft\EventMasterSoftWA\bin\EventMasterSoftWA.dll
+C:\Users\User\Desktop\GitHub\proyecto_prog3\Frontend\EventMasterSoft\EventMasterSoftWA\bin\EventMasterSoftWA.pdb
+C:\Users\User\Desktop\GitHub\proyecto_prog3\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\GitHub\proyecto_prog3\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\GitHub\proyecto_prog3\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.dll
+C:\Users\User\Desktop\GitHub\proyecto_prog3\Frontend\EventMasterSoft\EventMasterSoftWA\obj\Debug\EventMasterSoftWA.pdb

@@ -3,8 +3,9 @@ package pe.edu.pucp.FarmaSoft.AtencionPedidos.Model;
 
 public class Pago {
     private int ID;
+    private PedidoPropio pedidoPropio;
     private String metodoPago;
-    private int numOperaciones;
+    private String numOperaciones;
     private double montoPagado;
     private byte comprobante[];
     private boolean completado;
@@ -45,14 +46,14 @@ public class Pago {
     /**
      * @return the numOperaciones
      */
-    public int getNumOperaciones() {
+    public String getNumOperaciones() {
         return numOperaciones;
     }
 
     /**
      * @param numOperaciones the numOperaciones to set
      */
-    public void setNumOperaciones(int numOperaciones) {
+    public void setNumOperaciones(String numOperaciones) {
         this.numOperaciones = numOperaciones;
     }
 
@@ -96,5 +97,13 @@ public class Pago {
      */
     public void setCompletado(boolean completado) {
         this.completado = completado;
+    }
+    
+     public PedidoPropio getPedidoPropio() {
+        return pedidoPropio;
+    }
+
+    public void setPedidoPropio(PedidoPropio pedidoPropio) {
+        this.pedidoPropio = pedidoPropio;
     }
 }
