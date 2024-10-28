@@ -841,6 +841,9 @@ exists or setup the property manually. For example like this:
         <ant antfile="${project.FarmaSoftAtencionPedidosDA}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
+        <ant antfile="${project.FarmaSoftAtencionPedidosDA-1}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
         <ant antfile="${project.FarmaSoftAtencionPedidosModel}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
@@ -868,6 +871,9 @@ exists or setup the property manually. For example like this:
     </target>
     <target depends="init" if="dist.ear.dir" name="deps-ear-jar" unless="no.deps">
         <ant antfile="${project.FarmaSoftAtencionPedidosDA}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.FarmaSoftAtencionPedidosDA-1}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.FarmaSoftAtencionPedidosModel}/build.xml" inheritall="false" target="jar">
@@ -1479,6 +1485,7 @@ exists or setup the property manually. For example like this:
             -->
     <target depends="init" name="deps-clean" unless="no.deps">
         <ant antfile="${project.FarmaSoftAtencionPedidosDA}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.FarmaSoftAtencionPedidosDA-1}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.FarmaSoftAtencionPedidosModel}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.FarmaSoftAtencionSolicitudesDA}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.FarmaSoftAtencionSolicitudesModel}/build.xml" inheritall="false" target="clean"/>
