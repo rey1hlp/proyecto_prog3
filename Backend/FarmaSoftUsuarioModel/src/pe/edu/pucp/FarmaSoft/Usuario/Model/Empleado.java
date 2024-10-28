@@ -5,6 +5,7 @@ import java.util.Date;
 public class Empleado extends Usuario{
     private Date fechaIngreso;
     private Administrador jefe;
+    protected RolEmpleado rol;
     
     public Empleado(){
         super();
@@ -17,8 +18,8 @@ public class Empleado extends Usuario{
         this.fechaIngreso=fechaIngreso;
     }
     
-    public int getDNI(){
-        return super.getDni();
+    public RolEmpleado getRol() {
+        return rol;
     }
     
     public Date getFechaIngreso() {

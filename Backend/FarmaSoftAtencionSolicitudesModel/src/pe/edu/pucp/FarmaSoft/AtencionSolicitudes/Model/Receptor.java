@@ -3,13 +3,16 @@ package  pe.edu.pucp.FarmaSoft.AtencionSolicitudes.Model;
 import pe.edu.pucp.FarmaSoft.Medicina.Model.MedicinaGeneral;
 import pe.edu.pucp.FarmaSoft.Usuario.Model.Empleado;
 import java.util.ArrayList;
+import pe.edu.pucp.FarmaSoft.Usuario.Model.RolEmpleado;
 
 public class Receptor extends Empleado{
 	private ArrayList<Solicitud> solicitudesAtendidas;
 
 	public Receptor(){
-		super();
+            super();
+            rol = RolEmpleado.Receptor;
 	}
+        
         @Override
 	public void consultarDatos(){
 		//Implementa método de la interfaz IConsultable

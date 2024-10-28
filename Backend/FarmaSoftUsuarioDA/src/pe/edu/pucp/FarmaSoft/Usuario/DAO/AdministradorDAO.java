@@ -20,5 +20,7 @@ public interface AdministradorDAO {
     int darDeBaja(int dni);
     int darDeAlta(int dni);
     ArrayList<Administrador> listarTodos();
-    //ArrayList<Administrador> listarPorFiltros();
+    ArrayList<Administrador> listarPorFiltros(
+        Integer dni_admin, String nombre, String apellidoPaterno,
+            String apellidoMaterno, Integer telefono, Boolean estado);
 }

@@ -4,18 +4,21 @@ import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.Model.Direccion;
 import pe.edu.pucp.FarmaSoft.Usuario.Model.Empleado;
 import java.util.ArrayList;
 import java.util.Date;
+import pe.edu.pucp.FarmaSoft.Usuario.Model.RolEmpleado;
 
 public class Tecnico extends Empleado {
     private ArrayList<PedidoPropio> pedidosAtendidos;
 
-    public Tecnico() {}
+    public Tecnico() {
+        rol = RolEmpleado.Tecnico;
+    }
     
     public Tecnico(int DNI,String nombre,String apellidoPaterno,
             String apellidoMaterno,int telefono,boolean estado,
             String password,Date fechaIngreso){
         super(DNI,nombre,apellidoPaterno,apellidoMaterno,telefono,
                 estado,password,fechaIngreso);
-        
+        rol = RolEmpleado.Tecnico;
     }
 
     public void atenderPedido(int ID) {

@@ -6,9 +6,7 @@ import java.util.Date;
 public class Administrador extends Usuario{
     private ArrayList<Empleado> empleados;  //Estos son los empleados supervisados por el admin.
     
-    public Administrador(){
-    
-    }
+    public Administrador(){}
     
     public Administrador(int DNI,String nombre,String apellidoPaterno,
             String apellidoMaterno,int telefono,boolean estado,

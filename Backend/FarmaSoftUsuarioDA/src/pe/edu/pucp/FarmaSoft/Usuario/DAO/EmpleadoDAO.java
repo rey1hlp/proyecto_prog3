@@ -5,7 +5,9 @@
 package pe.edu.pucp.FarmaSoft.Usuario.DAO;
 
 import java.util.ArrayList;
+import java.util.Date;
 import pe.edu.pucp.FarmaSoft.Usuario.Model.Empleado;
+import pe.edu.pucp.FarmaSoft.Usuario.Model.RolEmpleado;
 
 /**
  *
@@ -20,5 +22,8 @@ public interface EmpleadoDAO {
     int darDeBaja(int dni);
     int darDeAlta(int dni);
     ArrayList<Empleado> listarTodos();
-    //ArrayList<Empleado> listarPorFiltros();
+    ArrayList<Empleado> listarPorFiltros(
+        Integer dni_emp, String nombre, String apellidoPaterno,
+            String apellidoMaterno, Integer telefono, Boolean estado,
+            Date fechaMin, Date fechaMax, Integer dni_jefe, RolEmpleado rol);
 }
