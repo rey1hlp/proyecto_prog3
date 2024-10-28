@@ -8,6 +8,8 @@ import java.util.Date;
 public class Tecnico extends Empleado {
     private ArrayList<PedidoPropio> pedidosAtendidos;
 
+    public Tecnico() {}
+    
     public Tecnico(int DNI,String nombre,String apellidoPaterno,
             String apellidoMaterno,int telefono,boolean estado,
             String password,Date fechaIngreso){
