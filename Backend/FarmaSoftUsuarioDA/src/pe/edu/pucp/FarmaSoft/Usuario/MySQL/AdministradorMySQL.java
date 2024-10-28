@@ -4,8 +4,10 @@ package pe.edu.pucp.FarmaSoft.Usuario.MySQL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.sql.SQLException;
+import java.sql.ResultSet;
 import pe.edu.pucp.FarmaSoft.Usuario.Model.Administrador;
 import pe.edu.pucp.FarmaSoft.Usuario.Model.Usuario;
+import pe.edu.pucp.FarmaSoft.Usuario.DAO.AdministradorDAO;
 import pe.edu.pucp.FarmaSoft.config.DBManager;
 
 
@@ -13,10 +15,11 @@ import pe.edu.pucp.FarmaSoft.config.DBManager;
  *
  * @author there
  */
-public class AdministradorMySQL extends UsuarioMySQL {
+public class AdministradorMySQL implements AdministradorDAO {
+    private ResultSet rs;
     
     @Override
-    public int insertar(Usuario admin) {
+    public int insertar(Administrador admin) {
         HashMap<String,Object> parametrosEntrada = new HashMap<>();
         
         //parametrosEntrada.put("id", usuario.getId());
@@ -35,8 +38,8 @@ public class AdministradorMySQL extends UsuarioMySQL {
     }
     
     @Override
-    public Usuario obtenerPorDni(int dni) {
-        Usuario admin = new Administrador();
+    public Administrador obtenerPorDni(int dni) {
+        Administrador admin = new Administrador();
         
         HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
         parametrosEntrada.put("_dni_admin", dni); 
@@ -61,7 +64,7 @@ public class AdministradorMySQL extends UsuarioMySQL {
     }
     
     @Override
-    public int actualizar(Usuario usuario) {
+    public int actualizar(Administrador usuario) {
         HashMap<String,Object> parametrosEntrada = new HashMap<>();
         
         //parametrosEntrada.put("id", usuario.getId());
@@ -122,8 +125,8 @@ public class AdministradorMySQL extends UsuarioMySQL {
     }
 
     @Override
-    public ArrayList<Usuario> listarTodos() {
-        ArrayList<Usuario> listaAdmins = new ArrayList<>();
+    public ArrayList<Administrador> listarTodos() {
+        ArrayList<Administrador> listaAdmins = new ArrayList<>();
         
         rs = DBManager.getInstance().ejecutarProcedimientoLectura("listarTodos_administrador",
                 null);

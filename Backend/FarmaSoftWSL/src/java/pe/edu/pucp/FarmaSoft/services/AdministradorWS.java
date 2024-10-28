@@ -5,7 +5,7 @@ import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam; 
 import java.util.ArrayList; 
 import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.Model.DetalleSolicitud;
-import pe.edu.pucp.FarmaSoft.Usuario.DAO.UsuarioDAO;
+import pe.edu.pucp.FarmaSoft.Usuario.DAO.AdministradorDAO;
 import pe.edu.pucp.FarmaSoft.Usuario.Model.Administrador;
 import pe.edu.pucp.FarmaSoft.Usuario.MySQL.AdministradorMySQL;
 import pe.edu.pucp.FarmaSoft.dao.DetalleSolicitudDAO;
@@ -15,7 +15,7 @@ import pe.edu.pucp.FarmaSoft.mysql.DetalleSolicitudMySQL;
 "http://services.FarmaSoft.pucp.edu.pe") 
 public class AdministradorWS { 
  
-    private UsuarioDAO daoAdministrador; 
+    private AdministradorDAO daoAdministrador; 
     
     @WebMethod(operationName = "insertarAdministrador") 
     public int insertarAdministrador() { 
@@ -31,7 +31,7 @@ public class AdministradorWS {
             admin.setPassword("Password");
             admin.setTelefono(902744125);
             resultado = daoAdministrador.insertar(admin);
-        }catch(Exception ex){ 
+        }catch(Exception ex){
             System.out.println(ex.getMessage()); 
         } 
         return resultado; 

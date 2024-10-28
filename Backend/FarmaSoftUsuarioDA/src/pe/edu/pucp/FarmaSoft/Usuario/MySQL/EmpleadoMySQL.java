@@ -1,21 +1,21 @@
 
 package pe.edu.pucp.FarmaSoft.Usuario.MySQL;
 
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.sql.SQLException;
+import pe.edu.pucp.FarmaSoft.Usuario.DAO.EmpleadoDAO;
 import pe.edu.pucp.FarmaSoft.Usuario.Model.Administrador;
-import pe.edu.pucp.FarmaSoft.Usuario.Model.Usuario;
 import pe.edu.pucp.FarmaSoft.Usuario.Model.Empleado;
 import pe.edu.pucp.FarmaSoft.config.DBManager;
 
-public abstract class EmpleadoMySQL extends UsuarioMySQL {
+public abstract class EmpleadoMySQL implements EmpleadoDAO {
+    private ResultSet rs;
     
     @Override
-    public int insertar(Usuario usuario) {
+    public int insertar(Empleado empleado) {
         HashMap<String,Object> parametrosEntrada = new HashMap<>();
-        
-        Empleado empleado = (Empleado) usuario;
         
         //parametrosEntrada.put("id", empleado.getId());
         parametrosEntrada.put("_dni_emp", empleado.getDni());
@@ -36,7 +36,7 @@ public abstract class EmpleadoMySQL extends UsuarioMySQL {
     }
     
     @Override
-    public Usuario obtenerPorDni(int dni) {
+    public Empleado obtenerPorDni(int dni) {
         Empleado empleado = obtenerInstanciaDeModelo();
         
         HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
@@ -67,7 +67,7 @@ public abstract class EmpleadoMySQL extends UsuarioMySQL {
     }
     
     @Override
-    public int actualizar(Usuario usuario) {
+    public int actualizar(Empleado usuario) {
         HashMap<String,Object> parametrosEntrada = new HashMap<>();
         
         Empleado empleado = (Empleado) usuario;
@@ -132,8 +132,8 @@ public abstract class EmpleadoMySQL extends UsuarioMySQL {
     }
     
     @Override
-    public ArrayList<Usuario> listarTodos() {
-        ArrayList<Usuario> listaEmpleados = new ArrayList<>();
+    public ArrayList<Empleado> listarTodos() {
+        ArrayList<Empleado> listaEmpleados = new ArrayList<>();
         
         rs = DBManager.getInstance().ejecutarProcedimientoLectura("listarTodos_empleado",
                 null);
@@ -164,7 +164,7 @@ public abstract class EmpleadoMySQL extends UsuarioMySQL {
     }
     
     //@Override
-    //public ArrayList<Usuario> listarPorFiltros() {...}
+    //public ArrayList<Empleado> listarPorFiltros() {...}
     
     protected abstract String obtenerRolDeModelo();
     protected abstract Empleado obtenerInstanciaDeModelo();
