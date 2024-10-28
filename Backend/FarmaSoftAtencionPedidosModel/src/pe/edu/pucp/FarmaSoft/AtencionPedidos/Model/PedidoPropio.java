@@ -4,14 +4,14 @@ import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.Model.Solicitud;
 import java.util.Date;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import pe.edu.pucp.FarmaSoft.Usuario.Model.Usuario;
 
 public class PedidoPropio {
     private int ID;
     private Solicitud solicitudAsociada;
-    private Date fechaCreacion;
-    private LocalTime horaCreacion;
+    private Date fechayHoraCreacion;
     private EstadoPedido estadoPedido;
-    private Tecnico tecnicoEncargado;
+    private Usuario tecnicoEncargado;
     private ArrayList<DetallePedido> detallesPedido;
     private double montoTotal;
     private double montoCubierto;
@@ -39,58 +39,15 @@ public class PedidoPropio {
     /**
      * @return the solicitudAsociada
      */
-    public Solicitud getSolicitudAsociada() {
-        return solicitudAsociada;
-    }
-
-    /**
-     * @param solicitudAsociada the solicitudAsociada to set
-     */
-    public void setSolicitudAsociada(Solicitud solicitudAsociada) {
-        this.solicitudAsociada = solicitudAsociada;
-    }
     
     /**
      * @return the fechaCreacion
      */
-    public Date getFechaCreacion() {
-        return fechaCreacion;
-    }
-
-    /**
-     * @param fechaCreacion the fechaCreacion to set
-     */
-    public void setFechaCreacion(Date fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
-    }
-
-    /**
-     * @return the horaCreacion
-     */
-    public LocalTime getHoraCreacion() {
-        return horaCreacion;
-    }
-
-    /**
-     * @param horaCreacion the horaCreacion to set
-     */
-    public void setHoraCreacion(LocalTime horaCreacion) {
-        this.horaCreacion = horaCreacion;
-    }
 
     /**
      * @return the tecnicoEncargado
      */
-    public Tecnico getTecnicoEncargado() {
-        return tecnicoEncargado;
-    }
 
-    /**
-     * @param tecnicoEncargado the tecnicoEncargado to set
-     */
-    public void setTecnicoEncargado(Tecnico tecnicoEncargado) {
-        this.tecnicoEncargado = tecnicoEncargado;
-    }
 
     /**
      * @return the estadoPedido
@@ -181,5 +138,29 @@ public class PedidoPropio {
     
     public void pasarMedicinaGeneralAMedicinaPropia(){
         //Convierte las medicinas generales de la solicitud en medicinas propias del pedido
+    }
+    
+    public Date getFechayHoraCreacion() {
+        return fechayHoraCreacion;
+    }
+
+    public void setFechayHoraCreacion(Date fechayHoraCreacion) {
+        this.fechayHoraCreacion = fechayHoraCreacion;
+    }
+    
+    public Solicitud getSolicitudAsociada() {
+        return solicitudAsociada;
+    }
+
+    public void setSolicitudAsociada(Solicitud solicitudAsociada) {
+        this.solicitudAsociada = solicitudAsociada;
+    }
+    
+    public Usuario getTecnicoEncargado() {
+        return tecnicoEncargado;
+    }
+
+    public void setTecnicoEncargado(Usuario tecnicoEncargado) {
+        this.tecnicoEncargado = tecnicoEncargado;
     }
 }

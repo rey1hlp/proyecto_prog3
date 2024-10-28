@@ -838,6 +838,15 @@ exists or setup the property manually. For example like this:
                 COMPILATION SECTION
             -->
     <target depends="init" if="no.dist.ear.dir" name="deps-module-jar" unless="no.deps">
+        <ant antfile="${project.FarmaSoftAtencionPedidosDA}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.FarmaSoftAtencionPedidosModel}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.FarmaSoftAtencionSolicitudesDA}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
         <ant antfile="${project.FarmaSoftAtencionSolicitudesModel}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
@@ -858,6 +867,15 @@ exists or setup the property manually. For example like this:
         </ant>
     </target>
     <target depends="init" if="dist.ear.dir" name="deps-ear-jar" unless="no.deps">
+        <ant antfile="${project.FarmaSoftAtencionPedidosDA}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.FarmaSoftAtencionPedidosModel}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.FarmaSoftAtencionSolicitudesDA}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
         <ant antfile="${project.FarmaSoftAtencionSolicitudesModel}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
@@ -1028,6 +1046,9 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${reference.FarmaSoftAtencionSolicitudesModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.FarmaSoftUsuarioDA.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.FarmaSoftUsuarioModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.FarmaSoftAtencionPedidosDA.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.FarmaSoftAtencionPedidosModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.FarmaSoftAtencionSolicitudesDA.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
@@ -1040,6 +1061,9 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${reference.FarmaSoftAtencionSolicitudesModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.FarmaSoftUsuarioDA.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.FarmaSoftUsuarioModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.FarmaSoftAtencionPedidosDA.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.FarmaSoftAtencionPedidosModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.FarmaSoftAtencionSolicitudesDA.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>
@@ -1454,6 +1478,9 @@ exists or setup the property manually. For example like this:
                 CLEANUP SECTION
             -->
     <target depends="init" name="deps-clean" unless="no.deps">
+        <ant antfile="${project.FarmaSoftAtencionPedidosDA}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.FarmaSoftAtencionPedidosModel}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.FarmaSoftAtencionSolicitudesDA}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.FarmaSoftAtencionSolicitudesModel}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.FarmaSoftDA}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.FarmaSoftDBManager}/build.xml" inheritall="false" target="clean"/>
