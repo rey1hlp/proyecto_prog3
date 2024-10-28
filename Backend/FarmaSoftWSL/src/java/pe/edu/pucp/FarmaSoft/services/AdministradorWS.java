@@ -4,62 +4,90 @@ import jakarta.jws.WebService;
 import jakarta.jws.WebMethod; 
 import jakarta.jws.WebParam; 
 import java.util.ArrayList; 
-import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.Model.DetalleSolicitud;
 import pe.edu.pucp.FarmaSoft.Usuario.DAO.AdministradorDAO;
 import pe.edu.pucp.FarmaSoft.Usuario.Model.Administrador;
 import pe.edu.pucp.FarmaSoft.Usuario.MySQL.AdministradorMySQL;
-import pe.edu.pucp.FarmaSoft.dao.DetalleSolicitudDAO;
-import pe.edu.pucp.FarmaSoft.mysql.DetalleSolicitudMySQL;
  
 @WebService(serviceName = "AdministradorWS", targetNamespace = 
 "http://services.FarmaSoft.pucp.edu.pe") 
 public class AdministradorWS { 
  
-    private AdministradorDAO daoAdministrador; 
+    private final AdministradorDAO daoAdministrador = new AdministradorMySQL();
     
     @WebMethod(operationName = "insertarAdministrador") 
-    public int insertarAdministrador() { 
-        Administrador admin;
-        int resultado = 0; 
-        try{ 
-            daoAdministrador = new AdministradorMySQL();
-            admin=new Administrador();
-            admin.setDNI(76591764);
-            admin.setApellidoPaterno("Condorhuaman");
-            admin.setApellidoMaterno("Gastanaga");
-            admin.setNombre("Carlos");
-            admin.setPassword("Password");
-            admin.setTelefono(902744125);
+    public int insertarAdministrador(@WebParam(name = "admin") Administrador admin) {
+        int resultado = 0;
+        try{
             resultado = daoAdministrador.insertar(admin);
         }catch(Exception ex){
-            System.out.println(ex.getMessage()); 
-        } 
+            System.out.println("Error en la insercion de administrador: " + ex.getMessage()); 
+        }
         return resultado; 
     }
     
-//    @WebMethod(operationName = "listarTodosDeatalleSolicitud") 
-//    public ArrayList<DetalleSolicitud> listarTodosDeatalleSolicitud(@WebParam(name = "idSolicitud") int idSolicitud) { 
-//        ArrayList<DetalleSolicitud> detalles = null; 
-//        try{ 
-//            daoDetalleSolicitud = new DetalleSolicitudMySQL(); 
-//            detalles = daoDetalleSolicitud.listarTodas(idSolicitud); 
-//        }catch(Exception ex){ 
-//            System.out.println(ex.getMessage()); 
-//        } 
-//        return detalles; 
-//    } 
+    @WebMethod(operationName = "obtenerAdministradorPorDni")
+    public Administrador obtenerAdministradorPorDni(@WebParam(name = "dni_admin") int dni_admin) {
+        Administrador admin = null;
+        try {
+            admin = daoAdministrador.obtenerPorDni(dni_admin);
+        }
+        catch(Exception ex) {
+            System.out.println("Error en la consulta de administrador: " + ex.getMessage());
+        }
+        return admin;
+    }
     
+    @WebMethod(operationName = "darDeBajaAdministradores")
+    public int darDeBajaAdministradores(@WebParam(name = "listaDniAdmins") ArrayList<Integer> listaDniAdmins) {
+        int resultado = 0;
+        try {
+            for(Integer dni_admin : listaDniAdmins) {
+                resultado += daoAdministrador.darDeBaja(dni_admin);
+            }
+        }
+        catch(Exception ex) {
+            System.out.println("Error en la modificacion de administradores: " + ex.getMessage());
+        }
+        return resultado;
+    }
     
-//    @WebMethod(operationName = "obtenerEventoPorId") 
-//    public Evento obtenerEventoPorId(@WebParam(name = "idEvento") int idEvento) { 
-//        Evento evento = null; 
-//        try{ 
-//            daoEvento = new EventoMySQL(); 
-//            evento = daoEvento.obtenerPorId(idEvento); 
-//        }catch(Exception ex){ 
-//            System.out.println(ex.getMessage()); 
-//        } 
-//        return evento; 
-//    } 
+    @WebMethod(operationName = "darDeAltaAdministradores")
+    public int darDeAltaAdministradores(@WebParam(name = "listaDniAdmins") ArrayList<Integer> listaDniAdmins) {
+        int resultado = 0;
+        try {
+            for(Integer dni_admin : listaDniAdmins) {
+                resultado += daoAdministrador.darDeAlta(dni_admin);
+            }
+        }
+        catch(Exception ex) {
+            System.out.println("Error en la modificacion de administradores: " + ex.getMessage());
+        }
+        return resultado;
+    }
     
+    @WebMethod(operationName = "actualizarAdministrador")
+    public int actualizarAdministrador(@WebParam(name = "admin") Administrador admin) {
+        int resultado = 0;
+        try {
+            resultado = daoAdministrador.actualizar(admin);
+        }
+        catch(Exception ex) {
+            System.out.println("Error en la actualizacion de administrador: " + ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "eliminarAdministrador")
+    public int eliminarAdministrador(@WebParam(name = "dni_admin") int dni_admin) {
+        int resultado = 0;
+        try {
+            resultado = daoAdministrador.eliminar(dni_admin);
+        }
+        catch(Exception ex) {
+            System.out.println("Error en el borrado de administrador: " + ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    // Proximamente: filtrado generico
 } 
