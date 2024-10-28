@@ -60,4 +60,30 @@ public class PagoWS{
         } 
         return pago; 
     } 
+    
+    @WebMethod(operationName = "actualizaPago")
+    public int actualizaPago(@WebParam(name = "pago") Pago pago) {
+        int resultado = 0;
+        try {
+            daoPago = new PagoMySQL(); 
+            resultado = daoPago.actualizar(pago);
+        }
+        catch(Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "eliminarPago")
+    public int eliminarPago(@WebParam(name = "idPago") int idPago) {
+        int resultado = 0;
+        try {
+            daoPago = new PagoMySQL(); 
+            resultado = daoPago.eliminar(idPago);
+        }
+        catch(Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
 }

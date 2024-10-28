@@ -398,6 +398,19 @@ namespace EventMasterSoftWA.ServicioWS {
     public interface EventoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.eventmastersoft.pucp.edu.pe/EventoWS/listarEventosPorNombreReques" +
+            "t", ReplyAction="http://services.eventmastersoft.pucp.edu.pe/EventoWS/listarEventosPorNombreRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        EventMasterSoftWA.ServicioWS.listarEventosPorNombreResponse listarEventosPorNombre(EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.eventmastersoft.pucp.edu.pe/EventoWS/listarEventosPorNombreReques" +
+            "t", ReplyAction="http://services.eventmastersoft.pucp.edu.pe/EventoWS/listarEventosPorNombreRespon" +
+            "se")]
+        System.Threading.Tasks.Task<EventMasterSoftWA.ServicioWS.listarEventosPorNombreResponse> listarEventosPorNombreAsync(EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.eventmastersoft.pucp.edu.pe/EventoWS/insertarEventoRequest", ReplyAction="http://services.eventmastersoft.pucp.edu.pe/EventoWS/insertarEventoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -414,19 +427,42 @@ namespace EventMasterSoftWA.ServicioWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.eventmastersoft.pucp.edu.pe/EventoWS/obtenerEventoPorIdRequest", ReplyAction="http://services.eventmastersoft.pucp.edu.pe/EventoWS/obtenerEventoPorIdResponse")]
         System.Threading.Tasks.Task<EventMasterSoftWA.ServicioWS.obtenerEventoPorIdResponse> obtenerEventoPorIdAsync(EventMasterSoftWA.ServicioWS.obtenerEventoPorIdRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEventosPorNombre", WrapperNamespace="http://services.eventmastersoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarEventosPorNombreRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.eventmastersoft.pucp.edu.pe/EventoWS/listarEventosPorNombreReques" +
-            "t", ReplyAction="http://services.eventmastersoft.pucp.edu.pe/EventoWS/listarEventosPorNombreRespon" +
-            "se")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        EventMasterSoftWA.ServicioWS.listarEventosPorNombreResponse listarEventosPorNombre(EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.eventmastersoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.eventmastersoft.pucp.edu.pe/EventoWS/listarEventosPorNombreReques" +
-            "t", ReplyAction="http://services.eventmastersoft.pucp.edu.pe/EventoWS/listarEventosPorNombreRespon" +
-            "se")]
-        System.Threading.Tasks.Task<EventMasterSoftWA.ServicioWS.listarEventosPorNombreResponse> listarEventosPorNombreAsync(EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest request);
+        public listarEventosPorNombreRequest() {
+        }
+        
+        public listarEventosPorNombreRequest(string nombre) {
+            this.nombre = nombre;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEventosPorNombreResponse", WrapperNamespace="http://services.eventmastersoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarEventosPorNombreResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.eventmastersoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public EventMasterSoftWA.ServicioWS.evento[] @return;
+        
+        public listarEventosPorNombreResponse() {
+        }
+        
+        public listarEventosPorNombreResponse(EventMasterSoftWA.ServicioWS.evento[] @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -501,42 +537,6 @@ namespace EventMasterSoftWA.ServicioWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEventosPorNombre", WrapperNamespace="http://services.eventmastersoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarEventosPorNombreRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.eventmastersoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        public listarEventosPorNombreRequest() {
-        }
-        
-        public listarEventosPorNombreRequest(string nombre) {
-            this.nombre = nombre;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarEventosPorNombreResponse", WrapperNamespace="http://services.eventmastersoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarEventosPorNombreResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.eventmastersoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public EventMasterSoftWA.ServicioWS.evento[] @return;
-        
-        public listarEventosPorNombreResponse() {
-        }
-        
-        public listarEventosPorNombreResponse(EventMasterSoftWA.ServicioWS.evento[] @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface EventoWSChannel : EventMasterSoftWA.ServicioWS.EventoWS, System.ServiceModel.IClientChannel {
     }
@@ -562,6 +562,29 @@ namespace EventMasterSoftWA.ServicioWS {
         
         public EventoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        EventMasterSoftWA.ServicioWS.listarEventosPorNombreResponse EventMasterSoftWA.ServicioWS.EventoWS.listarEventosPorNombre(EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest request) {
+            return base.Channel.listarEventosPorNombre(request);
+        }
+        
+        public EventMasterSoftWA.ServicioWS.evento[] listarEventosPorNombre(string nombre) {
+            EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest inValue = new EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest();
+            inValue.nombre = nombre;
+            EventMasterSoftWA.ServicioWS.listarEventosPorNombreResponse retVal = ((EventMasterSoftWA.ServicioWS.EventoWS)(this)).listarEventosPorNombre(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<EventMasterSoftWA.ServicioWS.listarEventosPorNombreResponse> EventMasterSoftWA.ServicioWS.EventoWS.listarEventosPorNombreAsync(EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest request) {
+            return base.Channel.listarEventosPorNombreAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<EventMasterSoftWA.ServicioWS.listarEventosPorNombreResponse> listarEventosPorNombreAsync(string nombre) {
+            EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest inValue = new EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest();
+            inValue.nombre = nombre;
+            return ((EventMasterSoftWA.ServicioWS.EventoWS)(this)).listarEventosPorNombreAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -608,29 +631,6 @@ namespace EventMasterSoftWA.ServicioWS {
             EventMasterSoftWA.ServicioWS.obtenerEventoPorIdRequest inValue = new EventMasterSoftWA.ServicioWS.obtenerEventoPorIdRequest();
             inValue.idEvento = idEvento;
             return ((EventMasterSoftWA.ServicioWS.EventoWS)(this)).obtenerEventoPorIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        EventMasterSoftWA.ServicioWS.listarEventosPorNombreResponse EventMasterSoftWA.ServicioWS.EventoWS.listarEventosPorNombre(EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest request) {
-            return base.Channel.listarEventosPorNombre(request);
-        }
-        
-        public EventMasterSoftWA.ServicioWS.evento[] listarEventosPorNombre(string nombre) {
-            EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest inValue = new EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest();
-            inValue.nombre = nombre;
-            EventMasterSoftWA.ServicioWS.listarEventosPorNombreResponse retVal = ((EventMasterSoftWA.ServicioWS.EventoWS)(this)).listarEventosPorNombre(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<EventMasterSoftWA.ServicioWS.listarEventosPorNombreResponse> EventMasterSoftWA.ServicioWS.EventoWS.listarEventosPorNombreAsync(EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest request) {
-            return base.Channel.listarEventosPorNombreAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<EventMasterSoftWA.ServicioWS.listarEventosPorNombreResponse> listarEventosPorNombreAsync(string nombre) {
-            EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest inValue = new EventMasterSoftWA.ServicioWS.listarEventosPorNombreRequest();
-            inValue.nombre = nombre;
-            return ((EventMasterSoftWA.ServicioWS.EventoWS)(this)).listarEventosPorNombreAsync(inValue);
         }
     }
 }

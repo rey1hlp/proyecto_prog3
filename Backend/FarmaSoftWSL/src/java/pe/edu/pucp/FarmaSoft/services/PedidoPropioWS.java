@@ -59,4 +59,31 @@ public class PedidoPropioWS {
         } 
         return pedidoPropio; 
     } 
+    
+    @WebMethod(operationName = "actualizaPedidoPropio")
+    public int actualizaPedidoPropio(@WebParam(name = "pedidoPropio") PedidoPropio pedidoPropio) {
+        int resultado = 0;
+        try {
+            daoPedidoPropio = new PedidoPropioMySQL(); 
+            resultado = daoPedidoPropio.actualizar(pedidoPropio);
+        }
+        catch(Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "eliminarPedidoPropio")
+    public int eliminarPedidoPropio(@WebParam(name = "idPedidoPropio") int idPedidoPropio) {
+        int resultado = 0;
+        try {
+            daoPedidoPropio = new PedidoPropioMySQL(); 
+            resultado = daoPedidoPropio.eliminar(idPedidoPropio);
+        }
+        catch(Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
 }

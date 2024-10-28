@@ -60,5 +60,30 @@ public class SolicitudWS {
         return solicitud; 
     } 
     
+    @WebMethod(operationName = "actualizaSolicitud")
+    public int actualizaSolicitud(@WebParam(name = "solicitud") Solicitud solicitud) {
+        int resultado = 0;
+        try {
+            daoSolicitud = new SolicitudMySQL(); 
+            resultado = daoSolicitud.actualizar(solicitud);
+        }
+        catch(Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
+    @WebMethod(operationName = "eliminarSolicitud")
+    public int eliminarSolicitud(@WebParam(name = "idSolicitud") int idSolicitud) {
+        int resultado = 0;
+        try {
+            daoSolicitud = new SolicitudMySQL(); 
+            resultado = daoSolicitud.eliminar(idSolicitud);
+        }
+        catch(Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
     
 }

@@ -3,8 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/User/Desktop/GitHub/proyecto_prog3/Backend/FarmaSoftAtencionPedidosDA/src/pe/edu/pucp/FarmaSoft/AtencionPedidos/MySQL/PagoMySQL.java</file>
-            <file>file:/C:/Users/User/Desktop/GitHub/proyecto_prog3/Backend/FarmaSoftAtencionPedidosDA/src/pe/edu/pucp/FarmaSoft/AtencionPedidos/MySQL/PedidoPropioMySQL.java</file>
+            <file>file:/C:/Users/User/Desktop/GitHub/proyecto_prog3/Backend/FarmaSoftAtencionPedidosDA/src/pe/edu/pucp/FarmaSoft/AtencionPedidos/DAO/PedidoPropioDAO.java</file>
+            <file>file:/C:/Users/User/Desktop/GitHub/proyecto_prog3/Backend/FarmaSoftAtencionPedidosDA/src/pe/edu/pucp/FarmaSoft/AtencionPedidos/DAO/PagoDAO.java</file>
         </group>
     </open-files>
 </project-private>
