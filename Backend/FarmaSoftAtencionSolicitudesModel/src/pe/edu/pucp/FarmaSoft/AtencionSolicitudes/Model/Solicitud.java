@@ -1,21 +1,22 @@
 package  pe.edu.pucp.FarmaSoft.AtencionSolicitudes.Model;
 
 import java.util.Date;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 import pe.edu.pucp.FarmaSoft.Medicina.Model.MedicinaGeneral;
+import pe.edu.pucp.FarmaSoft.Usuario.Model.Usuario;
 
 public class Solicitud {
     private int ID;
-    private Date fechaCreacion;
-    private LocalTime horaCreacion;
+    private Date fechayhoraCreacion;
     private EstadoSolicitud estado; 
     private byte recetaMedica[];
     private Cliente cliente;
-    private Intermediario intermediario;
-    private Receptor receptor;
+    private Usuario intermediario;
+    private Usuario receptor;
     private ArrayList<DetalleSolicitud> detallesSolicitud;
+    private FarmaciaAsociada farmaciaAsociada;
     private boolean generaPedido;
     private boolean completado;
 
@@ -87,30 +88,7 @@ public class Solicitud {
     /**
      * @return the fechaCreacion
      */
-    public Date getFechaCreacion() {
-        return fechaCreacion;
-    }
-
-    /**
-     * @param fechaCreacion the fechaCreacion to set
-     */
-    public void setFechaCreacion(Date fechaCreacion) {
-        this.fechaCreacion = fechaCreacion;
-    }
-
-    /**
-     * @return the horaCreacion
-     */
-    public LocalTime getHoraCreacion() {
-        return horaCreacion;
-    }
-
-    /**
-     * @param horaCreacion the horaCreacion to set
-     */
-    public void setHoraCreacion(LocalTime horaCreacion) {
-        this.horaCreacion = horaCreacion;
-    }
+   
 
     /**
      * @return the recetaMedica
@@ -129,28 +107,28 @@ public class Solicitud {
     /**
      * @return the intermediario
      */
-    public Intermediario getIntermediario() {
+    public Usuario getIntermediario() {
         return intermediario;
     }
 
     /**
      * @param intermediario the intermediario to set
      */
-    public void setIntermediario(Intermediario intermediario) {
+    public void setIntermediario(Usuario intermediario) {
         this.intermediario = intermediario;
     }
 
     /**
      * @return the receptor
      */
-    public Receptor getReceptor() {
+    public Usuario getReceptor() {
         return receptor;
     }
 
     /**
      * @param receptor the receptor to set
      */
-    public void setReceptor(Receptor receptor) {
+    public void setReceptor(Usuario receptor) {
         this.receptor = receptor;
     }
 
@@ -181,5 +159,18 @@ public class Solicitud {
     public void setCompletado(boolean completado) {
         this.completado = completado;
     }
-    
+    public FarmaciaAsociada getFarmaciaAsociada() {
+        return farmaciaAsociada;
+    }
+
+    public void setFarmaciaAsociada(FarmaciaAsociada farmaciaAsociada) {
+        this.farmaciaAsociada = farmaciaAsociada;
+    }
+    public Date getFechayhoraCreacion() {
+        return fechayhoraCreacion;
+    }
+
+    public void setFechayhoraCreacion(Date fechayhoraCreacion) {
+        this.fechayhoraCreacion = fechayhoraCreacion;
+    }
 }
