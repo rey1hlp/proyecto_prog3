@@ -5,31 +5,31 @@
       <xsd:import schemaLocation="http://localhost:32309/FarmaSoftWS/MedicinaPropiaWS?xsd=1" namespace="http://services.FarmaSoft.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="listarTodasMedicinasPropias">
-    <part name="parameters" element="tns:listarTodasMedicinasPropias" />
-  </message>
-  <message name="listarTodasMedicinasPropiasResponse">
-    <part name="parameters" element="tns:listarTodasMedicinasPropiasResponse" />
-  </message>
   <message name="insertarMedicinaPropia">
     <part name="parameters" element="tns:insertarMedicinaPropia" />
   </message>
   <message name="insertarMedicinaPropiaResponse">
     <part name="parameters" element="tns:insertarMedicinaPropiaResponse" />
   </message>
+  <message name="listarTodasMedicinasPropias">
+    <part name="parameters" element="tns:listarTodasMedicinasPropias" />
+  </message>
+  <message name="listarTodasMedicinasPropiasResponse">
+    <part name="parameters" element="tns:listarTodasMedicinasPropiasResponse" />
+  </message>
   <portType name="MedicinaPropiaWS">
-    <operation name="listarTodasMedicinasPropias">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropiasRequest" message="tns:listarTodasMedicinasPropias" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropiasResponse" message="tns:listarTodasMedicinasPropiasResponse" />
-    </operation>
     <operation name="insertarMedicinaPropia">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/insertarMedicinaPropiaRequest" message="tns:insertarMedicinaPropia" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/insertarMedicinaPropiaResponse" message="tns:insertarMedicinaPropiaResponse" />
     </operation>
+    <operation name="listarTodasMedicinasPropias">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropiasRequest" message="tns:listarTodasMedicinasPropias" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropiasResponse" message="tns:listarTodasMedicinasPropiasResponse" />
+    </operation>
   </portType>
   <binding name="MedicinaPropiaWSPortBinding" type="tns:MedicinaPropiaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarTodasMedicinasPropias">
+    <operation name="insertarMedicinaPropia">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -38,7 +38,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarMedicinaPropia">
+    <operation name="listarTodasMedicinasPropias">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

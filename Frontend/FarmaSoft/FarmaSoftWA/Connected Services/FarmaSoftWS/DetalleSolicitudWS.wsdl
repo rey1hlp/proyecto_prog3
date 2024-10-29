@@ -5,31 +5,31 @@
       <xsd:import schemaLocation="http://localhost:32309/FarmaSoftWS/DetalleSolicitudWS?xsd=1" namespace="http://services.FarmaSoft.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="listarTodosDetalleSolicitud">
-    <part name="parameters" element="tns:listarTodosDetalleSolicitud" />
-  </message>
-  <message name="listarTodosDetalleSolicitudResponse">
-    <part name="parameters" element="tns:listarTodosDetalleSolicitudResponse" />
-  </message>
   <message name="insertarDetalleSolicitud">
     <part name="parameters" element="tns:insertarDetalleSolicitud" />
   </message>
   <message name="insertarDetalleSolicitudResponse">
     <part name="parameters" element="tns:insertarDetalleSolicitudResponse" />
   </message>
+  <message name="listarTodosDetalleSolicitud">
+    <part name="parameters" element="tns:listarTodosDetalleSolicitud" />
+  </message>
+  <message name="listarTodosDetalleSolicitudResponse">
+    <part name="parameters" element="tns:listarTodosDetalleSolicitudResponse" />
+  </message>
   <portType name="DetalleSolicitudWS">
-    <operation name="listarTodosDetalleSolicitud">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/DetalleSolicitudWS/listarTodosDetalleSolicitudRequest" message="tns:listarTodosDetalleSolicitud" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/DetalleSolicitudWS/listarTodosDetalleSolicitudResponse" message="tns:listarTodosDetalleSolicitudResponse" />
-    </operation>
     <operation name="insertarDetalleSolicitud">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/DetalleSolicitudWS/insertarDetalleSolicitudRequest" message="tns:insertarDetalleSolicitud" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/DetalleSolicitudWS/insertarDetalleSolicitudResponse" message="tns:insertarDetalleSolicitudResponse" />
     </operation>
+    <operation name="listarTodosDetalleSolicitud">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/DetalleSolicitudWS/listarTodosDetalleSolicitudRequest" message="tns:listarTodosDetalleSolicitud" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/DetalleSolicitudWS/listarTodosDetalleSolicitudResponse" message="tns:listarTodosDetalleSolicitudResponse" />
+    </operation>
   </portType>
   <binding name="DetalleSolicitudWSPortBinding" type="tns:DetalleSolicitudWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarTodosDetalleSolicitud">
+    <operation name="insertarDetalleSolicitud">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -38,7 +38,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarDetalleSolicitud">
+    <operation name="listarTodosDetalleSolicitud">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
