@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:32309/FarmaSoftWS/PedidoPropioWS?xsd=1" namespace="http://services.FarmaSoft.pucp.edu.pe" />
     </xsd:schema>
   </types>
+  <message name="listarTodosPedidosPropios">
+    <part name="parameters" element="tns:listarTodosPedidosPropios" />
+  </message>
+  <message name="listarTodosPedidosPropiosResponse">
+    <part name="parameters" element="tns:listarTodosPedidosPropiosResponse" />
+  </message>
   <message name="insertarPedidoPropio">
     <part name="parameters" element="tns:insertarPedidoPropio" />
   </message>
@@ -17,13 +23,11 @@
   <message name="obtenerPedidoPropioPorIdResponse">
     <part name="parameters" element="tns:obtenerPedidoPropioPorIdResponse" />
   </message>
-  <message name="listarTodosPedidosPropios">
-    <part name="parameters" element="tns:listarTodosPedidosPropios" />
-  </message>
-  <message name="listarTodosPedidosPropiosResponse">
-    <part name="parameters" element="tns:listarTodosPedidosPropiosResponse" />
-  </message>
   <portType name="PedidoPropioWS">
+    <operation name="listarTodosPedidosPropios">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosRequest" message="tns:listarTodosPedidosPropios" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosResponse" message="tns:listarTodosPedidosPropiosResponse" />
+    </operation>
     <operation name="insertarPedidoPropio">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/insertarPedidoPropioRequest" message="tns:insertarPedidoPropio" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/insertarPedidoPropioResponse" message="tns:insertarPedidoPropioResponse" />
@@ -32,13 +36,18 @@
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/obtenerPedidoPropioPorIdRequest" message="tns:obtenerPedidoPropioPorId" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/obtenerPedidoPropioPorIdResponse" message="tns:obtenerPedidoPropioPorIdResponse" />
     </operation>
-    <operation name="listarTodosPedidosPropios">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosRequest" message="tns:listarTodosPedidosPropios" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosResponse" message="tns:listarTodosPedidosPropiosResponse" />
-    </operation>
   </portType>
   <binding name="PedidoPropioWSPortBinding" type="tns:PedidoPropioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarTodosPedidosPropios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="insertarPedidoPropio">
       <soap:operation soapAction="" />
       <input>
@@ -49,15 +58,6 @@
       </output>
     </operation>
     <operation name="obtenerPedidoPropioPorId">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTodosPedidosPropios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

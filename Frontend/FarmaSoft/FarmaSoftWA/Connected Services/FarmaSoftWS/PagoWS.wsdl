@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:32309/FarmaSoftWS/PagoWS?xsd=1" namespace="http://services.FarmaSoft.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="listarTodosPagos">
-    <part name="parameters" element="tns:listarTodosPagos" />
+  <message name="insertarPago">
+    <part name="parameters" element="tns:insertarPago" />
   </message>
-  <message name="listarTodosPagosResponse">
-    <part name="parameters" element="tns:listarTodosPagosResponse" />
+  <message name="insertarPagoResponse">
+    <part name="parameters" element="tns:insertarPagoResponse" />
   </message>
   <message name="obtenerPagoPorId">
     <part name="parameters" element="tns:obtenerPagoPorId" />
@@ -17,29 +17,29 @@
   <message name="obtenerPagoPorIdResponse">
     <part name="parameters" element="tns:obtenerPagoPorIdResponse" />
   </message>
-  <message name="insertarPago">
-    <part name="parameters" element="tns:insertarPago" />
+  <message name="listarTodosPagos">
+    <part name="parameters" element="tns:listarTodosPagos" />
   </message>
-  <message name="insertarPagoResponse">
-    <part name="parameters" element="tns:insertarPagoResponse" />
+  <message name="listarTodosPagosResponse">
+    <part name="parameters" element="tns:listarTodosPagosResponse" />
   </message>
   <portType name="PagoWS">
-    <operation name="listarTodosPagos">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/listarTodosPagosRequest" message="tns:listarTodosPagos" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/listarTodosPagosResponse" message="tns:listarTodosPagosResponse" />
+    <operation name="insertarPago">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/insertarPagoRequest" message="tns:insertarPago" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/insertarPagoResponse" message="tns:insertarPagoResponse" />
     </operation>
     <operation name="obtenerPagoPorId">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/obtenerPagoPorIdRequest" message="tns:obtenerPagoPorId" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/obtenerPagoPorIdResponse" message="tns:obtenerPagoPorIdResponse" />
     </operation>
-    <operation name="insertarPago">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/insertarPagoRequest" message="tns:insertarPago" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/insertarPagoResponse" message="tns:insertarPagoResponse" />
+    <operation name="listarTodosPagos">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/listarTodosPagosRequest" message="tns:listarTodosPagos" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/listarTodosPagosResponse" message="tns:listarTodosPagosResponse" />
     </operation>
   </portType>
   <binding name="PagoWSPortBinding" type="tns:PagoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarTodosPagos">
+    <operation name="insertarPago">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -57,7 +57,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarPago">
+    <operation name="listarTodosPagos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

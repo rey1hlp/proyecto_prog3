@@ -6,6 +6,7 @@ namespace FarmaSoft
 {
     public partial class GenerarPedidoProvincia : System.Web.UI.Page
     {
+        private DepartamentoWSClient departamentoWS = new DepartamentoWSClient();
         private FarmaciaAsociadaWSClient farmaciaAsociadaWS = new FarmaciaAsociadaWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -13,9 +14,13 @@ namespace FarmaSoft
             gvFarmacias.DataSource = farm;
             gvFarmacias.DataBind();
 
-            //var departamentos = departamentoWS.listarTodosDepartamentos();
-            //ddlDepartamento.DataSource = departamentos;
-            //ddlDepartamento.DataBind();
+            ddlDepartamento.DataSource = departamentoWS.listarTodosDepartamentos();
+            ddlDepartamento.DataBind();
+        }
+
+        protected void lbRegresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CompletarDireccionEnvio.aspx");
         }
     }
 }

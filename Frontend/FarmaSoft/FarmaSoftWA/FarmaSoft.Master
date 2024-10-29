@@ -25,14 +25,14 @@
     <div class="container-fluid d-flex p-0 h-100">
         <!--Menu Lateral-->
         <div id="bdSidebar" class="menu-bg d-flex flex-column flex-shrink-0 p-3  text-white offcanvas-md offcanvas-start">
-            <a href="#" class="navbar-brand">
+            <a href="Home.aspx" class="navbar-brand">
                 <img src="Images/pucp.png" width="150" />
             </a>
             <hr>
             <ul class="mynav nav nav-pills flex-column mb-auto">
                 <li class="nav-item mb-1">
                     <!-- IRA A LA PAGINA GENERAR PEDIDO X DEFAULT -->
-                    <a href="GenerarPedidoProvincia.aspx" class="navbar-text-color fw-bolder"><i class="fa-solid fa-calendar-days pe-2 navbar-text-color"></i>Clickeame 7u7</a>
+                    <a href="ListarSolicitudes.aspx" class="navbar-text-color fw-bolder"><i class="fa-solid fa-calendar-days pe-2 navbar-text-color"></i>Clickeame 7u7</a>
                 </li>
             </ul>
             <hr>
