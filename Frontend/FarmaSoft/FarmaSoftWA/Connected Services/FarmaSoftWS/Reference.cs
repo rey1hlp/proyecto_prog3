@@ -12,62 +12,21 @@ namespace FarmaSoftWA.FarmaSoftWS {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", ConfigurationName="FarmaSoftWS.MedicinaPropiaWS")]
-    public interface MedicinaPropiaWS {
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe/", ConfigurationName="FarmaSoftWS.MedicinaGeneralWS")]
+    public interface MedicinaGeneralWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/insertarMedicinaPropiaRequ" +
-            "est", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/insertarMedicinaPropiaResp" +
-            "onse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaGeneralWS/listarTodasMedicinasGener" +
+            "alesRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/MedicinaGeneralWS/listarTodasMedicinasGener" +
+            "alesResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FarmaSoftWA.FarmaSoftWS.insertarMedicinaPropiaResponse insertarMedicinaPropia(FarmaSoftWA.FarmaSoftWS.insertarMedicinaPropiaRequest request);
+        FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesResponse listarTodasMedicinasGenerales(FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/insertarMedicinaPropiaRequ" +
-            "est", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/insertarMedicinaPropiaResp" +
-            "onse")]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarMedicinaPropiaResponse> insertarMedicinaPropiaAsync(FarmaSoftWA.FarmaSoftWS.insertarMedicinaPropiaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropia" +
-            "sRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropia" +
-            "sResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasPropiasResponse listarTodasMedicinasPropias(FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasPropiasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropia" +
-            "sRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropia" +
-            "sResponse")]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasPropiasResponse> listarTodasMedicinasPropiasAsync(FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasPropiasRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMedicinaPropia", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarMedicinaPropiaRequest {
-        
-        public insertarMedicinaPropiaRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMedicinaPropiaResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarMedicinaPropiaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarMedicinaPropiaResponse() {
-        }
-        
-        public insertarMedicinaPropiaResponse(int @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaGeneralWS/listarTodasMedicinasGener" +
+            "alesRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/MedicinaGeneralWS/listarTodasMedicinasGener" +
+            "alesResponse")]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesResponse> listarTodasMedicinasGeneralesAsync(FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesRequest request);
     }
     
     /// <remarks/>
@@ -75,46 +34,8 @@ namespace FarmaSoftWA.FarmaSoftWS {
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe")]
-    public partial class medicinaPropia : medicinaGeneral {
-        
-        private double precioField;
-        
-        private int stockField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public double precio {
-            get {
-                return this.precioField;
-            }
-            set {
-                this.precioField = value;
-                this.RaisePropertyChanged("precio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int stock {
-            get {
-                return this.stockField;
-            }
-            set {
-                this.stockField = value;
-                this.RaisePropertyChanged("stock");
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(medicinaPropia))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe")]
-    public abstract partial class medicinaGeneral : object, System.ComponentModel.INotifyPropertyChanged {
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe/")]
+    public partial class medicinaGeneral : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string idField;
         
@@ -185,11 +106,11 @@ namespace FarmaSoftWA.FarmaSoftWS {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe/")]
     public enum tipoMedicamento {
         
         /// <remarks/>
-        ANALGESICOS,
+        ANALGESICO,
         
         /// <remarks/>
         ANTIBIOTICO,
@@ -268,6 +189,146 @@ namespace FarmaSoftWA.FarmaSoftWS {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe")]
+    public partial class medicinaPropia : medicinaGeneral1 {
+        
+        private double precioField;
+        
+        private int stockField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public double precio {
+            get {
+                return this.precioField;
+            }
+            set {
+                this.precioField = value;
+                this.RaisePropertyChanged("precio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int stock {
+            get {
+                return this.stockField;
+            }
+            set {
+                this.stockField = value;
+                this.RaisePropertyChanged("stock");
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(medicinaPropia))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="medicinaGeneral", Namespace="http://services.FarmaSoft.pucp.edu.pe")]
+    public partial class medicinaGeneral1 : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idField;
+        
+        private string nombreField;
+        
+        private tipoMedicamento1 tipoMedicamentoField;
+        
+        private bool tipoMedicamentoFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string ID {
+            get {
+                return this.idField;
+            }
+            set {
+                this.idField = value;
+                this.RaisePropertyChanged("ID");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public tipoMedicamento1 tipoMedicamento {
+            get {
+                return this.tipoMedicamentoField;
+            }
+            set {
+                this.tipoMedicamentoField = value;
+                this.RaisePropertyChanged("tipoMedicamento");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool tipoMedicamentoSpecified {
+            get {
+                return this.tipoMedicamentoFieldSpecified;
+            }
+            set {
+                this.tipoMedicamentoFieldSpecified = value;
+                this.RaisePropertyChanged("tipoMedicamentoSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(TypeName="tipoMedicamento", Namespace="http://services.FarmaSoft.pucp.edu.pe")]
+    public enum tipoMedicamento1 {
+        
+        /// <remarks/>
+        ANALGESICO,
+        
+        /// <remarks/>
+        ANTIBIOTICO,
+        
+        /// <remarks/>
+        ANTIVIRAL,
+        
+        /// <remarks/>
+        ANTIFUNGICO,
+        
+        /// <remarks/>
+        ANTIHISTAMINICO,
+        
+        /// <remarks/>
+        ANTIDEPRESIVO,
+        
+        /// <remarks/>
+        VITAMINAS_Y_SUPLEMENTOS,
     }
     
     /// <remarks/>
@@ -1217,7 +1278,7 @@ namespace FarmaSoftWA.FarmaSoftWS {
         
         private int cantidadPedidaField;
         
-        private medicinaGeneral medicinaField;
+        private medicinaGeneral1 medicinaField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -1233,7 +1294,7 @@ namespace FarmaSoftWA.FarmaSoftWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public medicinaGeneral medicina {
+        public medicinaGeneral1 medicina {
             get {
                 return this.medicinaField;
             }
@@ -1739,6 +1800,142 @@ namespace FarmaSoftWA.FarmaSoftWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasMedicinasGenerales", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodasMedicinasGeneralesRequest {
+        
+        public listarTodasMedicinasGeneralesRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasMedicinasGeneralesResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodasMedicinasGeneralesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FarmaSoftWA.FarmaSoftWS.medicinaGeneral[] @return;
+        
+        public listarTodasMedicinasGeneralesResponse() {
+        }
+        
+        public listarTodasMedicinasGeneralesResponse(FarmaSoftWA.FarmaSoftWS.medicinaGeneral[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface MedicinaGeneralWSChannel : FarmaSoftWA.FarmaSoftWS.MedicinaGeneralWS, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class MedicinaGeneralWSClient : System.ServiceModel.ClientBase<FarmaSoftWA.FarmaSoftWS.MedicinaGeneralWS>, FarmaSoftWA.FarmaSoftWS.MedicinaGeneralWS {
+        
+        public MedicinaGeneralWSClient() {
+        }
+        
+        public MedicinaGeneralWSClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public MedicinaGeneralWSClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public MedicinaGeneralWSClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public MedicinaGeneralWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesResponse FarmaSoftWA.FarmaSoftWS.MedicinaGeneralWS.listarTodasMedicinasGenerales(FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesRequest request) {
+            return base.Channel.listarTodasMedicinasGenerales(request);
+        }
+        
+        public FarmaSoftWA.FarmaSoftWS.medicinaGeneral[] listarTodasMedicinasGenerales() {
+            FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesRequest();
+            FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesResponse retVal = ((FarmaSoftWA.FarmaSoftWS.MedicinaGeneralWS)(this)).listarTodasMedicinasGenerales(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesResponse> FarmaSoftWA.FarmaSoftWS.MedicinaGeneralWS.listarTodasMedicinasGeneralesAsync(FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesRequest request) {
+            return base.Channel.listarTodasMedicinasGeneralesAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesResponse> listarTodasMedicinasGeneralesAsync() {
+            FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesRequest();
+            return ((FarmaSoftWA.FarmaSoftWS.MedicinaGeneralWS)(this)).listarTodasMedicinasGeneralesAsync(inValue);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", ConfigurationName="FarmaSoftWS.MedicinaPropiaWS")]
+    public interface MedicinaPropiaWS {
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/insertarMedicinaPropiaRequ" +
+            "est", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/insertarMedicinaPropiaResp" +
+            "onse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FarmaSoftWA.FarmaSoftWS.insertarMedicinaPropiaResponse insertarMedicinaPropia(FarmaSoftWA.FarmaSoftWS.insertarMedicinaPropiaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/insertarMedicinaPropiaRequ" +
+            "est", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/insertarMedicinaPropiaResp" +
+            "onse")]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarMedicinaPropiaResponse> insertarMedicinaPropiaAsync(FarmaSoftWA.FarmaSoftWS.insertarMedicinaPropiaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropia" +
+            "sRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropia" +
+            "sResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasPropiasResponse listarTodasMedicinasPropias(FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasPropiasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropia" +
+            "sRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropia" +
+            "sResponse")]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasPropiasResponse> listarTodasMedicinasPropiasAsync(FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasPropiasRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMedicinaPropia", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarMedicinaPropiaRequest {
+        
+        public insertarMedicinaPropiaRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMedicinaPropiaResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarMedicinaPropiaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarMedicinaPropiaResponse() {
+        }
+        
+        public insertarMedicinaPropiaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodasMedicinasPropias", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
     public partial class listarTodasMedicinasPropiasRequest {
         
@@ -1831,101 +2028,6 @@ namespace FarmaSoftWA.FarmaSoftWS {
         public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasPropiasResponse> listarTodasMedicinasPropiasAsync() {
             FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasPropiasRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasPropiasRequest();
             return ((FarmaSoftWA.FarmaSoftWS.MedicinaPropiaWS)(this)).listarTodasMedicinasPropiasAsync(inValue);
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", ConfigurationName="FarmaSoftWS.DepartamentoWS")]
-    public interface DepartamentoWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/DepartamentoWS/listarTodosDepartamentosRequ" +
-            "est", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/DepartamentoWS/listarTodosDepartamentosResp" +
-            "onse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosResponse listarTodosDepartamentos(FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/DepartamentoWS/listarTodosDepartamentosRequ" +
-            "est", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/DepartamentoWS/listarTodosDepartamentosResp" +
-            "onse")]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosResponse> listarTodosDepartamentosAsync(FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosDepartamentos", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosDepartamentosRequest {
-        
-        public listarTodosDepartamentosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosDepartamentosResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosDepartamentosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FarmaSoftWA.FarmaSoftWS.departamento[] @return;
-        
-        public listarTodosDepartamentosResponse() {
-        }
-        
-        public listarTodosDepartamentosResponse(FarmaSoftWA.FarmaSoftWS.departamento[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface DepartamentoWSChannel : FarmaSoftWA.FarmaSoftWS.DepartamentoWS, System.ServiceModel.IClientChannel {
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class DepartamentoWSClient : System.ServiceModel.ClientBase<FarmaSoftWA.FarmaSoftWS.DepartamentoWS>, FarmaSoftWA.FarmaSoftWS.DepartamentoWS {
-        
-        public DepartamentoWSClient() {
-        }
-        
-        public DepartamentoWSClient(string endpointConfigurationName) : 
-                base(endpointConfigurationName) {
-        }
-        
-        public DepartamentoWSClient(string endpointConfigurationName, string remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public DepartamentoWSClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(endpointConfigurationName, remoteAddress) {
-        }
-        
-        public DepartamentoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
-                base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosResponse FarmaSoftWA.FarmaSoftWS.DepartamentoWS.listarTodosDepartamentos(FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosRequest request) {
-            return base.Channel.listarTodosDepartamentos(request);
-        }
-        
-        public FarmaSoftWA.FarmaSoftWS.departamento[] listarTodosDepartamentos() {
-            FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosRequest();
-            FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosResponse retVal = ((FarmaSoftWA.FarmaSoftWS.DepartamentoWS)(this)).listarTodosDepartamentos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosResponse> FarmaSoftWA.FarmaSoftWS.DepartamentoWS.listarTodosDepartamentosAsync(FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosRequest request) {
-            return base.Channel.listarTodosDepartamentosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosResponse> listarTodosDepartamentosAsync() {
-            FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodosDepartamentosRequest();
-            return ((FarmaSoftWA.FarmaSoftWS.DepartamentoWS)(this)).listarTodosDepartamentosAsync(inValue);
         }
     }
     
@@ -2775,6 +2877,101 @@ namespace FarmaSoftWA.FarmaSoftWS {
             FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest inValue = new FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest();
             inValue.solicitud = solicitud;
             return ((FarmaSoftWA.FarmaSoftWS.SolicitudWS)(this)).insertarSolicitudAsync(inValue);
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", ConfigurationName="FarmaSoftWS.TipoMedicamentoWS")]
+    public interface TipoMedicamentoWS {
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/TipoMedicamentoWS/listarTodosTiposMedicamen" +
+            "tosRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/TipoMedicamentoWS/listarTodosTiposMedicamen" +
+            "tosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosResponse listarTodosTiposMedicamentos(FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/TipoMedicamentoWS/listarTodosTiposMedicamen" +
+            "tosRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/TipoMedicamentoWS/listarTodosTiposMedicamen" +
+            "tosResponse")]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosResponse> listarTodosTiposMedicamentosAsync(FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosTiposMedicamentos", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosTiposMedicamentosRequest {
+        
+        public listarTodosTiposMedicamentosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosTiposMedicamentosResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosTiposMedicamentosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FarmaSoftWA.FarmaSoftWS.tipoMedicamento1[] @return;
+        
+        public listarTodosTiposMedicamentosResponse() {
+        }
+        
+        public listarTodosTiposMedicamentosResponse(FarmaSoftWA.FarmaSoftWS.tipoMedicamento1[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface TipoMedicamentoWSChannel : FarmaSoftWA.FarmaSoftWS.TipoMedicamentoWS, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class TipoMedicamentoWSClient : System.ServiceModel.ClientBase<FarmaSoftWA.FarmaSoftWS.TipoMedicamentoWS>, FarmaSoftWA.FarmaSoftWS.TipoMedicamentoWS {
+        
+        public TipoMedicamentoWSClient() {
+        }
+        
+        public TipoMedicamentoWSClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public TipoMedicamentoWSClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public TipoMedicamentoWSClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public TipoMedicamentoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosResponse FarmaSoftWA.FarmaSoftWS.TipoMedicamentoWS.listarTodosTiposMedicamentos(FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosRequest request) {
+            return base.Channel.listarTodosTiposMedicamentos(request);
+        }
+        
+        public FarmaSoftWA.FarmaSoftWS.tipoMedicamento1[] listarTodosTiposMedicamentos() {
+            FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosRequest();
+            FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosResponse retVal = ((FarmaSoftWA.FarmaSoftWS.TipoMedicamentoWS)(this)).listarTodosTiposMedicamentos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosResponse> FarmaSoftWA.FarmaSoftWS.TipoMedicamentoWS.listarTodosTiposMedicamentosAsync(FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosRequest request) {
+            return base.Channel.listarTodosTiposMedicamentosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosResponse> listarTodosTiposMedicamentosAsync() {
+            FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosRequest();
+            return ((FarmaSoftWA.FarmaSoftWS.TipoMedicamentoWS)(this)).listarTodosTiposMedicamentosAsync(inValue);
         }
     }
     

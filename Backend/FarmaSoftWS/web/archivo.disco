@@ -16,5 +16,7 @@ ref="http://localhost:32309/FarmaSoftWS/PedidoPropioWS?WSDL"/>
 <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
 ref="http://localhost:32309/FarmaSoftWS/SolicitudWS?WSDL"/>
 <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
-ref="http://localhost:32309/FarmaSoftWS/DepartamentoWS?WSDL"/>
+ref="http://localhost:32309/FarmaSoftWS/TipoMedicamentoWS?WSDL"/>
+<contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
+ref="http://localhost:32309/FarmaSoftWS/MedicinaGeneralWS?WSDL"/>
 </discovery>

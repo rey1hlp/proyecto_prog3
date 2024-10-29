@@ -1,12 +1,12 @@
 ﻿using FarmaSoftWA.FarmaSoftWS;
 using System;
+using System.Collections.Generic;
 
 
 namespace FarmaSoft
 {
     public partial class GenerarPedidoProvincia : System.Web.UI.Page
     {
-        private DepartamentoWSClient departamentoWS = new DepartamentoWSClient();
         private FarmaciaAsociadaWSClient farmaciaAsociadaWS = new FarmaciaAsociadaWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -14,7 +14,7 @@ namespace FarmaSoft
             gvFarmacias.DataSource = farm;
             gvFarmacias.DataBind();
 
-            ddlDepartamento.DataSource = departamentoWS.listarTodosDepartamentos();
+            ddlDepartamento.DataSource = Application["listaDepartamentos"] as departamento[];
             ddlDepartamento.DataBind();
         }
 

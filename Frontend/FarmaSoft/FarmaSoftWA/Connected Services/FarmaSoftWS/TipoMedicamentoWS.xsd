@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.FarmaSoft.pucp.edu.pe" targetNamespace="http://services.FarmaSoft.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="listarTodosTiposMedicamentos" type="tns:listarTodosTiposMedicamentos" />
+  <xs:element name="listarTodosTiposMedicamentosResponse" type="tns:listarTodosTiposMedicamentosResponse" />
+  <xs:complexType name="listarTodosTiposMedicamentos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosTiposMedicamentosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tipoMedicamento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipoMedicamento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ANALGESICO" />
+      <xs:enumeration value="ANTIBIOTICO" />
+      <xs:enumeration value="ANTIVIRAL" />
+      <xs:enumeration value="ANTIFUNGICO" />
+      <xs:enumeration value="ANTIHISTAMINICO" />
+      <xs:enumeration value="ANTIDEPRESIVO" />
+      <xs:enumeration value="VITAMINAS_Y_SUPLEMENTOS" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -22,7 +22,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="medicinaGeneral" abstract="true">
+  <xs:complexType name="medicinaGeneral">
     <xs:sequence>
       <xs:element minOccurs="0" name="ID" type="xs:string" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
@@ -39,7 +39,7 @@
   </xs:complexType>
   <xs:simpleType name="tipoMedicamento">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="ANALGESICOS" />
+      <xs:enumeration value="ANALGESICO" />
       <xs:enumeration value="ANTIBIOTICO" />
       <xs:enumeration value="ANTIVIRAL" />
       <xs:enumeration value="ANTIFUNGICO" />

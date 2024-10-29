@@ -10,10 +10,9 @@ namespace FarmaSoftWA
 {
     public partial class GenerarPedidoLima : System.Web.UI.Page
     {
-        private DepartamentoWSClient departamentoWS = new DepartamentoWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-            ddlDepartamento.DataSource = departamentoWS.listarTodosDepartamentos();
+            ddlDepartamento.DataSource = Application["listaDepartamentos"] as departamento[];
             ddlDepartamento.DataBind();
         }
     }

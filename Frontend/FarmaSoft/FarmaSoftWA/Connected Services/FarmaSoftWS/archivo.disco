@@ -8,5 +8,6 @@
   <contractRef ref="http://localhost:32309/FarmaSoftWS/PagoWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:32309/FarmaSoftWS/PedidoPropioWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
   <contractRef ref="http://localhost:32309/FarmaSoftWS/SolicitudWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
-  <contractRef ref="http://localhost:32309/FarmaSoftWS/DepartamentoWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <contractRef ref="http://localhost:32309/FarmaSoftWS/TipoMedicamentoWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <contractRef ref="http://localhost:32309/FarmaSoftWS/MedicinaGeneralWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
 </discovery>

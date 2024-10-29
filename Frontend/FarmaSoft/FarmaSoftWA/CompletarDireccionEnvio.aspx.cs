@@ -1,16 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
 using FarmaSoftWA.FarmaSoftWS;
 
 namespace FarmaSoft
 {
     public partial class CompletarDireccionEnvio : System.Web.UI.Page
     {
-        private DepartamentoWSClient departamentoWS = new DepartamentoWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             lblTitulo.Text = "Completar direccion de envío";
-            
-            ddlDepartamento.DataSource = departamentoWS.listarTodosDepartamentos();
+
+            ddlDepartamento.DataSource = Application["listaDepartamentos"] as departamento[];
             ddlDepartamento.DataBind();
         }
 

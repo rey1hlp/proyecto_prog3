@@ -5,26 +5,27 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import pe.edu.pucp.FarmaSoft.config.DBManager;
-import pe.edu.pucp.FarmaSoft.Medicina.Model.TipoMedicamento;
 //import pe.edu.pucp.eventmastersoft.model.Evento;
 //import pe.edu.pucp.eventmastersoft.model.Productora;
 //import pe.edu.pucp.eventmastersoft.model.TipoEvento;
 import java.sql.Types;
 import pe.edu.pucp.FarmaSoft.Medicina.Model.MedicinaGeneral;
 import pe.edu.pucp.FarmaSoft.Medicina.DAO.MedicinaGeneralDAO;
-import pe.edu.pucp.FarmaSoft.Medicina.DAO.MedicinaPropiaDAO;
+import pe.edu.pucp.FarmaSoft.Medicina.DAO.TipoMedicamentoDAO;
+import pe.edu.pucp.FarmaSoft.Medicina.Model.TipoMedicamento;
 
 public class MedicinaGeneralMySQL implements MedicinaGeneralDAO{
 
     private ResultSet rs;
     private int rsi;
+    private final TipoMedicamentoDAO daoTipoMed = new TipoMedicamentoMySQL();
     
     @Override 
     public int insertar(MedicinaGeneral medicinaGeneral) { 
         HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
         parametrosEntrada.put("idi", medicinaGeneral.getID()); 
         parametrosEntrada.put("nombre", medicinaGeneral.getNombre()); 
-        parametrosEntrada.put("tipo_medicamento", medicinaGeneral.getTipoMedicamento());
+        parametrosEntrada.put("id_TipoMedicamento", medicinaGeneral.getTipoMedicamento());
 
         //HashMap<String,Object> parametrosSalida = new HashMap<>(); 
         //parametrosSalida.put("_id_evento", Types.INTEGER); 
@@ -33,7 +34,28 @@ public class MedicinaGeneralMySQL implements MedicinaGeneralDAO{
                 parametrosEntrada,null); 
         //return (int) parametrosSalida.get("_id_evento"); 
         return rsi;
-    } 
+    }
+    
+    @Override
+    public ArrayList<MedicinaGeneral> listarTodas() {
+        ArrayList<MedicinaGeneral> medicinas = new ArrayList<>();
+        rs = DBManager.getInstance().ejecutarProcedimientoLectura("listar_medicinas_generales", null);
+        try{ 
+            while(rs.next()){ 
+                MedicinaGeneral medicina = new MedicinaGeneral();
+                
+                medicina.setID(rs.getString("ID"));
+                medicina.setNombre(rs.getString("nombre"));
+                TipoMedicamento tipoMed = daoTipoMed.obtenerPorId(rs.getInt("ID_TipoMedicamento"));
+                medicina.setTipoMedicamento(tipoMed);
+                
+                medicinas.add(medicina);
+            } 
+        }catch(SQLException ex){ 
+            System.out.println("Error leyendo datos: " + ex.getMessage()); 
+        } 
+        return medicinas;
+    }
 
 //    @Override 
 //    public ArrayList<MedicinaPropia> listarPorNombre(String nombre) { 

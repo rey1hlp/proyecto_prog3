@@ -16,8 +16,7 @@ public class FarmaciaAsociadaMySQL implements FarmaciaAsociadaDAO{
     //en rs y rsi se guardaran los resultados de las consultas a la base de datos
     private ResultSet rs;
     private int rsi;
-    private FarmaciaAsociadaDAO daoFarmaciaAsociada;
-    private DireccionDAO daoDireccion;
+    private final DireccionDAO daoDireccion = new DireccionMySQL();
     
     @Override 
     public ArrayList<FarmaciaAsociada> listarTodas() { 
@@ -29,7 +28,7 @@ public class FarmaciaAsociadaMySQL implements FarmaciaAsociadaDAO{
                 
                 farmacia.setID(rs.getInt("ID"));
                 farmacia.setNombre(rs.getString("nombre"));
-                daoDireccion = new DireccionMySQL();
+                
                 Direccion direccion = daoDireccion.obtenerPorId(rs.getInt("ID_Direccion"));
                 farmacia.setDireccion(direccion);
                 farmacia.setTelefono(rs.getInt("telefono"));

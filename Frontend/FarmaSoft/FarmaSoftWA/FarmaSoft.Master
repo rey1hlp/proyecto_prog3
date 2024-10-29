@@ -32,7 +32,7 @@
             <ul class="mynav nav nav-pills flex-column mb-auto">
                 <li class="nav-item mb-1">
                     <!-- IRA A LA PAGINA GENERAR PEDIDO X DEFAULT -->
-                    <a href="ListarSolicitudes.aspx" class="navbar-text-color fw-bolder"><i class="fa-solid fa-calendar-days pe-2 navbar-text-color"></i>Clickeame 7u7</a>
+                    <a href="ListarSolicitudes.aspx" class="navbar-text-color fw-bolder"><i class="fa-solid fa-calendar-days pe-2 navbar-text-color"></i>Atención de Solicitudes</a>
                 </li>
             </ul>
             <hr>

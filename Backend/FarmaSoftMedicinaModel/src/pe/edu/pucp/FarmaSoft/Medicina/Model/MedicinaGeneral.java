@@ -2,7 +2,7 @@ package pe.edu.pucp.FarmaSoft.Medicina.Model;
 
 //import pe.edu.pucp.FarmaSoft.Util.Model.IConsultable;
 
-public abstract class MedicinaGeneral implements IConsultable {
+public class MedicinaGeneral implements IConsultable {
     private String ID;
     private String nombre;
     private TipoMedicamento tipoMedicamento;
