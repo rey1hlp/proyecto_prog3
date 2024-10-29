@@ -25,3 +25,11 @@ replay_pid*
 
 # para la prog distribuida
 *.xml
+/Backend/FarmaSoftDA/dist/
+/Backend/FarmaSoftMedicinaDA/nbproject/private/
+/Backend/FarmaSoftMedicinaDA/build/
+/Backend/FarmaSoftMedicinaDA/dist/
+/Backend/FarmaSoftAtencionPedidosModel/dist/
+/Backend/FarmaSoftUsuarioDA/dist/
+/Backend/FarmaSoftWS/build/
+/Backend/FarmaSoftWS/dist/

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.FarmaSoft.pucp.edu.pe" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="MedicinaPropiaWS" targetNamespace="http://services.FarmaSoft.pucp.edu.pe" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:32309/FarmaSoftWS/MedicinaPropiaWS?xsd=1" namespace="http://services.FarmaSoft.pucp.edu.pe" />
+    </xsd:schema>
+  </types>
+  <message name="listarTodasMedicinasPropias">
+    <part name="parameters" element="tns:listarTodasMedicinasPropias" />
+  </message>
+  <message name="listarTodasMedicinasPropiasResponse">
+    <part name="parameters" element="tns:listarTodasMedicinasPropiasResponse" />
+  </message>
+  <message name="insertarMedicinaPropia">
+    <part name="parameters" element="tns:insertarMedicinaPropia" />
+  </message>
+  <message name="insertarMedicinaPropiaResponse">
+    <part name="parameters" element="tns:insertarMedicinaPropiaResponse" />
+  </message>
+  <portType name="MedicinaPropiaWS">
+    <operation name="listarTodasMedicinasPropias">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropiasRequest" message="tns:listarTodasMedicinasPropias" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/listarTodasMedicinasPropiasResponse" message="tns:listarTodasMedicinasPropiasResponse" />
+    </operation>
+    <operation name="insertarMedicinaPropia">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/insertarMedicinaPropiaRequest" message="tns:insertarMedicinaPropia" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/MedicinaPropiaWS/insertarMedicinaPropiaResponse" message="tns:insertarMedicinaPropiaResponse" />
+    </operation>
+  </portType>
+  <binding name="MedicinaPropiaWSPortBinding" type="tns:MedicinaPropiaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarTodasMedicinasPropias">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarMedicinaPropia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="MedicinaPropiaWS">
+    <port name="MedicinaPropiaWSPort" binding="tns:MedicinaPropiaWSPortBinding">
+      <soap:address location="http://localhost:32309/FarmaSoftWS/MedicinaPropiaWS" />
+    </port>
+  </service>
+</definitions>

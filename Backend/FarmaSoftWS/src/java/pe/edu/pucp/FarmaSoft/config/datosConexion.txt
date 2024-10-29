@@ -1,0 +1,5 @@
+hostname=pruebas.cwv00fcmltns.us-east-1.rds.amazonaws.com
+user=admin
+password=pruebas123
+port=3306
+database=farmasoftdb

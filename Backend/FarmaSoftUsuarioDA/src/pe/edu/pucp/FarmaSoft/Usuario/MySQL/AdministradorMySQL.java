@@ -41,7 +41,7 @@ public class AdministradorMySQL implements AdministradorDAO {
     
     @Override
     public Administrador obtenerPorDni(int dni) {
-        Administrador admin = new Administrador();
+        Administrador admin = null;
         
         HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
         parametrosEntrada.put("_dni_admin", dni); 
@@ -49,7 +49,8 @@ public class AdministradorMySQL implements AdministradorDAO {
                 parametrosEntrada);
         
         try {
-            if(rs.next()) {
+            if(rs!=null && rs.next()) {
+                admin = new Administrador();
                 admin.setDNI(rs.getInt("DNI"));
                 admin.setPassword(rs.getString("contrasena"));
                 admin.setNombre(rs.getString("nombre"));

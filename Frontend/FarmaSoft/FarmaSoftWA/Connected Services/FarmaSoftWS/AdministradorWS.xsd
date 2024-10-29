@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.FarmaSoft.pucp.edu.pe" targetNamespace="http://services.FarmaSoft.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarAdministrador" type="tns:actualizarAdministrador" />
+  <xs:element name="actualizarAdministradorResponse" type="tns:actualizarAdministradorResponse" />
+  <xs:element name="darDeAltaAdministradores" type="tns:darDeAltaAdministradores" />
+  <xs:element name="darDeAltaAdministradoresResponse" type="tns:darDeAltaAdministradoresResponse" />
+  <xs:element name="darDeBajaAdministradores" type="tns:darDeBajaAdministradores" />
+  <xs:element name="darDeBajaAdministradoresResponse" type="tns:darDeBajaAdministradoresResponse" />
+  <xs:element name="eliminarAdministrador" type="tns:eliminarAdministrador" />
+  <xs:element name="eliminarAdministradorResponse" type="tns:eliminarAdministradorResponse" />
+  <xs:element name="insertarAdministrador" type="tns:insertarAdministrador" />
+  <xs:element name="insertarAdministradorResponse" type="tns:insertarAdministradorResponse" />
+  <xs:element name="obtenerAdministradorPorDni" type="tns:obtenerAdministradorPorDni" />
+  <xs:element name="obtenerAdministradorPorDniResponse" type="tns:obtenerAdministradorPorDniResponse" />
+  <xs:complexType name="darDeBajaAdministradores">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaDniAdmins" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="darDeBajaAdministradoresResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerAdministradorPorDni">
+    <xs:sequence>
+      <xs:element name="dni_admin" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerAdministradorPorDniResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="administrador">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="empleados" nillable="true" type="tns:empleado" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element name="telefono" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="empleado">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuario">
+        <xs:sequence>
+          <xs:element name="DNIJefe" type="xs:int" />
+          <xs:element minOccurs="0" name="jefe" type="tns:administrador" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="actualizarAdministrador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="admin" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarAdministradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAdministrador">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="admin" type="tns:administrador" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAdministradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAdministrador">
+    <xs:sequence>
+      <xs:element name="dni_admin" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAdministradorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="darDeAltaAdministradores">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaDniAdmins" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="darDeAltaAdministradoresResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

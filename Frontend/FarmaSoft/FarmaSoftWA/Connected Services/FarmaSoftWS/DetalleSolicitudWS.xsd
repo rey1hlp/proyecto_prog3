@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.FarmaSoft.pucp.edu.pe" targetNamespace="http://services.FarmaSoft.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="insertarDetalleSolicitud" type="tns:insertarDetalleSolicitud" />
+  <xs:element name="insertarDetalleSolicitudResponse" type="tns:insertarDetalleSolicitudResponse" />
+  <xs:element name="listarTodosDetalleSolicitud" type="tns:listarTodosDetalleSolicitud" />
+  <xs:element name="listarTodosDetalleSolicitudResponse" type="tns:listarTodosDetalleSolicitudResponse" />
+  <xs:complexType name="insertarDetalleSolicitud">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="insertarDetalleSolicitudResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosDetalleSolicitud">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosDetalleSolicitudResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:detalleSolicitud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detalleSolicitud">
+    <xs:sequence>
+      <xs:element name="cantidadPedida" type="xs:int" />
+      <xs:element minOccurs="0" name="medicina" type="tns:medicinaGeneral" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicinaGeneral" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoMedicamento" type="tns:tipoMedicamento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipoMedicamento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ANALGESICOS" />
+      <xs:enumeration value="ANTIBIOTICO" />
+      <xs:enumeration value="ANTIVIRAL" />
+      <xs:enumeration value="ANTIFUNGICO" />
+      <xs:enumeration value="ANTIHISTAMINICO" />
+      <xs:enumeration value="ANTIDEPRESIVO" />
+      <xs:enumeration value="VITAMINAS_Y_SUPLEMENTOS" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

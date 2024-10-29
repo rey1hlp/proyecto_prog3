@@ -1,0 +1,402 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CA81A759-8E85-4330-8D37-B20135AB5062}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FarmaSoftWA</RootNamespace>
+    <AssemblyName>FarmaSoftWA</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CompletarDireccionEnvio.aspx" />
+    <None Include="Connected Services\FarmaSoftWS\archivo.disco" />
+    <None Include="Connected Services\FarmaSoftWS\configuration91.svcinfo" />
+    <None Include="Connected Services\FarmaSoftWS\configuration.svcinfo" />
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.actualizarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.administrador.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.detalleSolicitud.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.eliminarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarAdministradorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarDetalleSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarMedicinaPropiaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarPagoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarPedidoPropioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasPropiasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodasSolicitudesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodosDetalleSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodosPagosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.medicinaPropia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.obtenerAdministradorPorDniResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.obtenerPagoPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.obtenerPedidoPropioPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.obtenerSolicitudPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.pago.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.pedidoPropio.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.solicitud.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\FarmaSoftWS\EmpleadoWS.wsdl" />
+    <None Include="Connected Services\FarmaSoftWS\EmpleadoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FarmaSoftWS\FarmaciaAsociadaWS.wsdl" />
+    <None Include="Connected Services\FarmaSoftWS\FarmaciaAsociadaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.actualizarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.darDeBajaEmpleadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.empleado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.farmaciaAsociada.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodasFarmaciasAsociadasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\FarmaSoftWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Fonts\css\all.css" />
+    <Content Include="Content\Fonts\css\all.min.css" />
+    <Content Include="Content\Fonts\css\brands.css" />
+    <Content Include="Content\Fonts\css\brands.min.css" />
+    <Content Include="Content\Fonts\css\duotone.css" />
+    <Content Include="Content\Fonts\css\duotone.min.css" />
+    <Content Include="Content\Fonts\css\fontawesome.css" />
+    <Content Include="Content\Fonts\css\fontawesome.min.css" />
+    <Content Include="Content\Fonts\css\light.css" />
+    <Content Include="Content\Fonts\css\light.min.css" />
+    <Content Include="Content\Fonts\css\regular.css" />
+    <Content Include="Content\Fonts\css\regular.min.css" />
+    <Content Include="Content\Fonts\css\solid.css" />
+    <Content Include="Content\Fonts\css\solid.min.css" />
+    <Content Include="Content\Fonts\css\svg-with-js.css" />
+    <Content Include="Content\Fonts\css\svg-with-js.min.css" />
+    <Content Include="Content\Fonts\css\thin.css" />
+    <Content Include="Content\Fonts\css\thin.min.css" />
+    <Content Include="Content\Fonts\css\v4-font-face.css" />
+    <Content Include="Content\Fonts\css\v4-font-face.min.css" />
+    <Content Include="Content\Fonts\css\v4-shims.css" />
+    <Content Include="Content\Fonts\css\v4-shims.min.css" />
+    <Content Include="Content\Fonts\css\v5-font-face.css" />
+    <Content Include="Content\Fonts\css\v5-font-face.min.css" />
+    <Content Include="Content\site.css" />
+    <Content Include="GenerarPedidoProvincia.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="Images\placeholder.jpg" />
+    <Content Include="Images\pucp.png" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="FarmaSoft.Master" />
+    <Content Include="Content\Fonts\webfonts\fa-brands-400.ttf" />
+    <Content Include="Content\Fonts\webfonts\fa-brands-400.woff" />
+    <Content Include="Content\Fonts\webfonts\fa-brands-400.woff2" />
+    <Content Include="Content\Fonts\webfonts\fa-duotone-900.ttf" />
+    <Content Include="Content\Fonts\webfonts\fa-duotone-900.woff" />
+    <Content Include="Content\Fonts\webfonts\fa-duotone-900.woff2" />
+    <Content Include="Content\Fonts\webfonts\fa-light-300.ttf" />
+    <Content Include="Content\Fonts\webfonts\fa-light-300.woff" />
+    <Content Include="Content\Fonts\webfonts\fa-light-300.woff2" />
+    <Content Include="Content\Fonts\webfonts\fa-regular-400.ttf" />
+    <Content Include="Content\Fonts\webfonts\fa-regular-400.woff" />
+    <Content Include="Content\Fonts\webfonts\fa-regular-400.woff2" />
+    <Content Include="Content\Fonts\webfonts\fa-solid-900.ttf" />
+    <Content Include="Content\Fonts\webfonts\fa-solid-900.woff" />
+    <Content Include="Content\Fonts\webfonts\fa-solid-900.woff2" />
+    <Content Include="Content\Fonts\webfonts\fa-thin-100.ttf" />
+    <Content Include="Content\Fonts\webfonts\fa-thin-100.woff" />
+    <Content Include="Content\Fonts\webfonts\fa-thin-100.woff2" />
+    <Content Include="Content\Fonts\webfonts\fa-v4compatibility.ttf" />
+    <Content Include="Content\Fonts\webfonts\fa-v4compatibility.woff2" />
+    <None Include="Connected Services\FarmaSoftWS\AdministradorWS.wsdl" />
+    <None Include="Connected Services\FarmaSoftWS\AdministradorWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FarmaSoftWS\DetalleSolicitudWS.wsdl" />
+    <None Include="Connected Services\FarmaSoftWS\DetalleSolicitudWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FarmaSoftWS\MedicinaPropiaWS.wsdl" />
+    <None Include="Connected Services\FarmaSoftWS\MedicinaPropiaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FarmaSoftWS\PagoWS.wsdl" />
+    <None Include="Connected Services\FarmaSoftWS\PagoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FarmaSoftWS\PedidoPropioWS.wsdl" />
+    <None Include="Connected Services\FarmaSoftWS\PedidoPropioWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FarmaSoftWS\SolicitudWS.wsdl" />
+    <None Include="Connected Services\FarmaSoftWS\SolicitudWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.7.1.js" />
+    <Content Include="Scripts\jquery-3.7.1.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.js" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <Content Include="Scripts\site.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CompletarDireccionEnvio.aspx.cs">
+      <DependentUpon>CompletarDireccionEnvio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompletarDireccionEnvio.aspx.designer.cs">
+      <DependentUpon>CompletarDireccionEnvio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\FarmaSoftWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="FarmaSoft.Master.cs">
+      <DependentUpon>FarmaSoft.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FarmaSoft.Master.designer.cs">
+      <DependentUpon>FarmaSoft.Master</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarPedidoProvincia.aspx.cs">
+      <DependentUpon>GenerarPedidoProvincia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenerarPedidoProvincia.aspx.designer.cs">
+      <DependentUpon>GenerarPedidoProvincia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.7.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.7.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\FarmaSoftWS\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52634</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52634/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -52,7 +52,7 @@ public class EmpleadoMySQL implements EmpleadoDAO {
                 parametrosEntrada);
         
         try {
-            if(rs.next()) {
+            if(rs!=null && rs.next()) {
                 empleado = obtenerInstanciaDeModelo(RolEmpleado.valueOf(rs.getString("rol")));
                 empleado.setDNI(rs.getInt("DNI"));
                 

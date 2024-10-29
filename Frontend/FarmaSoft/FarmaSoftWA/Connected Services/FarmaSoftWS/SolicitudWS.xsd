@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.FarmaSoft.pucp.edu.pe" targetNamespace="http://services.FarmaSoft.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="insertarSolicitud" type="tns:insertarSolicitud" />
+  <xs:element name="insertarSolicitudResponse" type="tns:insertarSolicitudResponse" />
+  <xs:element name="listarTodasSolicitudes" type="tns:listarTodasSolicitudes" />
+  <xs:element name="listarTodasSolicitudesResponse" type="tns:listarTodasSolicitudesResponse" />
+  <xs:element name="obtenerSolicitudPorId" type="tns:obtenerSolicitudPorId" />
+  <xs:element name="obtenerSolicitudPorIdResponse" type="tns:obtenerSolicitudPorIdResponse" />
+  <xs:complexType name="obtenerSolicitudPorId">
+    <xs:sequence>
+      <xs:element name="idSolicitud" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerSolicitudPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:solicitud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="solicitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cliente" type="tns:cliente" />
+      <xs:element name="completado" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="detallesSolicitud" nillable="true" type="tns:detalleSolicitud" />
+      <xs:element minOccurs="0" name="estado" type="tns:estadoSolicitud" />
+      <xs:element minOccurs="0" name="farmaciaAsociada" type="tns:farmaciaAsociada" />
+      <xs:element minOccurs="0" name="fechayhoraCreacion" type="xs:dateTime" />
+      <xs:element name="generaPedido" type="xs:boolean" />
+      <xs:element name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="intermediario" type="tns:usuario" />
+      <xs:element minOccurs="0" name="receptor" type="tns:usuario" />
+      <xs:element minOccurs="0" name="recetaMedica" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element name="completado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="correoContacto" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+      <xs:element name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="numDocumento" type="xs:int" />
+      <xs:element minOccurs="0" name="poliza" type="tns:poliza" />
+      <xs:element name="telefonoContacto" type="xs:int" />
+      <xs:element name="tienePoliza" type="xs:boolean" />
+      <xs:element minOccurs="0" name="tipoDocumento" type="tns:tipoDocumento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="poliza">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aseguradora" type="xs:string" />
+      <xs:element name="coberturaMaxima" type="xs:double" />
+      <xs:element name="codigo" type="xs:int" />
+      <xs:element name="esValida" type="xs:boolean" />
+      <xs:element minOccurs="0" name="fechaEmision" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaVencimiento" type="xs:dateTime" />
+      <xs:element name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
+      <xs:element name="porcentajeCobertura" type="xs:double" />
+      <xs:element minOccurs="0" name="tipoSeguro" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="detalleSolicitud">
+    <xs:sequence>
+      <xs:element name="cantidadPedida" type="xs:int" />
+      <xs:element minOccurs="0" name="medicina" type="tns:medicinaGeneral" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="medicinaGeneral" abstract="true">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="tipoMedicamento" type="tns:tipoMedicamento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="farmaciaAsociada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="tns:direccion" />
+      <xs:element name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="telefono" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="direccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="calle" type="xs:string" />
+      <xs:element name="completado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="departamento" type="tns:departamento" />
+      <xs:element minOccurs="0" name="distrito" type="xs:string" />
+      <xs:element name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="provincia" type="xs:string" />
+      <xs:element minOccurs="0" name="referencia" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apellidoMaterno" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
+      <xs:element name="estado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element name="telefono" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarSolicitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="solicitud" type="tns:solicitud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarSolicitudResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodasSolicitudes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasSolicitudesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:solicitud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="tipoDocumento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DNI" />
+      <xs:enumeration value="CE" />
+      <xs:enumeration value="PASAPORTE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoMedicamento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ANALGESICOS" />
+      <xs:enumeration value="ANTIBIOTICO" />
+      <xs:enumeration value="ANTIVIRAL" />
+      <xs:enumeration value="ANTIFUNGICO" />
+      <xs:enumeration value="ANTIHISTAMINICO" />
+      <xs:enumeration value="ANTIDEPRESIVO" />
+      <xs:enumeration value="VITAMINAS_Y_SUPLEMENTOS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="estadoSolicitud">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PENDIENTE" />
+      <xs:enumeration value="EN_ATENCION" />
+      <xs:enumeration value="DESCARTADA" />
+      <xs:enumeration value="A_PROPIA" />
+      <xs:enumeration value="A_ASOCIADA" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="departamento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AMAZONAS" />
+      <xs:enumeration value="ANCASH" />
+      <xs:enumeration value="APURIMAC" />
+      <xs:enumeration value="AREQUIPA" />
+      <xs:enumeration value="AYACUCHO" />
+      <xs:enumeration value="CAJAMARCA" />
+      <xs:enumeration value="CUSCO" />
+      <xs:enumeration value="HUANCAVELICA" />
+      <xs:enumeration value="HUANUCO" />
+      <xs:enumeration value="ICA" />
+      <xs:enumeration value="JUNIN" />
+      <xs:enumeration value="LA_LIBERTAD" />
+      <xs:enumeration value="LAMBAYEQUE" />
+      <xs:enumeration value="LIMA_Y_CALLAO" />
+      <xs:enumeration value="LORETO" />
+      <xs:enumeration value="MADRE_DE_DIOS" />
+      <xs:enumeration value="MOQUEGUA" />
+      <xs:enumeration value="PASCO" />
+      <xs:enumeration value="PIURA" />
+      <xs:enumeration value="PUNO" />
+      <xs:enumeration value="SAN_MARTIN" />
+      <xs:enumeration value="TACNA" />
+      <xs:enumeration value="TUMBES" />
+      <xs:enumeration value="UCAYALI" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

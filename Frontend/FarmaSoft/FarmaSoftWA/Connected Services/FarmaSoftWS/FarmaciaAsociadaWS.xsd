@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.FarmaSoft.pucp.edu.pe" targetNamespace="http://services.FarmaSoft.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="listarTodasFarmaciasAsociadas" type="tns:listarTodasFarmaciasAsociadas" />
+  <xs:element name="listarTodasFarmaciasAsociadasResponse" type="tns:listarTodasFarmaciasAsociadasResponse" />
+  <xs:complexType name="listarTodasFarmaciasAsociadas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodasFarmaciasAsociadasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:farmaciaAsociada" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="farmaciaAsociada">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="correo" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="tns:direccion" />
+      <xs:element name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element name="telefono" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="direccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="calle" type="xs:string" />
+      <xs:element name="completado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="departamento" type="tns:departamento" />
+      <xs:element minOccurs="0" name="distrito" type="xs:string" />
+      <xs:element name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="provincia" type="xs:string" />
+      <xs:element minOccurs="0" name="referencia" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="departamento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AMAZONAS" />
+      <xs:enumeration value="ANCASH" />
+      <xs:enumeration value="APURIMAC" />
+      <xs:enumeration value="AREQUIPA" />
+      <xs:enumeration value="AYACUCHO" />
+      <xs:enumeration value="CAJAMARCA" />
+      <xs:enumeration value="CUSCO" />
+      <xs:enumeration value="HUANCAVELICA" />
+      <xs:enumeration value="HUANUCO" />
+      <xs:enumeration value="ICA" />
+      <xs:enumeration value="JUNIN" />
+      <xs:enumeration value="LA_LIBERTAD" />
+      <xs:enumeration value="LAMBAYEQUE" />
+      <xs:enumeration value="LIMA_Y_CALLAO" />
+      <xs:enumeration value="LORETO" />
+      <xs:enumeration value="MADRE_DE_DIOS" />
+      <xs:enumeration value="MOQUEGUA" />
+      <xs:enumeration value="PASCO" />
+      <xs:enumeration value="PIURA" />
+      <xs:enumeration value="PUNO" />
+      <xs:enumeration value="SAN_MARTIN" />
+      <xs:enumeration value="TACNA" />
+      <xs:enumeration value="TUMBES" />
+      <xs:enumeration value="UCAYALI" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

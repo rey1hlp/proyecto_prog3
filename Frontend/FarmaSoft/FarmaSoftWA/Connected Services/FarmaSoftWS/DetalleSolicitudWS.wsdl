@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.FarmaSoft.pucp.edu.pe" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="DetalleSolicitudWS" targetNamespace="http://services.FarmaSoft.pucp.edu.pe" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:32309/FarmaSoftWS/DetalleSolicitudWS?xsd=1" namespace="http://services.FarmaSoft.pucp.edu.pe" />
+    </xsd:schema>
+  </types>
+  <message name="listarTodosDetalleSolicitud">
+    <part name="parameters" element="tns:listarTodosDetalleSolicitud" />
+  </message>
+  <message name="listarTodosDetalleSolicitudResponse">
+    <part name="parameters" element="tns:listarTodosDetalleSolicitudResponse" />
+  </message>
+  <message name="insertarDetalleSolicitud">
+    <part name="parameters" element="tns:insertarDetalleSolicitud" />
+  </message>
+  <message name="insertarDetalleSolicitudResponse">
+    <part name="parameters" element="tns:insertarDetalleSolicitudResponse" />
+  </message>
+  <portType name="DetalleSolicitudWS">
+    <operation name="listarTodosDetalleSolicitud">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/DetalleSolicitudWS/listarTodosDetalleSolicitudRequest" message="tns:listarTodosDetalleSolicitud" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/DetalleSolicitudWS/listarTodosDetalleSolicitudResponse" message="tns:listarTodosDetalleSolicitudResponse" />
+    </operation>
+    <operation name="insertarDetalleSolicitud">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/DetalleSolicitudWS/insertarDetalleSolicitudRequest" message="tns:insertarDetalleSolicitud" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/DetalleSolicitudWS/insertarDetalleSolicitudResponse" message="tns:insertarDetalleSolicitudResponse" />
+    </operation>
+  </portType>
+  <binding name="DetalleSolicitudWSPortBinding" type="tns:DetalleSolicitudWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarTodosDetalleSolicitud">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarDetalleSolicitud">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DetalleSolicitudWS">
+    <port name="DetalleSolicitudWSPort" binding="tns:DetalleSolicitudWSPortBinding">
+      <soap:address location="http://localhost:32309/FarmaSoftWS/DetalleSolicitudWS" />
+    </port>
+  </service>
+</definitions>

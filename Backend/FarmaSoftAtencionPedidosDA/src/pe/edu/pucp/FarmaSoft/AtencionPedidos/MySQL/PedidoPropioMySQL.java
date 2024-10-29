@@ -65,13 +65,14 @@ public class PedidoPropioMySQL implements PedidoPropioDAO{
 
     @Override
     public PedidoPropio obtenerPorId(int idPedidoPropio) {
-        PedidoPropio pedidoPropio = new PedidoPropio();  
+        PedidoPropio pedidoPropio = null;  
         HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
         parametrosEntrada.put("p_id", idPedidoPropio); 
         rs = DBManager.getInstance().ejecutarProcedimientoLectura("obtenerPorId_pedido_propio", 
     parametrosEntrada); 
         try{ 
-            if(rs.next()){  
+            if(rs!=null && rs.next()){  
+                pedidoPropio = new PedidoPropio();
                 pedidoPropio.setID(rs.getInt("ID"));
                 Solicitud solicitud = new Solicitud();
                 solicitud.setID(rs.getInt("ID_Solicitud"));

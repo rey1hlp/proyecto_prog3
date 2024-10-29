@@ -78,13 +78,14 @@ public class SolicitudMySQL implements SolicitudDAO{
 
     @Override
     public Solicitud obtenerPorId(int idSolicitud) {
-        Solicitud solicitud = new Solicitud();  
+        Solicitud solicitud = null;  
         HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
         parametrosEntrada.put("p_id", idSolicitud); 
         rs = DBManager.getInstance().ejecutarProcedimientoLectura("obtenerPorId_solicitud", 
     parametrosEntrada); 
         try{ 
-            if(rs.next()){  
+            if(rs != null && rs.next()){
+                solicitud = new Solicitud();
                 solicitud.setID(rs.getInt("ID"));
                 solicitud.setFechayhoraCreacion(rs.getDate("fechaYHoraCreacion"));
                 solicitud.setEstado(EstadoSolicitud.valueOf(rs.getString("estado")));

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost:32309/FarmaSoftWS/AdministradorWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <contractRef ref="http://localhost:32309/FarmaSoftWS/DetalleSolicitudWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <contractRef ref="http://localhost:32309/FarmaSoftWS/EmpleadoWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <contractRef ref="http://localhost:32309/FarmaSoftWS/FarmaciaAsociadaWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <contractRef ref="http://localhost:32309/FarmaSoftWS/MedicinaPropiaWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <contractRef ref="http://localhost:32309/FarmaSoftWS/PagoWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <contractRef ref="http://localhost:32309/FarmaSoftWS/PedidoPropioWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <contractRef ref="http://localhost:32309/FarmaSoftWS/SolicitudWS?WSDL" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+</discovery>
