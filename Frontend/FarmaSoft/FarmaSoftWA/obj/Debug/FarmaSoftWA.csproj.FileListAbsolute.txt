@@ -12,8 +12,6 @@ C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\FarmaSoftFinal\Frontend\FarmaSoft
 C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\FarmaSoftFinal\Frontend\FarmaSoft\FarmaSoftWA\bin\EventMasterSoftWA.dll.config
 C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\FarmaSoftFinal\Frontend\FarmaSoft\FarmaSoftWA\bin\EventMasterSoftWA.dll
 C:\Users\REYNALDO\OneDrive\Escritorio\EXAMENES\FarmaSoftFinal\Frontend\FarmaSoft\FarmaSoftWA\bin\EventMasterSoftWA.pdb
-D:\CarpetasPUCP\6to_Ciclo\PROG3\FarmaSoft\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.csproj.AssemblyReference.cache
-D:\CarpetasPUCP\6to_Ciclo\PROG3\FarmaSoft\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.csproj.CoreCompileInputs.cache
 C:\Users\there\Downloads\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.csproj.AssemblyReference.cache
 C:\Users\there\Downloads\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.csproj.CoreCompileInputs.cache
 C:\Users\there\Downloads\FarmaSoft\FarmaSoftWA\bin\FarmaSoftWA.dll.config
@@ -24,5 +22,7 @@ C:\Users\there\Downloads\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.pdb
 D:\CarpetasPUCP\6to_Ciclo\PROG3\FarmaSoft\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\bin\FarmaSoftWA.dll.config
 D:\CarpetasPUCP\6to_Ciclo\PROG3\FarmaSoft\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\bin\FarmaSoftWA.dll
 D:\CarpetasPUCP\6to_Ciclo\PROG3\FarmaSoft\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\bin\FarmaSoftWA.pdb
+D:\CarpetasPUCP\6to_Ciclo\PROG3\FarmaSoft\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.csproj.AssemblyReference.cache
+D:\CarpetasPUCP\6to_Ciclo\PROG3\FarmaSoft\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.csproj.CoreCompileInputs.cache
 D:\CarpetasPUCP\6to_Ciclo\PROG3\FarmaSoft\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.dll
 D:\CarpetasPUCP\6to_Ciclo\PROG3\FarmaSoft\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.pdb

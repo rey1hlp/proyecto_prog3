@@ -223,6 +223,7 @@
     <Content Include="Content\Fonts\css\v5-font-face.css" />
     <Content Include="Content\Fonts\css\v5-font-face.min.css" />
     <Content Include="Content\site.css" />
+    <Content Include="GenerarPedidoLima.aspx" />
     <Content Include="GenerarPedidoProvincia.aspx" />
     <Content Include="Home.aspx" />
     <Content Include="Images\placeholder.jpg" />
@@ -305,6 +306,13 @@
     </Compile>
     <Compile Include="FarmaSoft.Master.designer.cs">
       <DependentUpon>FarmaSoft.Master</DependentUpon>
+    </Compile>
+    <Compile Include="GenerarPedidoLima.aspx.cs">
+      <DependentUpon>GenerarPedidoLima.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenerarPedidoLima.aspx.designer.cs">
+      <DependentUpon>GenerarPedidoLima.aspx</DependentUpon>
     </Compile>
     <Compile Include="GenerarPedidoProvincia.aspx.cs">
       <DependentUpon>GenerarPedidoProvincia.aspx</DependentUpon>

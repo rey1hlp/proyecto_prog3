@@ -22,21 +22,17 @@
 <body>
     <asp:ContentPlaceHolder ID="cphScripts" runat="server">
     </asp:ContentPlaceHolder>
-    <style>
-        .custom-bg {
-            background-color: #86B6F6 !important; /* Usa !important para asegurar la prioridad */
-        }
-    </style>
-    <div class="container-fluid d-flex p-0 h-100 custom-bg">
+    <div class="container-fluid d-flex p-0 h-100">
         <!--Menu Lateral-->
-        <div id="bdSidebar" class="d-flex flex-column flex-shrink-0 p-3  text-white offcanvas-md offcanvas-start">
+        <div id="bdSidebar" class="menu-bg d-flex flex-column flex-shrink-0 p-3  text-white offcanvas-md offcanvas-start">
             <a href="#" class="navbar-brand">
                 <img src="Images/pucp.png" width="150" />
             </a>
             <hr>
             <ul class="mynav nav nav-pills flex-column mb-auto">
                 <li class="nav-item mb-1">
-                    <a href="GenerarPedidoProvincia.aspx"><i class="fa-solid fa-calendar-days pe-2"></i>Eventos</a>
+                    <!-- IRA A LA PAGINA GENERAR PEDIDO X DEFAULT -->
+                    <a href="GenerarPedidoProvincia.aspx" class="navbar-text-color fw-bolder"><i class="fa-solid fa-calendar-days pe-2 navbar-text-color"></i>Clickeame 7u7</a>
                 </li>
             </ul>
             <hr>
@@ -55,20 +51,20 @@
                 <img src="Images/pucp.png" class="ms-3" width="75">
             </div>
             <!-- Barra de Usuario -->
-            <nav class="navbar navbar-dark bg-primary">
+            <nav class="navbar navbar-dark top-menu-bg">
                 <div class="container-fluid">
-                    <a class="navbar-brand d-sm-none d-md-block d-none d-sm-block">Software del Curso de Prog. 3</a>
+                    <a class="navbar-brand d-sm-none d-md-block d-none d-sm-block navbar-text-color">Software del Curso de Prog. 3</a>
                     <form class="d-flex">
                         <div class="dropdown ps-3">
-                            <button class="btn btn-outline-light dropdown-toggle"
+                            <button class="btn custom-btn-outline dropdown-toggle"
                                 id="btnUsuario" data-bs-toggle="dropdown" type="button"
                                 aria-expanded="false">
                                 <i class="fas fa-user me-2"></i>Juan Perez
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="btnUsuario">
-                                <li><a class="dropdown-item" href="#">Perfil</a></li>
-                                <li><a class="dropdown-item" href="#">Cambiar Contraseña</a></li>
-                                <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                                <li><a class="dropdown-item navbar-text-color" href="#">Perfil</a></li>
+                                <li><a class="dropdown-item navbar-text-color" href="#">Cambiar Contraseña</a></li>
+                                <li><a class="dropdown-item navbar-text-color" href="#">Cerrar Sesión</a></li>
                             </ul>
                         </div>
                     </form>

@@ -88,7 +88,7 @@
 }
 
 
-/*css de label progress bar:*/
+/css de label progress bar:/
 .progressContainer {
     width: 100%;
     background-color: #ddd;
@@ -104,6 +104,39 @@
     line-height: 30px;
 }
 
-.custom-bg {
+.menu-bg {
     background-color: #86B6F6 !important; /* Usa !important para asegurar la prioridad */
+}
+
+.top-menu-bg {
+    background-color: #B4D4FF !important; /* Usa !important para asegurar la prioridad */
+}
+
+.navbar-text-color {
+    color: #176B87 !important; /* Cambia #333333 al color que prefieras */
+}
+
+.custom-btn-outline {
+    border-color: #176B87 !important; /* Color del contorno */
+    color: #176B87 !important; /* Color del texto */
+}
+
+    /* Efecto hover */
+    .custom-btn-outline:hover {
+        background-color: #86B6F6 !important; /* Color de fondo al hacer hover */
+        color: #176B87 !important; /* Color de texto en hover */
+        border-color: #86B6F6 !important; /* Asegura que el borde se mantenga en hover */
+    }
+
+.form-check-label {
+    margin-left: 5px; /* Ajusta este valor según sea necesario */
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    margin-right: 10px; /* Ajusta este valor según sea necesario */
 }
