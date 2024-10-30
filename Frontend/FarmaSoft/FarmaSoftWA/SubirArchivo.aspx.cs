@@ -21,7 +21,7 @@ namespace FarmaSoftWA
 
         protected void lbContinuar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CompletarDIreccionEnvio.aspx");
+            Response.Redirect("AgregarMedicinasGenericas.aspx");
         }
     }
 }

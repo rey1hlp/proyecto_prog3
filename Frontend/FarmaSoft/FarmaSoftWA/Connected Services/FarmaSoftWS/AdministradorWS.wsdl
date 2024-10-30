@@ -11,11 +11,11 @@
   <message name="insertarAdministradorResponse">
     <part name="parameters" element="tns:insertarAdministradorResponse" />
   </message>
-  <message name="darDeAltaAdministradores">
-    <part name="parameters" element="tns:darDeAltaAdministradores" />
+  <message name="darDeBajaAdministradores">
+    <part name="parameters" element="tns:darDeBajaAdministradores" />
   </message>
-  <message name="darDeAltaAdministradoresResponse">
-    <part name="parameters" element="tns:darDeAltaAdministradoresResponse" />
+  <message name="darDeBajaAdministradoresResponse">
+    <part name="parameters" element="tns:darDeBajaAdministradoresResponse" />
   </message>
   <message name="actualizarAdministrador">
     <part name="parameters" element="tns:actualizarAdministrador" />
@@ -29,26 +29,26 @@
   <message name="obtenerAdministradorPorDniResponse">
     <part name="parameters" element="tns:obtenerAdministradorPorDniResponse" />
   </message>
+  <message name="darDeAltaAdministradores">
+    <part name="parameters" element="tns:darDeAltaAdministradores" />
+  </message>
+  <message name="darDeAltaAdministradoresResponse">
+    <part name="parameters" element="tns:darDeAltaAdministradoresResponse" />
+  </message>
   <message name="eliminarAdministrador">
     <part name="parameters" element="tns:eliminarAdministrador" />
   </message>
   <message name="eliminarAdministradorResponse">
     <part name="parameters" element="tns:eliminarAdministradorResponse" />
   </message>
-  <message name="darDeBajaAdministradores">
-    <part name="parameters" element="tns:darDeBajaAdministradores" />
-  </message>
-  <message name="darDeBajaAdministradoresResponse">
-    <part name="parameters" element="tns:darDeBajaAdministradoresResponse" />
-  </message>
   <portType name="AdministradorWS">
     <operation name="insertarAdministrador">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/insertarAdministradorRequest" message="tns:insertarAdministrador" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/insertarAdministradorResponse" message="tns:insertarAdministradorResponse" />
     </operation>
-    <operation name="darDeAltaAdministradores">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeAltaAdministradoresRequest" message="tns:darDeAltaAdministradores" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeAltaAdministradoresResponse" message="tns:darDeAltaAdministradoresResponse" />
+    <operation name="darDeBajaAdministradores">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeBajaAdministradoresRequest" message="tns:darDeBajaAdministradores" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeBajaAdministradoresResponse" message="tns:darDeBajaAdministradoresResponse" />
     </operation>
     <operation name="actualizarAdministrador">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/actualizarAdministradorRequest" message="tns:actualizarAdministrador" />
@@ -58,13 +58,13 @@
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/obtenerAdministradorPorDniRequest" message="tns:obtenerAdministradorPorDni" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/obtenerAdministradorPorDniResponse" message="tns:obtenerAdministradorPorDniResponse" />
     </operation>
+    <operation name="darDeAltaAdministradores">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeAltaAdministradoresRequest" message="tns:darDeAltaAdministradores" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeAltaAdministradoresResponse" message="tns:darDeAltaAdministradoresResponse" />
+    </operation>
     <operation name="eliminarAdministrador">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/eliminarAdministradorRequest" message="tns:eliminarAdministrador" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/eliminarAdministradorResponse" message="tns:eliminarAdministradorResponse" />
-    </operation>
-    <operation name="darDeBajaAdministradores">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeBajaAdministradoresRequest" message="tns:darDeBajaAdministradores" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeBajaAdministradoresResponse" message="tns:darDeBajaAdministradoresResponse" />
     </operation>
   </portType>
   <binding name="AdministradorWSPortBinding" type="tns:AdministradorWS">
@@ -78,7 +78,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="darDeAltaAdministradores">
+    <operation name="darDeBajaAdministradores">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -105,7 +105,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarAdministrador">
+    <operation name="darDeAltaAdministradores">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -114,7 +114,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="darDeBajaAdministradores">
+    <operation name="eliminarAdministrador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

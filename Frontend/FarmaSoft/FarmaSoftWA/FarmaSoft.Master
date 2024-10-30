@@ -34,6 +34,14 @@
                     <!-- IRA A LA PAGINA GENERAR PEDIDO X DEFAULT -->
                     <a href="ListarSolicitudes.aspx" class="navbar-text-color fw-bolder"><i class="fa-solid fa-calendar-days pe-2 navbar-text-color"></i>Atención de Solicitudes</a>
                 </li>
+                <li class="nav-item mb-1">
+                    <!-- IRA A LA PAGINA GENERAR REPORTES DE SOLICITUDES -->
+                    <a href="#" class="navbar-text-color fw-bolder"><i class="fa-solid fa-file-pdf pe-2 navbar-text-color" aria-hidden="true"></i>Reportes de solicitudes</a>
+                </li>
+                <li class="nav-item mb-1">
+                    <!-- IRA A LA PAGINA GENERAR REPORTES DE VENTAS -->
+                    <a href="#" class="navbar-text-color fw-bolder"><i class="fa-solid fa-file-pdf pe-2 navbar-text-color" aria-hidden="true"></i>Reportes de ventas</a>
+                </li>
             </ul>
             <hr>
             <div class="d-flex">

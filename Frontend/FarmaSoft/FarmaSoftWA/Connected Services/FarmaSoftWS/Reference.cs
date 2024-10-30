@@ -2049,17 +2049,17 @@ namespace FarmaSoftWA.FarmaSoftWS {
         System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarAdministradorResponse> insertarAdministradorAsync(FarmaSoftWA.FarmaSoftWS.insertarAdministradorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeAltaAdministradoresReq" +
-            "uest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeAltaAdministradoresRes" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeBajaAdministradoresReq" +
+            "uest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeBajaAdministradoresRes" +
             "ponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse darDeAltaAdministradores(FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest request);
+        FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse darDeBajaAdministradores(FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeAltaAdministradoresReq" +
-            "uest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeAltaAdministradoresRes" +
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeBajaAdministradoresReq" +
+            "uest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeBajaAdministradoresRes" +
             "ponse")]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse> darDeAltaAdministradoresAsync(FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest request);
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse> darDeBajaAdministradoresAsync(FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/actualizarAdministradorRequ" +
@@ -2088,6 +2088,19 @@ namespace FarmaSoftWA.FarmaSoftWS {
         System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.obtenerAdministradorPorDniResponse> obtenerAdministradorPorDniAsync(FarmaSoftWA.FarmaSoftWS.obtenerAdministradorPorDniRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeAltaAdministradoresReq" +
+            "uest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeAltaAdministradoresRes" +
+            "ponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse darDeAltaAdministradores(FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeAltaAdministradoresReq" +
+            "uest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeAltaAdministradoresRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse> darDeAltaAdministradoresAsync(FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/eliminarAdministradorReques" +
             "t", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/eliminarAdministradorRespon" +
             "se")]
@@ -2099,19 +2112,6 @@ namespace FarmaSoftWA.FarmaSoftWS {
             "t", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/eliminarAdministradorRespon" +
             "se")]
         System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.eliminarAdministradorResponse> eliminarAdministradorAsync(FarmaSoftWA.FarmaSoftWS.eliminarAdministradorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeBajaAdministradoresReq" +
-            "uest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeBajaAdministradoresRes" +
-            "ponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse darDeBajaAdministradores(FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeBajaAdministradoresReq" +
-            "uest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/AdministradorWS/darDeBajaAdministradoresRes" +
-            "ponse")]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse> darDeBajaAdministradoresAsync(FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2153,17 +2153,17 @@ namespace FarmaSoftWA.FarmaSoftWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="darDeAltaAdministradores", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class darDeAltaAdministradoresRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="darDeBajaAdministradores", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class darDeBajaAdministradoresRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("listaDniAdmins", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int[] listaDniAdmins;
         
-        public darDeAltaAdministradoresRequest() {
+        public darDeBajaAdministradoresRequest() {
         }
         
-        public darDeAltaAdministradoresRequest(int[] listaDniAdmins) {
+        public darDeBajaAdministradoresRequest(int[] listaDniAdmins) {
             this.listaDniAdmins = listaDniAdmins;
         }
     }
@@ -2171,17 +2171,17 @@ namespace FarmaSoftWA.FarmaSoftWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="darDeAltaAdministradoresResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class darDeAltaAdministradoresResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="darDeBajaAdministradoresResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class darDeBajaAdministradoresResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public darDeAltaAdministradoresResponse() {
+        public darDeBajaAdministradoresResponse() {
         }
         
-        public darDeAltaAdministradoresResponse(int @return) {
+        public darDeBajaAdministradoresResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -2261,6 +2261,42 @@ namespace FarmaSoftWA.FarmaSoftWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="darDeAltaAdministradores", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class darDeAltaAdministradoresRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("listaDniAdmins", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int[] listaDniAdmins;
+        
+        public darDeAltaAdministradoresRequest() {
+        }
+        
+        public darDeAltaAdministradoresRequest(int[] listaDniAdmins) {
+            this.listaDniAdmins = listaDniAdmins;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="darDeAltaAdministradoresResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class darDeAltaAdministradoresResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public darDeAltaAdministradoresResponse() {
+        }
+        
+        public darDeAltaAdministradoresResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAdministrador", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
     public partial class eliminarAdministradorRequest {
         
@@ -2290,42 +2326,6 @@ namespace FarmaSoftWA.FarmaSoftWS {
         }
         
         public eliminarAdministradorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="darDeBajaAdministradores", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class darDeBajaAdministradoresRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("listaDniAdmins", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int[] listaDniAdmins;
-        
-        public darDeBajaAdministradoresRequest() {
-        }
-        
-        public darDeBajaAdministradoresRequest(int[] listaDniAdmins) {
-            this.listaDniAdmins = listaDniAdmins;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="darDeBajaAdministradoresResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class darDeBajaAdministradoresResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public darDeBajaAdministradoresResponse() {
-        }
-        
-        public darDeBajaAdministradoresResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -2381,26 +2381,26 @@ namespace FarmaSoftWA.FarmaSoftWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse FarmaSoftWA.FarmaSoftWS.AdministradorWS.darDeAltaAdministradores(FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest request) {
-            return base.Channel.darDeAltaAdministradores(request);
+        FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse FarmaSoftWA.FarmaSoftWS.AdministradorWS.darDeBajaAdministradores(FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest request) {
+            return base.Channel.darDeBajaAdministradores(request);
         }
         
-        public int darDeAltaAdministradores(int[] listaDniAdmins) {
-            FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest inValue = new FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest();
+        public int darDeBajaAdministradores(int[] listaDniAdmins) {
+            FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest inValue = new FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest();
             inValue.listaDniAdmins = listaDniAdmins;
-            FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse retVal = ((FarmaSoftWA.FarmaSoftWS.AdministradorWS)(this)).darDeAltaAdministradores(inValue);
+            FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse retVal = ((FarmaSoftWA.FarmaSoftWS.AdministradorWS)(this)).darDeBajaAdministradores(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse> FarmaSoftWA.FarmaSoftWS.AdministradorWS.darDeAltaAdministradoresAsync(FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest request) {
-            return base.Channel.darDeAltaAdministradoresAsync(request);
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse> FarmaSoftWA.FarmaSoftWS.AdministradorWS.darDeBajaAdministradoresAsync(FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest request) {
+            return base.Channel.darDeBajaAdministradoresAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse> darDeAltaAdministradoresAsync(int[] listaDniAdmins) {
-            FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest inValue = new FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest();
+        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse> darDeBajaAdministradoresAsync(int[] listaDniAdmins) {
+            FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest inValue = new FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest();
             inValue.listaDniAdmins = listaDniAdmins;
-            return ((FarmaSoftWA.FarmaSoftWS.AdministradorWS)(this)).darDeAltaAdministradoresAsync(inValue);
+            return ((FarmaSoftWA.FarmaSoftWS.AdministradorWS)(this)).darDeBajaAdministradoresAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2450,6 +2450,29 @@ namespace FarmaSoftWA.FarmaSoftWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse FarmaSoftWA.FarmaSoftWS.AdministradorWS.darDeAltaAdministradores(FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest request) {
+            return base.Channel.darDeAltaAdministradores(request);
+        }
+        
+        public int darDeAltaAdministradores(int[] listaDniAdmins) {
+            FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest inValue = new FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest();
+            inValue.listaDniAdmins = listaDniAdmins;
+            FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse retVal = ((FarmaSoftWA.FarmaSoftWS.AdministradorWS)(this)).darDeAltaAdministradores(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse> FarmaSoftWA.FarmaSoftWS.AdministradorWS.darDeAltaAdministradoresAsync(FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest request) {
+            return base.Channel.darDeAltaAdministradoresAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse> darDeAltaAdministradoresAsync(int[] listaDniAdmins) {
+            FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest inValue = new FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresRequest();
+            inValue.listaDniAdmins = listaDniAdmins;
+            return ((FarmaSoftWA.FarmaSoftWS.AdministradorWS)(this)).darDeAltaAdministradoresAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FarmaSoftWA.FarmaSoftWS.eliminarAdministradorResponse FarmaSoftWA.FarmaSoftWS.AdministradorWS.eliminarAdministrador(FarmaSoftWA.FarmaSoftWS.eliminarAdministradorRequest request) {
             return base.Channel.eliminarAdministrador(request);
         }
@@ -2470,29 +2493,6 @@ namespace FarmaSoftWA.FarmaSoftWS {
             FarmaSoftWA.FarmaSoftWS.eliminarAdministradorRequest inValue = new FarmaSoftWA.FarmaSoftWS.eliminarAdministradorRequest();
             inValue.dni_admin = dni_admin;
             return ((FarmaSoftWA.FarmaSoftWS.AdministradorWS)(this)).eliminarAdministradorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse FarmaSoftWA.FarmaSoftWS.AdministradorWS.darDeBajaAdministradores(FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest request) {
-            return base.Channel.darDeBajaAdministradores(request);
-        }
-        
-        public int darDeBajaAdministradores(int[] listaDniAdmins) {
-            FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest inValue = new FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest();
-            inValue.listaDniAdmins = listaDniAdmins;
-            FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse retVal = ((FarmaSoftWA.FarmaSoftWS.AdministradorWS)(this)).darDeBajaAdministradores(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse> FarmaSoftWA.FarmaSoftWS.AdministradorWS.darDeBajaAdministradoresAsync(FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest request) {
-            return base.Channel.darDeBajaAdministradoresAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse> darDeBajaAdministradoresAsync(int[] listaDniAdmins) {
-            FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest inValue = new FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresRequest();
-            inValue.listaDniAdmins = listaDniAdmins;
-            return ((FarmaSoftWA.FarmaSoftWS.AdministradorWS)(this)).darDeBajaAdministradoresAsync(inValue);
         }
     }
     
@@ -2658,6 +2658,15 @@ namespace FarmaSoftWA.FarmaSoftWS {
     public interface SolicitudWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse insertarSolicitud(FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudResponse")]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse> insertarSolicitudAsync(FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/listarTodasSolicitudesRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/listarTodasSolicitudesResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -2674,15 +2683,42 @@ namespace FarmaSoftWA.FarmaSoftWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/obtenerSolicitudPorIdRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/obtenerSolicitudPorIdResponse")]
         System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.obtenerSolicitudPorIdResponse> obtenerSolicitudPorIdAsync(FarmaSoftWA.FarmaSoftWS.obtenerSolicitudPorIdRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarSolicitud", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarSolicitudRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse insertarSolicitud(FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FarmaSoftWA.FarmaSoftWS.solicitud solicitud;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudResponse")]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse> insertarSolicitudAsync(FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest request);
+        public insertarSolicitudRequest() {
+        }
+        
+        public insertarSolicitudRequest(FarmaSoftWA.FarmaSoftWS.solicitud solicitud) {
+            this.solicitud = solicitud;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarSolicitudResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarSolicitudResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarSolicitudResponse() {
+        }
+        
+        public insertarSolicitudResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2749,42 +2785,6 @@ namespace FarmaSoftWA.FarmaSoftWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarSolicitud", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarSolicitudRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FarmaSoftWA.FarmaSoftWS.solicitud solicitud;
-        
-        public insertarSolicitudRequest() {
-        }
-        
-        public insertarSolicitudRequest(FarmaSoftWA.FarmaSoftWS.solicitud solicitud) {
-            this.solicitud = solicitud;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarSolicitudResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarSolicitudResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarSolicitudResponse() {
-        }
-        
-        public insertarSolicitudResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface SolicitudWSChannel : FarmaSoftWA.FarmaSoftWS.SolicitudWS, System.ServiceModel.IClientChannel {
     }
@@ -2810,6 +2810,29 @@ namespace FarmaSoftWA.FarmaSoftWS {
         
         public SolicitudWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse FarmaSoftWA.FarmaSoftWS.SolicitudWS.insertarSolicitud(FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest request) {
+            return base.Channel.insertarSolicitud(request);
+        }
+        
+        public int insertarSolicitud(FarmaSoftWA.FarmaSoftWS.solicitud solicitud) {
+            FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest inValue = new FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest();
+            inValue.solicitud = solicitud;
+            FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse retVal = ((FarmaSoftWA.FarmaSoftWS.SolicitudWS)(this)).insertarSolicitud(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse> FarmaSoftWA.FarmaSoftWS.SolicitudWS.insertarSolicitudAsync(FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest request) {
+            return base.Channel.insertarSolicitudAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse> insertarSolicitudAsync(FarmaSoftWA.FarmaSoftWS.solicitud solicitud) {
+            FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest inValue = new FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest();
+            inValue.solicitud = solicitud;
+            return ((FarmaSoftWA.FarmaSoftWS.SolicitudWS)(this)).insertarSolicitudAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2854,29 +2877,6 @@ namespace FarmaSoftWA.FarmaSoftWS {
             FarmaSoftWA.FarmaSoftWS.obtenerSolicitudPorIdRequest inValue = new FarmaSoftWA.FarmaSoftWS.obtenerSolicitudPorIdRequest();
             inValue.idSolicitud = idSolicitud;
             return ((FarmaSoftWA.FarmaSoftWS.SolicitudWS)(this)).obtenerSolicitudPorIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse FarmaSoftWA.FarmaSoftWS.SolicitudWS.insertarSolicitud(FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest request) {
-            return base.Channel.insertarSolicitud(request);
-        }
-        
-        public int insertarSolicitud(FarmaSoftWA.FarmaSoftWS.solicitud solicitud) {
-            FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest inValue = new FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest();
-            inValue.solicitud = solicitud;
-            FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse retVal = ((FarmaSoftWA.FarmaSoftWS.SolicitudWS)(this)).insertarSolicitud(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse> FarmaSoftWA.FarmaSoftWS.SolicitudWS.insertarSolicitudAsync(FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest request) {
-            return base.Channel.insertarSolicitudAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse> insertarSolicitudAsync(FarmaSoftWA.FarmaSoftWS.solicitud solicitud) {
-            FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest inValue = new FarmaSoftWA.FarmaSoftWS.insertarSolicitudRequest();
-            inValue.solicitud = solicitud;
-            return ((FarmaSoftWA.FarmaSoftWS.SolicitudWS)(this)).insertarSolicitudAsync(inValue);
         }
     }
     
@@ -3075,13 +3075,22 @@ namespace FarmaSoftWA.FarmaSoftWS {
     public interface EmpleadoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoPorDniRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoPorDniResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/insertarEmpleadoRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/insertarEmpleadoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse obtenerEmpleadoPorDni(FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest request);
+        FarmaSoftWA.FarmaSoftWS.insertarEmpleadoResponse insertarEmpleado(FarmaSoftWA.FarmaSoftWS.insertarEmpleadoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoPorDniRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoPorDniResponse")]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse> obtenerEmpleadoPorDniAsync(FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/insertarEmpleadoRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/insertarEmpleadoResponse")]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarEmpleadoResponse> insertarEmpleadoAsync(FarmaSoftWA.FarmaSoftWS.insertarEmpleadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/darDeBajaEmpleadosRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/darDeBajaEmpleadosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FarmaSoftWA.FarmaSoftWS.darDeBajaEmpleadosResponse darDeBajaEmpleados(FarmaSoftWA.FarmaSoftWS.darDeBajaEmpleadosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/darDeBajaEmpleadosRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/darDeBajaEmpleadosResponse")]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeBajaEmpleadosResponse> darDeBajaEmpleadosAsync(FarmaSoftWA.FarmaSoftWS.darDeBajaEmpleadosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/eliminarEmpleadoRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/eliminarEmpleadoResponse")]
@@ -3102,24 +3111,6 @@ namespace FarmaSoftWA.FarmaSoftWS {
         System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosResponse> darDeAltaEmpleadosAsync(FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/insertarEmpleadoRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/insertarEmpleadoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FarmaSoftWA.FarmaSoftWS.insertarEmpleadoResponse insertarEmpleado(FarmaSoftWA.FarmaSoftWS.insertarEmpleadoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/insertarEmpleadoRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/insertarEmpleadoResponse")]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarEmpleadoResponse> insertarEmpleadoAsync(FarmaSoftWA.FarmaSoftWS.insertarEmpleadoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/darDeBajaEmpleadosRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/darDeBajaEmpleadosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FarmaSoftWA.FarmaSoftWS.darDeBajaEmpleadosResponse darDeBajaEmpleados(FarmaSoftWA.FarmaSoftWS.darDeBajaEmpleadosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/darDeBajaEmpleadosRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/darDeBajaEmpleadosResponse")]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeBajaEmpleadosResponse> darDeBajaEmpleadosAsync(FarmaSoftWA.FarmaSoftWS.darDeBajaEmpleadosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/actualizarEmpleadoRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/actualizarEmpleadoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -3127,40 +3118,85 @@ namespace FarmaSoftWA.FarmaSoftWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/actualizarEmpleadoRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/actualizarEmpleadoResponse")]
         System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.actualizarEmpleadoResponse> actualizarEmpleadoAsync(FarmaSoftWA.FarmaSoftWS.actualizarEmpleadoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoPorDniRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoPorDniResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse obtenerEmpleadoPorDni(FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoPorDniRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoPorDniResponse")]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse> obtenerEmpleadoPorDniAsync(FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerEmpleadoPorDni", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerEmpleadoPorDniRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEmpleado", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarEmpleadoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int dni_emp;
+        public FarmaSoftWA.FarmaSoftWS.empleado emp;
         
-        public obtenerEmpleadoPorDniRequest() {
+        public insertarEmpleadoRequest() {
         }
         
-        public obtenerEmpleadoPorDniRequest(int dni_emp) {
-            this.dni_emp = dni_emp;
+        public insertarEmpleadoRequest(FarmaSoftWA.FarmaSoftWS.empleado emp) {
+            this.emp = emp;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerEmpleadoPorDniResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerEmpleadoPorDniResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEmpleadoResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarEmpleadoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FarmaSoftWA.FarmaSoftWS.empleado @return;
+        public int @return;
         
-        public obtenerEmpleadoPorDniResponse() {
+        public insertarEmpleadoResponse() {
         }
         
-        public obtenerEmpleadoPorDniResponse(FarmaSoftWA.FarmaSoftWS.empleado @return) {
+        public insertarEmpleadoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="darDeBajaEmpleados", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class darDeBajaEmpleadosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("listaDniEmp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int[] listaDniEmp;
+        
+        public darDeBajaEmpleadosRequest() {
+        }
+        
+        public darDeBajaEmpleadosRequest(int[] listaDniEmp) {
+            this.listaDniEmp = listaDniEmp;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="darDeBajaEmpleadosResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class darDeBajaEmpleadosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public darDeBajaEmpleadosResponse() {
+        }
+        
+        public darDeBajaEmpleadosResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3240,78 +3276,6 @@ namespace FarmaSoftWA.FarmaSoftWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEmpleado", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarEmpleadoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FarmaSoftWA.FarmaSoftWS.empleado emp;
-        
-        public insertarEmpleadoRequest() {
-        }
-        
-        public insertarEmpleadoRequest(FarmaSoftWA.FarmaSoftWS.empleado emp) {
-            this.emp = emp;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarEmpleadoResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarEmpleadoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarEmpleadoResponse() {
-        }
-        
-        public insertarEmpleadoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="darDeBajaEmpleados", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class darDeBajaEmpleadosRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("listaDniEmp", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int[] listaDniEmp;
-        
-        public darDeBajaEmpleadosRequest() {
-        }
-        
-        public darDeBajaEmpleadosRequest(int[] listaDniEmp) {
-            this.listaDniEmp = listaDniEmp;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="darDeBajaEmpleadosResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class darDeBajaEmpleadosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public darDeBajaEmpleadosResponse() {
-        }
-        
-        public darDeBajaEmpleadosResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEmpleado", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
     public partial class actualizarEmpleadoRequest {
         
@@ -3345,6 +3309,42 @@ namespace FarmaSoftWA.FarmaSoftWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerEmpleadoPorDni", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerEmpleadoPorDniRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int dni_emp;
+        
+        public obtenerEmpleadoPorDniRequest() {
+        }
+        
+        public obtenerEmpleadoPorDniRequest(int dni_emp) {
+            this.dni_emp = dni_emp;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerEmpleadoPorDniResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerEmpleadoPorDniResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FarmaSoftWA.FarmaSoftWS.empleado @return;
+        
+        public obtenerEmpleadoPorDniResponse() {
+        }
+        
+        public obtenerEmpleadoPorDniResponse(FarmaSoftWA.FarmaSoftWS.empleado @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface EmpleadoWSChannel : FarmaSoftWA.FarmaSoftWS.EmpleadoWS, System.ServiceModel.IClientChannel {
     }
@@ -3370,75 +3370,6 @@ namespace FarmaSoftWA.FarmaSoftWS {
         
         public EmpleadoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse FarmaSoftWA.FarmaSoftWS.EmpleadoWS.obtenerEmpleadoPorDni(FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest request) {
-            return base.Channel.obtenerEmpleadoPorDni(request);
-        }
-        
-        public FarmaSoftWA.FarmaSoftWS.empleado obtenerEmpleadoPorDni(int dni_emp) {
-            FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest inValue = new FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest();
-            inValue.dni_emp = dni_emp;
-            FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse retVal = ((FarmaSoftWA.FarmaSoftWS.EmpleadoWS)(this)).obtenerEmpleadoPorDni(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse> FarmaSoftWA.FarmaSoftWS.EmpleadoWS.obtenerEmpleadoPorDniAsync(FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest request) {
-            return base.Channel.obtenerEmpleadoPorDniAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse> obtenerEmpleadoPorDniAsync(int dni_emp) {
-            FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest inValue = new FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest();
-            inValue.dni_emp = dni_emp;
-            return ((FarmaSoftWA.FarmaSoftWS.EmpleadoWS)(this)).obtenerEmpleadoPorDniAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoResponse FarmaSoftWA.FarmaSoftWS.EmpleadoWS.eliminarEmpleado(FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoRequest request) {
-            return base.Channel.eliminarEmpleado(request);
-        }
-        
-        public int eliminarEmpleado(int dni_emp) {
-            FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoRequest inValue = new FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoRequest();
-            inValue.dni_emp = dni_emp;
-            FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoResponse retVal = ((FarmaSoftWA.FarmaSoftWS.EmpleadoWS)(this)).eliminarEmpleado(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoResponse> FarmaSoftWA.FarmaSoftWS.EmpleadoWS.eliminarEmpleadoAsync(FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoRequest request) {
-            return base.Channel.eliminarEmpleadoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoResponse> eliminarEmpleadoAsync(int dni_emp) {
-            FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoRequest inValue = new FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoRequest();
-            inValue.dni_emp = dni_emp;
-            return ((FarmaSoftWA.FarmaSoftWS.EmpleadoWS)(this)).eliminarEmpleadoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosResponse FarmaSoftWA.FarmaSoftWS.EmpleadoWS.darDeAltaEmpleados(FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosRequest request) {
-            return base.Channel.darDeAltaEmpleados(request);
-        }
-        
-        public int darDeAltaEmpleados(int[] listaDniEmp) {
-            FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosRequest inValue = new FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosRequest();
-            inValue.listaDniEmp = listaDniEmp;
-            FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosResponse retVal = ((FarmaSoftWA.FarmaSoftWS.EmpleadoWS)(this)).darDeAltaEmpleados(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosResponse> FarmaSoftWA.FarmaSoftWS.EmpleadoWS.darDeAltaEmpleadosAsync(FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosRequest request) {
-            return base.Channel.darDeAltaEmpleadosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosResponse> darDeAltaEmpleadosAsync(int[] listaDniEmp) {
-            FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosRequest inValue = new FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosRequest();
-            inValue.listaDniEmp = listaDniEmp;
-            return ((FarmaSoftWA.FarmaSoftWS.EmpleadoWS)(this)).darDeAltaEmpleadosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3488,6 +3419,52 @@ namespace FarmaSoftWA.FarmaSoftWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoResponse FarmaSoftWA.FarmaSoftWS.EmpleadoWS.eliminarEmpleado(FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoRequest request) {
+            return base.Channel.eliminarEmpleado(request);
+        }
+        
+        public int eliminarEmpleado(int dni_emp) {
+            FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoRequest inValue = new FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoRequest();
+            inValue.dni_emp = dni_emp;
+            FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoResponse retVal = ((FarmaSoftWA.FarmaSoftWS.EmpleadoWS)(this)).eliminarEmpleado(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoResponse> FarmaSoftWA.FarmaSoftWS.EmpleadoWS.eliminarEmpleadoAsync(FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoRequest request) {
+            return base.Channel.eliminarEmpleadoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoResponse> eliminarEmpleadoAsync(int dni_emp) {
+            FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoRequest inValue = new FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoRequest();
+            inValue.dni_emp = dni_emp;
+            return ((FarmaSoftWA.FarmaSoftWS.EmpleadoWS)(this)).eliminarEmpleadoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosResponse FarmaSoftWA.FarmaSoftWS.EmpleadoWS.darDeAltaEmpleados(FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosRequest request) {
+            return base.Channel.darDeAltaEmpleados(request);
+        }
+        
+        public int darDeAltaEmpleados(int[] listaDniEmp) {
+            FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosRequest inValue = new FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosRequest();
+            inValue.listaDniEmp = listaDniEmp;
+            FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosResponse retVal = ((FarmaSoftWA.FarmaSoftWS.EmpleadoWS)(this)).darDeAltaEmpleados(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosResponse> FarmaSoftWA.FarmaSoftWS.EmpleadoWS.darDeAltaEmpleadosAsync(FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosRequest request) {
+            return base.Channel.darDeAltaEmpleadosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosResponse> darDeAltaEmpleadosAsync(int[] listaDniEmp) {
+            FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosRequest inValue = new FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosRequest();
+            inValue.listaDniEmp = listaDniEmp;
+            return ((FarmaSoftWA.FarmaSoftWS.EmpleadoWS)(this)).darDeAltaEmpleadosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         FarmaSoftWA.FarmaSoftWS.actualizarEmpleadoResponse FarmaSoftWA.FarmaSoftWS.EmpleadoWS.actualizarEmpleado(FarmaSoftWA.FarmaSoftWS.actualizarEmpleadoRequest request) {
             return base.Channel.actualizarEmpleado(request);
         }
@@ -3509,6 +3486,29 @@ namespace FarmaSoftWA.FarmaSoftWS {
             inValue.emp = emp;
             return ((FarmaSoftWA.FarmaSoftWS.EmpleadoWS)(this)).actualizarEmpleadoAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse FarmaSoftWA.FarmaSoftWS.EmpleadoWS.obtenerEmpleadoPorDni(FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest request) {
+            return base.Channel.obtenerEmpleadoPorDni(request);
+        }
+        
+        public FarmaSoftWA.FarmaSoftWS.empleado obtenerEmpleadoPorDni(int dni_emp) {
+            FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest inValue = new FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest();
+            inValue.dni_emp = dni_emp;
+            FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse retVal = ((FarmaSoftWA.FarmaSoftWS.EmpleadoWS)(this)).obtenerEmpleadoPorDni(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse> FarmaSoftWA.FarmaSoftWS.EmpleadoWS.obtenerEmpleadoPorDniAsync(FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest request) {
+            return base.Channel.obtenerEmpleadoPorDniAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse> obtenerEmpleadoPorDniAsync(int dni_emp) {
+            FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest inValue = new FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniRequest();
+            inValue.dni_emp = dni_emp;
+            return ((FarmaSoftWA.FarmaSoftWS.EmpleadoWS)(this)).obtenerEmpleadoPorDniAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -3516,13 +3516,13 @@ namespace FarmaSoftWA.FarmaSoftWS {
     public interface PagoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/insertarPagoRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PagoWS/insertarPagoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/listarTodosPagosRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PagoWS/listarTodosPagosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FarmaSoftWA.FarmaSoftWS.insertarPagoResponse insertarPago(FarmaSoftWA.FarmaSoftWS.insertarPagoRequest request);
+        FarmaSoftWA.FarmaSoftWS.listarTodosPagosResponse listarTodosPagos(FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/insertarPagoRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PagoWS/insertarPagoResponse")]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarPagoResponse> insertarPagoAsync(FarmaSoftWA.FarmaSoftWS.insertarPagoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/listarTodosPagosRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PagoWS/listarTodosPagosResponse")]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosPagosResponse> listarTodosPagosAsync(FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/obtenerPagoPorIdRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PagoWS/obtenerPagoPorIdResponse")]
@@ -3534,47 +3534,39 @@ namespace FarmaSoftWA.FarmaSoftWS {
         System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.obtenerPagoPorIdResponse> obtenerPagoPorIdAsync(FarmaSoftWA.FarmaSoftWS.obtenerPagoPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/listarTodosPagosRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PagoWS/listarTodosPagosResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/insertarPagoRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PagoWS/insertarPagoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FarmaSoftWA.FarmaSoftWS.listarTodosPagosResponse listarTodosPagos(FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest request);
+        FarmaSoftWA.FarmaSoftWS.insertarPagoResponse insertarPago(FarmaSoftWA.FarmaSoftWS.insertarPagoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/listarTodosPagosRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PagoWS/listarTodosPagosResponse")]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosPagosResponse> listarTodosPagosAsync(FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PagoWS/insertarPagoRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PagoWS/insertarPagoResponse")]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarPagoResponse> insertarPagoAsync(FarmaSoftWA.FarmaSoftWS.insertarPagoRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPago", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarPagoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPagos", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosPagosRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FarmaSoftWA.FarmaSoftWS.pago pago;
-        
-        public insertarPagoRequest() {
-        }
-        
-        public insertarPagoRequest(FarmaSoftWA.FarmaSoftWS.pago pago) {
-            this.pago = pago;
+        public listarTodosPagosRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPagoResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarPagoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPagosResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosPagosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FarmaSoftWA.FarmaSoftWS.pago[] @return;
         
-        public insertarPagoResponse() {
+        public listarTodosPagosResponse() {
         }
         
-        public insertarPagoResponse(int @return) {
+        public listarTodosPagosResponse(FarmaSoftWA.FarmaSoftWS.pago[] @return) {
             this.@return = @return;
         }
     }
@@ -3618,27 +3610,35 @@ namespace FarmaSoftWA.FarmaSoftWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPagos", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosPagosRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPago", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarPagoRequest {
         
-        public listarTodosPagosRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FarmaSoftWA.FarmaSoftWS.pago pago;
+        
+        public insertarPagoRequest() {
+        }
+        
+        public insertarPagoRequest(FarmaSoftWA.FarmaSoftWS.pago pago) {
+            this.pago = pago;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPagosResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosPagosResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarPagoResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarPagoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FarmaSoftWA.FarmaSoftWS.pago[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarTodosPagosResponse() {
+        public insertarPagoResponse() {
         }
         
-        public listarTodosPagosResponse(FarmaSoftWA.FarmaSoftWS.pago[] @return) {
+        public insertarPagoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3671,26 +3671,24 @@ namespace FarmaSoftWA.FarmaSoftWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FarmaSoftWA.FarmaSoftWS.insertarPagoResponse FarmaSoftWA.FarmaSoftWS.PagoWS.insertarPago(FarmaSoftWA.FarmaSoftWS.insertarPagoRequest request) {
-            return base.Channel.insertarPago(request);
+        FarmaSoftWA.FarmaSoftWS.listarTodosPagosResponse FarmaSoftWA.FarmaSoftWS.PagoWS.listarTodosPagos(FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest request) {
+            return base.Channel.listarTodosPagos(request);
         }
         
-        public int insertarPago(FarmaSoftWA.FarmaSoftWS.pago pago) {
-            FarmaSoftWA.FarmaSoftWS.insertarPagoRequest inValue = new FarmaSoftWA.FarmaSoftWS.insertarPagoRequest();
-            inValue.pago = pago;
-            FarmaSoftWA.FarmaSoftWS.insertarPagoResponse retVal = ((FarmaSoftWA.FarmaSoftWS.PagoWS)(this)).insertarPago(inValue);
+        public FarmaSoftWA.FarmaSoftWS.pago[] listarTodosPagos() {
+            FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest();
+            FarmaSoftWA.FarmaSoftWS.listarTodosPagosResponse retVal = ((FarmaSoftWA.FarmaSoftWS.PagoWS)(this)).listarTodosPagos(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarPagoResponse> FarmaSoftWA.FarmaSoftWS.PagoWS.insertarPagoAsync(FarmaSoftWA.FarmaSoftWS.insertarPagoRequest request) {
-            return base.Channel.insertarPagoAsync(request);
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosPagosResponse> FarmaSoftWA.FarmaSoftWS.PagoWS.listarTodosPagosAsync(FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest request) {
+            return base.Channel.listarTodosPagosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarPagoResponse> insertarPagoAsync(FarmaSoftWA.FarmaSoftWS.pago pago) {
-            FarmaSoftWA.FarmaSoftWS.insertarPagoRequest inValue = new FarmaSoftWA.FarmaSoftWS.insertarPagoRequest();
-            inValue.pago = pago;
-            return ((FarmaSoftWA.FarmaSoftWS.PagoWS)(this)).insertarPagoAsync(inValue);
+        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosPagosResponse> listarTodosPagosAsync() {
+            FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest();
+            return ((FarmaSoftWA.FarmaSoftWS.PagoWS)(this)).listarTodosPagosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3717,43 +3715,32 @@ namespace FarmaSoftWA.FarmaSoftWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FarmaSoftWA.FarmaSoftWS.listarTodosPagosResponse FarmaSoftWA.FarmaSoftWS.PagoWS.listarTodosPagos(FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest request) {
-            return base.Channel.listarTodosPagos(request);
+        FarmaSoftWA.FarmaSoftWS.insertarPagoResponse FarmaSoftWA.FarmaSoftWS.PagoWS.insertarPago(FarmaSoftWA.FarmaSoftWS.insertarPagoRequest request) {
+            return base.Channel.insertarPago(request);
         }
         
-        public FarmaSoftWA.FarmaSoftWS.pago[] listarTodosPagos() {
-            FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest();
-            FarmaSoftWA.FarmaSoftWS.listarTodosPagosResponse retVal = ((FarmaSoftWA.FarmaSoftWS.PagoWS)(this)).listarTodosPagos(inValue);
+        public int insertarPago(FarmaSoftWA.FarmaSoftWS.pago pago) {
+            FarmaSoftWA.FarmaSoftWS.insertarPagoRequest inValue = new FarmaSoftWA.FarmaSoftWS.insertarPagoRequest();
+            inValue.pago = pago;
+            FarmaSoftWA.FarmaSoftWS.insertarPagoResponse retVal = ((FarmaSoftWA.FarmaSoftWS.PagoWS)(this)).insertarPago(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosPagosResponse> FarmaSoftWA.FarmaSoftWS.PagoWS.listarTodosPagosAsync(FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest request) {
-            return base.Channel.listarTodosPagosAsync(request);
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarPagoResponse> FarmaSoftWA.FarmaSoftWS.PagoWS.insertarPagoAsync(FarmaSoftWA.FarmaSoftWS.insertarPagoRequest request) {
+            return base.Channel.insertarPagoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosPagosResponse> listarTodosPagosAsync() {
-            FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodosPagosRequest();
-            return ((FarmaSoftWA.FarmaSoftWS.PagoWS)(this)).listarTodosPagosAsync(inValue);
+        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.insertarPagoResponse> insertarPagoAsync(FarmaSoftWA.FarmaSoftWS.pago pago) {
+            FarmaSoftWA.FarmaSoftWS.insertarPagoRequest inValue = new FarmaSoftWA.FarmaSoftWS.insertarPagoRequest();
+            inValue.pago = pago;
+            return ((FarmaSoftWA.FarmaSoftWS.PagoWS)(this)).insertarPagoAsync(inValue);
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", ConfigurationName="FarmaSoftWS.PedidoPropioWS")]
     public interface PedidoPropioWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosReq" +
-            "uest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosRes" +
-            "ponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse listarTodosPedidosPropios(FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosReq" +
-            "uest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosRes" +
-            "ponse")]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse> listarTodosPedidosPropiosAsync(FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/insertarPedidoPropioRequest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/insertarPedidoPropioResponse" +
@@ -3778,34 +3765,19 @@ namespace FarmaSoftWA.FarmaSoftWS {
             "est", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/obtenerPedidoPropioPorIdResp" +
             "onse")]
         System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.obtenerPedidoPropioPorIdResponse> obtenerPedidoPropioPorIdAsync(FarmaSoftWA.FarmaSoftWS.obtenerPedidoPropioPorIdRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPedidosPropios", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosPedidosPropiosRequest {
         
-        public listarTodosPedidosPropiosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPedidosPropiosResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosPedidosPropiosResponse {
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosReq" +
+            "uest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosRes" +
+            "ponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse listarTodosPedidosPropios(FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public FarmaSoftWA.FarmaSoftWS.pedidoPropio[] @return;
-        
-        public listarTodosPedidosPropiosResponse() {
-        }
-        
-        public listarTodosPedidosPropiosResponse(FarmaSoftWA.FarmaSoftWS.pedidoPropio[] @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosReq" +
+            "uest", ReplyAction="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse> listarTodosPedidosPropiosAsync(FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3880,6 +3852,34 @@ namespace FarmaSoftWA.FarmaSoftWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPedidosPropios", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosPedidosPropiosRequest {
+        
+        public listarTodosPedidosPropiosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPedidosPropiosResponse", WrapperNamespace="http://services.FarmaSoft.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosPedidosPropiosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.FarmaSoft.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public FarmaSoftWA.FarmaSoftWS.pedidoPropio[] @return;
+        
+        public listarTodosPedidosPropiosResponse() {
+        }
+        
+        public listarTodosPedidosPropiosResponse(FarmaSoftWA.FarmaSoftWS.pedidoPropio[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PedidoPropioWSChannel : FarmaSoftWA.FarmaSoftWS.PedidoPropioWS, System.ServiceModel.IClientChannel {
     }
@@ -3905,27 +3905,6 @@ namespace FarmaSoftWA.FarmaSoftWS {
         
         public PedidoPropioWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse FarmaSoftWA.FarmaSoftWS.PedidoPropioWS.listarTodosPedidosPropios(FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest request) {
-            return base.Channel.listarTodosPedidosPropios(request);
-        }
-        
-        public FarmaSoftWA.FarmaSoftWS.pedidoPropio[] listarTodosPedidosPropios() {
-            FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest();
-            FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse retVal = ((FarmaSoftWA.FarmaSoftWS.PedidoPropioWS)(this)).listarTodosPedidosPropios(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse> FarmaSoftWA.FarmaSoftWS.PedidoPropioWS.listarTodosPedidosPropiosAsync(FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest request) {
-            return base.Channel.listarTodosPedidosPropiosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse> listarTodosPedidosPropiosAsync() {
-            FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest();
-            return ((FarmaSoftWA.FarmaSoftWS.PedidoPropioWS)(this)).listarTodosPedidosPropiosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3972,6 +3951,27 @@ namespace FarmaSoftWA.FarmaSoftWS {
             FarmaSoftWA.FarmaSoftWS.obtenerPedidoPropioPorIdRequest inValue = new FarmaSoftWA.FarmaSoftWS.obtenerPedidoPropioPorIdRequest();
             inValue.idPedidoPropio = idPedidoPropio;
             return ((FarmaSoftWA.FarmaSoftWS.PedidoPropioWS)(this)).obtenerPedidoPropioPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse FarmaSoftWA.FarmaSoftWS.PedidoPropioWS.listarTodosPedidosPropios(FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest request) {
+            return base.Channel.listarTodosPedidosPropios(request);
+        }
+        
+        public FarmaSoftWA.FarmaSoftWS.pedidoPropio[] listarTodosPedidosPropios() {
+            FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest();
+            FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse retVal = ((FarmaSoftWA.FarmaSoftWS.PedidoPropioWS)(this)).listarTodosPedidosPropios(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse> FarmaSoftWA.FarmaSoftWS.PedidoPropioWS.listarTodosPedidosPropiosAsync(FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest request) {
+            return base.Channel.listarTodosPedidosPropiosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse> listarTodosPedidosPropiosAsync() {
+            FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest inValue = new FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosRequest();
+            return ((FarmaSoftWA.FarmaSoftWS.PedidoPropioWS)(this)).listarTodosPedidosPropiosAsync(inValue);
         }
     }
 }

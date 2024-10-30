@@ -10,7 +10,7 @@
         <div class="card-header">
             <h2>
                 <!-- Cambiar el titulo dependiendo de si se registran o muestran datos -->
-                <asp:Label ID="lblTitulo" runat="server" Text="lblTitulo"></asp:Label>
+                <asp:Label ID="lblTitulo" runat="server" Text="Pedido para Lima"></asp:Label>
             </h2>
         </div>
 

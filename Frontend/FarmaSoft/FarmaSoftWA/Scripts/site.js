@@ -19,3 +19,7 @@ function startProgress() {
         }
     }, 500); // Intervalo en milisegundos
 }
+function openModal() {
+    var myModal = new bootstrap.Modal(document.getElementById('modalMedicinas'));
+    myModal.show();
+}

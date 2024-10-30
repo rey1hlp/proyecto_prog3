@@ -71,16 +71,6 @@
       <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="obtenerEmpleadoPorDni">
-    <xs:sequence>
-      <xs:element name="dni_emp" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerEmpleadoPorDniResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:empleado" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="darDeAltaEmpleados">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="listaDniEmp" type="xs:int" />
@@ -99,6 +89,16 @@
   <xs:complexType name="actualizarEmpleadoResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEmpleadoPorDni">
+    <xs:sequence>
+      <xs:element name="dni_emp" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEmpleadoPorDniResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:empleado" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

@@ -64,6 +64,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AgregarMedicinasGenericas.aspx" />
     <Content Include="CompletarDireccionEnvio.aspx" />
     <None Include="Connected Services\FarmaSoftWS\archivo.disco" />
     <None Include="Connected Services\FarmaSoftWS\configuration91.svcinfo" />
@@ -311,6 +312,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgregarMedicinasGenericas.aspx.cs">
+      <DependentUpon>AgregarMedicinasGenericas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AgregarMedicinasGenericas.aspx.designer.cs">
+      <DependentUpon>AgregarMedicinasGenericas.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CompletarDireccionEnvio.aspx.cs">
       <DependentUpon>CompletarDireccionEnvio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

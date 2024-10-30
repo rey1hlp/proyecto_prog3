@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:32309/FarmaSoftWS/SolicitudWS?xsd=1" namespace="http://services.FarmaSoft.pucp.edu.pe" />
     </xsd:schema>
   </types>
+  <message name="insertarSolicitud">
+    <part name="parameters" element="tns:insertarSolicitud" />
+  </message>
+  <message name="insertarSolicitudResponse">
+    <part name="parameters" element="tns:insertarSolicitudResponse" />
+  </message>
   <message name="listarTodasSolicitudes">
     <part name="parameters" element="tns:listarTodasSolicitudes" />
   </message>
@@ -17,13 +23,11 @@
   <message name="obtenerSolicitudPorIdResponse">
     <part name="parameters" element="tns:obtenerSolicitudPorIdResponse" />
   </message>
-  <message name="insertarSolicitud">
-    <part name="parameters" element="tns:insertarSolicitud" />
-  </message>
-  <message name="insertarSolicitudResponse">
-    <part name="parameters" element="tns:insertarSolicitudResponse" />
-  </message>
   <portType name="SolicitudWS">
+    <operation name="insertarSolicitud">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudRequest" message="tns:insertarSolicitud" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudResponse" message="tns:insertarSolicitudResponse" />
+    </operation>
     <operation name="listarTodasSolicitudes">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/listarTodasSolicitudesRequest" message="tns:listarTodasSolicitudes" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/listarTodasSolicitudesResponse" message="tns:listarTodasSolicitudesResponse" />
@@ -32,13 +36,18 @@
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/obtenerSolicitudPorIdRequest" message="tns:obtenerSolicitudPorId" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/obtenerSolicitudPorIdResponse" message="tns:obtenerSolicitudPorIdResponse" />
     </operation>
-    <operation name="insertarSolicitud">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudRequest" message="tns:insertarSolicitud" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudResponse" message="tns:insertarSolicitudResponse" />
-    </operation>
   </portType>
   <binding name="SolicitudWSPortBinding" type="tns:SolicitudWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarSolicitud">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarTodasSolicitudes">
       <soap:operation soapAction="" />
       <input>
@@ -49,15 +58,6 @@
       </output>
     </operation>
     <operation name="obtenerSolicitudPorId">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarSolicitud">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
