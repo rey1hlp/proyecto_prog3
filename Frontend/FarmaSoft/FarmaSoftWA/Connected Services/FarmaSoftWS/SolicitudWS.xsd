@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.FarmaSoft.pucp.edu.pe" targetNamespace="http://services.FarmaSoft.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarSolicitud" type="tns:actualizarSolicitud" />
+  <xs:element name="actualizarSolicitudResponse" type="tns:actualizarSolicitudResponse" />
   <xs:element name="insertarSolicitud" type="tns:insertarSolicitud" />
   <xs:element name="insertarSolicitudResponse" type="tns:insertarSolicitudResponse" />
   <xs:element name="listarTodasSolicitudes" type="tns:listarTodasSolicitudes" />
@@ -110,6 +112,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarSolicitudResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarSolicitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="solicitud" type="tns:solicitud" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarSolicitudResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

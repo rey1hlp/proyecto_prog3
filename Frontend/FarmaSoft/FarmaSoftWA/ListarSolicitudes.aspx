@@ -22,13 +22,13 @@
                 <div class="col-md-12 pb-md-3">
                     <!--Aqui van la tabla-->
                     <asp:GridView ID="gvSolicitudes" runat="server" AllowPaging="true" PageSize="5" 
-                        AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" 
-                        ShowHeaderWhenEmpty="true">
+                    AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" 
+                    ShowHeaderWhenEmpty="true" DataKeyNames="id">
                         <Columns>
-                            <asp:TemplateField HeaderText="">
+                            <asp:TemplateField HeaderText="Seleccionar">
                                 <ItemStyle Width="5%" />
                                 <ItemTemplate>
-                                    <input type="radio" name="ProveedorSeleccionado" />
+                                    <asp:RadioButton ID="rbSeleccionado" runat="server" GroupName="ProveedorSeleccionado" />
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:BoundField HeaderText="Id" DataField="id" />

@@ -75,6 +75,9 @@
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.actualizarEmpleadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.actualizarSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.administrador.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>

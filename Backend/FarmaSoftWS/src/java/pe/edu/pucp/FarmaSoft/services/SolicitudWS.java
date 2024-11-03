@@ -61,5 +61,17 @@ public class SolicitudWS {
         return solicitud; 
     } 
     
+    @WebMethod(operationName = "actualizarSolicitud") 
+    public int actualizarSolicitud(@WebParam(name = "solicitud") Solicitud solicitud) { 
+        int resultado = 0; 
+        try{ 
+            daoSolicitud = new SolicitudMySQL();
+            resultado = daoSolicitud.actualizar(solicitud); 
+        }catch(Exception ex){ 
+            System.out.println(ex.getMessage()); 
+        } 
+        return resultado; 
+    }
+    
     
 }

@@ -26,3 +26,17 @@ D:\CarpetasPUCP\6to_Ciclo\PROG3\FarmaSoft\proyecto_prog3\Frontend\FarmaSoft\Farm
 D:\CarpetasPUCP\6to_Ciclo\PROG3\FarmaSoft\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.csproj.CoreCompileInputs.cache
 D:\CarpetasPUCP\6to_Ciclo\PROG3\FarmaSoft\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.dll
 D:\CarpetasPUCP\6to_Ciclo\PROG3\FarmaSoft\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.pdb
+C:\Users\REYNALDO\Downloads\proyecto_prog3_v3\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\bin\FarmaSoftWA.dll.config
+C:\Users\REYNALDO\Downloads\proyecto_prog3_v3\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\bin\FarmaSoftWA.dll
+C:\Users\REYNALDO\Downloads\proyecto_prog3_v3\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\bin\FarmaSoftWA.pdb
+C:\Users\REYNALDO\Downloads\proyecto_prog3_v3\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.csproj.AssemblyReference.cache
+C:\Users\REYNALDO\Downloads\proyecto_prog3_v3\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.csproj.CoreCompileInputs.cache
+C:\Users\REYNALDO\Downloads\proyecto_prog3_v3\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.dll
+C:\Users\REYNALDO\Downloads\proyecto_prog3_v3\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.pdb
+C:\Users\there\Downloads\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\bin\FarmaSoftWA.dll.config
+C:\Users\there\Downloads\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\bin\FarmaSoftWA.dll
+C:\Users\there\Downloads\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\bin\FarmaSoftWA.pdb
+C:\Users\there\Downloads\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.csproj.AssemblyReference.cache
+C:\Users\there\Downloads\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.csproj.CoreCompileInputs.cache
+C:\Users\there\Downloads\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.dll
+C:\Users\there\Downloads\proyecto_prog3\Frontend\FarmaSoft\FarmaSoftWA\obj\Debug\FarmaSoftWA.pdb

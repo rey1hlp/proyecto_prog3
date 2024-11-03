@@ -1,20 +1,20 @@
 <discovery xmlns="http://schemas.xmlsoap.org/disco/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
 <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
-ref="http://localhost:32309/FarmaSoftWS/AdministradorWS?WSDL"/>
+ref="http://localhost:8080/FarmaSoftWS/AdministradorWS?WSDL"/>
 <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
-ref="http://localhost:32309/FarmaSoftWS/EmpleadoWS?WSDL"/>
+ref="http://localhost:8080/FarmaSoftWS/EmpleadoWS?WSDL"/>
 <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
-ref="http://localhost:32309/FarmaSoftWS/FarmaciaAsociadaWS?WSDL"/>
+ref="http://localhost:8080/FarmaSoftWS/FarmaciaAsociadaWS?WSDL"/>
 <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
-ref="http://localhost:32309/FarmaSoftWS/MedicinaGeneralWS?WSDL"/>
+ref="http://localhost:8080/FarmaSoftWS/MedicinaGeneralWS?WSDL"/>
 <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
-ref="http://localhost:32309/FarmaSoftWS/MedicinaPropiaWS?WSDL"/>
+ref="http://localhost:8080/FarmaSoftWS/MedicinaPropiaWS?WSDL"/>
 <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
-ref="http://localhost:32309/FarmaSoftWS/DetalleSolicitudWS?WSDL"/>
+ref="http://localhost:8080/FarmaSoftWS/DetalleSolicitudWS?WSDL"/>
 <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
-ref="http://localhost:32309/FarmaSoftWS/SolicitudWS?WSDL"/>
+ref="http://localhost:8080/FarmaSoftWS/SolicitudWS?WSDL"/>
 <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
-ref="http://localhost:32309/FarmaSoftWS/PedidoPropioWS?WSDL"/>
+ref="http://localhost:8080/FarmaSoftWS/PedidoPropioWS?WSDL"/>
 <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/"
-ref="http://localhost:32309/FarmaSoftWS/PagoWS?WSDL"/>
+ref="http://localhost:8080/FarmaSoftWS/PagoWS?WSDL"/>
 </discovery>

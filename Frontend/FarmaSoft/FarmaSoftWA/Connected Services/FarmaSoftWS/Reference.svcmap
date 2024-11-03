@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="4542aa5a-9897-48d5-a114-62bc4123b8a3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="9aa5288f-d238-4870-a763-1976461d4a11" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,28 +19,28 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:32309/FarmaSoftWS/archivo.disco" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/FarmaSoftWS/archivo.disco" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MedicinaGeneralWS.wsdl" MetadataType="Wsdl" ID="f08992bd-27ec-4b0b-8fd0-5b503b55e8e3" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/MedicinaGeneralWS?WSDL" />
-    <MetadataFile FileName="MedicinaPropiaWS.wsdl" MetadataType="Wsdl" ID="16a23e45-916c-4787-92e0-5e9fd6f97431" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/MedicinaPropiaWS?WSDL" />
-    <MetadataFile FileName="AdministradorWS.wsdl" MetadataType="Wsdl" ID="55f3ea5f-62e9-48ed-8b22-2e37b3d2a5b1" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/AdministradorWS?WSDL" />
-    <MetadataFile FileName="MedicinaPropiaWS.xsd" MetadataType="Schema" ID="216b29e3-1165-459e-830a-ed3a39b62f92" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/MedicinaPropiaWS?xsd=1" />
-    <MetadataFile FileName="DetalleSolicitudWS.wsdl" MetadataType="Wsdl" ID="72f939d0-df33-46e2-a80f-9800c28a8fbb" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/DetalleSolicitudWS?WSDL" />
-    <MetadataFile FileName="EmpleadoWS.xsd" MetadataType="Schema" ID="f25a3963-f3ce-4e28-9f2d-d04d0c936cc6" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/EmpleadoWS?xsd=1" />
-    <MetadataFile FileName="MedicinaGeneralWS.xsd" MetadataType="Schema" ID="1fdfef22-0a68-4803-83d6-58bafc75616d" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/MedicinaGeneralWS?xsd=1" />
-    <MetadataFile FileName="FarmaciaAsociadaWS.xsd" MetadataType="Schema" ID="08e1ffe6-4ed2-402e-a120-64f666ffdd7c" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/FarmaciaAsociadaWS?xsd=1" />
-    <MetadataFile FileName="SolicitudWS.wsdl" MetadataType="Wsdl" ID="c526df97-74b3-4582-80c3-039b73d9e98f" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/SolicitudWS?WSDL" />
-    <MetadataFile FileName="PedidoPropioWS.xsd" MetadataType="Schema" ID="21e10a8c-4fc9-408c-9127-074ca7f409b5" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/PedidoPropioWS?xsd=1" />
-    <MetadataFile FileName="DetalleSolicitudWS.xsd" MetadataType="Schema" ID="471c5c71-6a48-4696-91ab-5328762825cd" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/DetalleSolicitudWS?xsd=1" />
-    <MetadataFile FileName="AdministradorWS.xsd" MetadataType="Schema" ID="2ca37fe5-31dd-4501-ad7b-395514740511" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/AdministradorWS?xsd=1" />
-    <MetadataFile FileName="PagoWS.xsd" MetadataType="Schema" ID="942de358-489b-4ec1-b1bc-10ce7b90bcfd" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/PagoWS?xsd=1" />
-    <MetadataFile FileName="FarmaciaAsociadaWS.wsdl" MetadataType="Wsdl" ID="c9ded723-4f82-481b-9cd9-4d65229c072e" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/FarmaciaAsociadaWS?WSDL" />
-    <MetadataFile FileName="EmpleadoWS.wsdl" MetadataType="Wsdl" ID="ea5acb3d-9ec2-4600-b3b1-d16cb83dc95d" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/EmpleadoWS?WSDL" />
-    <MetadataFile FileName="PagoWS.wsdl" MetadataType="Wsdl" ID="96552c96-5389-4b75-93f3-14e010b13864" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/PagoWS?WSDL" />
-    <MetadataFile FileName="PedidoPropioWS.wsdl" MetadataType="Wsdl" ID="e035b1dd-ef28-4e7a-86c0-38faa83e7502" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/PedidoPropioWS?WSDL" />
-    <MetadataFile FileName="archivo.disco" MetadataType="Disco" ID="1c0cedad-8165-4cf1-bcf2-762131aba590" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/archivo.disco" />
-    <MetadataFile FileName="SolicitudWS.xsd" MetadataType="Schema" ID="222a3dcd-91f4-490c-a686-fb54b29e7b0e" SourceId="1" SourceUrl="http://localhost:32309/FarmaSoftWS/SolicitudWS?xsd=1" />
+    <MetadataFile FileName="AdministradorWS.xsd" MetadataType="Schema" ID="72d308d2-62cb-4c81-90ec-128df6ce574a" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/AdministradorWS?xsd=1" />
+    <MetadataFile FileName="DetalleSolicitudWS.xsd" MetadataType="Schema" ID="a00cee32-2509-4228-a4ee-9a384e81cd51" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/DetalleSolicitudWS?xsd=1" />
+    <MetadataFile FileName="PedidoPropioWS.xsd" MetadataType="Schema" ID="20373e07-1286-4e7c-9ca3-653b90abedbe" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/PedidoPropioWS?xsd=1" />
+    <MetadataFile FileName="EmpleadoWS.xsd" MetadataType="Schema" ID="fd74ebbd-cdfd-463b-8133-3fa9d5dfd016" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/EmpleadoWS?xsd=1" />
+    <MetadataFile FileName="AdministradorWS.wsdl" MetadataType="Wsdl" ID="5481efe6-397b-48e0-971f-9453bdf36a45" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/AdministradorWS?WSDL" />
+    <MetadataFile FileName="SolicitudWS.xsd" MetadataType="Schema" ID="3cf8c160-faf2-486f-83de-fde87e65e3e3" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/SolicitudWS?xsd=1" />
+    <MetadataFile FileName="MedicinaGeneralWS.wsdl" MetadataType="Wsdl" ID="ff45776f-92e9-4a11-ba86-a8b21476e720" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/MedicinaGeneralWS?WSDL" />
+    <MetadataFile FileName="PedidoPropioWS.wsdl" MetadataType="Wsdl" ID="f878ae3d-3524-4cd7-8fdf-7a9c321f8ff3" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/PedidoPropioWS?WSDL" />
+    <MetadataFile FileName="MedicinaPropiaWS.xsd" MetadataType="Schema" ID="fcfbbf35-eb65-476d-8731-2eb2778b198e" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/MedicinaPropiaWS?xsd=1" />
+    <MetadataFile FileName="archivo.disco" MetadataType="Disco" ID="40af29d8-bde5-40c9-b00d-8ad790933677" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/archivo.disco" />
+    <MetadataFile FileName="SolicitudWS.wsdl" MetadataType="Wsdl" ID="b8fc203c-1dea-4c13-92dd-f6a20a10a776" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/SolicitudWS?WSDL" />
+    <MetadataFile FileName="MedicinaPropiaWS.wsdl" MetadataType="Wsdl" ID="804f2299-18b3-4085-8feb-d438ea0a22db" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/MedicinaPropiaWS?WSDL" />
+    <MetadataFile FileName="MedicinaGeneralWS.xsd" MetadataType="Schema" ID="7ef1eeb8-d26c-4f18-a751-3a4f1c33348c" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/MedicinaGeneralWS?xsd=1" />
+    <MetadataFile FileName="FarmaciaAsociadaWS.xsd" MetadataType="Schema" ID="f1374b60-7e5d-433a-aa65-5b131527df07" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/FarmaciaAsociadaWS?xsd=1" />
+    <MetadataFile FileName="PagoWS.wsdl" MetadataType="Wsdl" ID="8eca4319-99c7-435a-9d48-448bf8648c56" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/PagoWS?WSDL" />
+    <MetadataFile FileName="EmpleadoWS.wsdl" MetadataType="Wsdl" ID="8cffcf4a-06d4-48d4-95ea-dd41679e7d30" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/EmpleadoWS?WSDL" />
+    <MetadataFile FileName="DetalleSolicitudWS.wsdl" MetadataType="Wsdl" ID="c07b1dff-7d5b-41d9-aba0-4a45c8f5eb39" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/DetalleSolicitudWS?WSDL" />
+    <MetadataFile FileName="PagoWS.xsd" MetadataType="Schema" ID="c21c9c9e-80b0-4b35-a20d-8ad2753f4fd7" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/PagoWS?xsd=1" />
+    <MetadataFile FileName="FarmaciaAsociadaWS.wsdl" MetadataType="Wsdl" ID="dffc6dd3-bf22-4045-a33f-180fb60f7061" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/FarmaciaAsociadaWS?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

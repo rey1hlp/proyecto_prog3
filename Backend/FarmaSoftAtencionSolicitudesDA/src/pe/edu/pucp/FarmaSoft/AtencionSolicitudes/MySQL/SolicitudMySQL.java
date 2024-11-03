@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.sql.SQLException;
 import java.util.HashMap;
+import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.DAO.ClienteDAO;
 import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.DAO.SolicitudDAO;
 import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.Model.Cliente;
 import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.Model.EstadoSolicitud;
@@ -55,8 +56,10 @@ public class SolicitudMySQL implements SolicitudDAO{
                 solicitud.setEstado(EstadoSolicitud.valueOf(rs.getString("estado")));
                 solicitud.setRecetaMedica(rs.getBytes("recetaMedica"));
                 solicitud.setGeneraPedido(rs.getBoolean("generaPedido")); 
-                Cliente cliente = new Cliente();
-                cliente.setID(rs.getInt("ID_Cliente"));
+                
+                ClienteDAO clienteDA = new ClienteMySQL();
+                Cliente cliente=clienteDA.obtenerPorId(rs.getInt("ID_Cliente"));
+                
                 solicitud.setCliente(cliente);
                 Usuario intermediario = new Intermediario();
                 intermediario.setDNI(rs.getInt("DNI_Intermediario"));
@@ -91,8 +94,11 @@ public class SolicitudMySQL implements SolicitudDAO{
                 solicitud.setEstado(EstadoSolicitud.valueOf(rs.getString("estado")));
                 solicitud.setRecetaMedica(rs.getBytes("recetaMedica"));
                 solicitud.setGeneraPedido(rs.getBoolean("generaPedido")); 
-                Cliente cliente = new Cliente();
-                cliente.setID(rs.getInt("ID_Cliente"));
+                
+               
+                ClienteDAO clienteDA = new ClienteMySQL();
+                Cliente cliente=clienteDA.obtenerPorId(rs.getInt("ID_Cliente"));
+                
                 solicitud.setCliente(cliente);
                 Usuario intermediario = new Intermediario();
                 intermediario.setDNI(rs.getInt("DNI_Intermediario"));
