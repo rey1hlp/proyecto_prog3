@@ -12,16 +12,6 @@
   <xs:element name="insertarEmpleadoResponse" type="tns:insertarEmpleadoResponse" />
   <xs:element name="obtenerEmpleadoPorDni" type="tns:obtenerEmpleadoPorDni" />
   <xs:element name="obtenerEmpleadoPorDniResponse" type="tns:obtenerEmpleadoPorDniResponse" />
-  <xs:complexType name="darDeBajaEmpleados">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaDniEmp" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="darDeBajaEmpleadosResponse">
-    <xs:sequence>
-      <xs:element name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarEmpleado">
     <xs:sequence>
       <xs:element minOccurs="0" name="emp" type="tns:empleado" />
@@ -57,6 +47,16 @@
     </xs:complexContent>
   </xs:complexType>
   <xs:complexType name="insertarEmpleadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="darDeBajaEmpleados">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="listaDniEmp" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="darDeBajaEmpleadosResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
     </xs:sequence>

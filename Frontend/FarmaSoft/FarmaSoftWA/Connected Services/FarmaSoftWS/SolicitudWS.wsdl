@@ -11,17 +11,17 @@
   <message name="insertarSolicitudResponse">
     <part name="parameters" element="tns:insertarSolicitudResponse" />
   </message>
-  <message name="actualizarSolicitud">
-    <part name="parameters" element="tns:actualizarSolicitud" />
-  </message>
-  <message name="actualizarSolicitudResponse">
-    <part name="parameters" element="tns:actualizarSolicitudResponse" />
-  </message>
   <message name="listarTodasSolicitudes">
     <part name="parameters" element="tns:listarTodasSolicitudes" />
   </message>
   <message name="listarTodasSolicitudesResponse">
     <part name="parameters" element="tns:listarTodasSolicitudesResponse" />
+  </message>
+  <message name="actualizarSolicitud">
+    <part name="parameters" element="tns:actualizarSolicitud" />
+  </message>
+  <message name="actualizarSolicitudResponse">
+    <part name="parameters" element="tns:actualizarSolicitudResponse" />
   </message>
   <message name="obtenerSolicitudPorId">
     <part name="parameters" element="tns:obtenerSolicitudPorId" />
@@ -34,13 +34,13 @@
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudRequest" message="tns:insertarSolicitud" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/insertarSolicitudResponse" message="tns:insertarSolicitudResponse" />
     </operation>
-    <operation name="actualizarSolicitud">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/actualizarSolicitudRequest" message="tns:actualizarSolicitud" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/actualizarSolicitudResponse" message="tns:actualizarSolicitudResponse" />
-    </operation>
     <operation name="listarTodasSolicitudes">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/listarTodasSolicitudesRequest" message="tns:listarTodasSolicitudes" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/listarTodasSolicitudesResponse" message="tns:listarTodasSolicitudesResponse" />
+    </operation>
+    <operation name="actualizarSolicitud">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/actualizarSolicitudRequest" message="tns:actualizarSolicitud" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/actualizarSolicitudResponse" message="tns:actualizarSolicitudResponse" />
     </operation>
     <operation name="obtenerSolicitudPorId">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/SolicitudWS/obtenerSolicitudPorIdRequest" message="tns:obtenerSolicitudPorId" />
@@ -58,7 +58,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarSolicitud">
+    <operation name="listarTodasSolicitudes">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -67,7 +67,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodasSolicitudes">
+    <operation name="actualizarSolicitud">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
