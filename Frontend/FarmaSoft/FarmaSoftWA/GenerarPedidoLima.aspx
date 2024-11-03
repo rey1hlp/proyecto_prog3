@@ -22,11 +22,11 @@
                     <div class="row">
                         <div class="col-md-12 pb-md-3">
                             <asp:Label ID="lblDepartamento" runat="server" Text="Departamento:" CssClass="col-form-label fw-bold"></asp:Label>
-                            <asp:DropDownList ID="ddlDepartamento" runat="server" AutoPostBack="true" CssClass="form-select" Enabled="false"></asp:DropDownList>
+                            <asp:DropDownList ID="ddlDepartamento" runat="server" AutoPostBack="false" CssClass="form-select" Enabled="false"></asp:DropDownList>
                         </div>
                         <div class="col-md-12 pb-md-3">
                             <asp:Label ID="Label1" runat="server" Text="Provincia:" CssClass="col-form-label fw-bold" ></asp:Label>
-                            <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
+                            <asp:TextBox ID="txtProvincia" runat="server" CssClass="form-control" Enabled="false"></asp:TextBox>
                         </div>
                         <div class="col-md-12 pb-md-3">
                             <asp:Label ID="lblDistrito" runat="server" Text="Distrito:" CssClass="col-form-label fw-bold" ></asp:Label>
@@ -67,9 +67,8 @@
         </div>
 
         <div class="card-footer clearfix">
-            <asp:LinkButton ID="lbRegresar" runat="server" Text="<i class='fa-solid fa-rotate-left'></i> Regresar" CssClass="float-start btn btn-secondary" />
+            <asp:LinkButton ID="lbRegresar" runat="server" Text="<i class='fa-solid fa-rotate-left'></i> Regresar" CssClass="float-start btn btn-secondary" OnClick="lbRegresar_Click"/>
             <asp:LinkButton ID="lbGuardar" runat="server" Text="<i class='fa-regular fa-floppy-disk'></i> Guardar" CssClass="float-end btn btn-primary" />
-            
         </div>
 
 

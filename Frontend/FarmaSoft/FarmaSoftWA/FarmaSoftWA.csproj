@@ -72,13 +72,22 @@
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.actualizarAdministradorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.actualizarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.administrador.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.darDeAltaAdministradoresResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.darDeBajaAdministradoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.darDeBajaEmpleadosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.detalleSolicitud.datasource">
@@ -87,10 +96,22 @@
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.eliminarAdministradorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.empleado.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.farmaciaAsociada.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarAdministradorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarDetalleSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarEmpleadoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarMedicinaPropiaResponse.datasource">
@@ -103,6 +124,12 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodasFarmaciasAsociadasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasPropiasResponse.datasource">
@@ -120,10 +147,16 @@
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.medicinaGeneral.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.medicinaPropia.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.obtenerAdministradorPorDniResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.obtenerPagoPorIdResponse.datasource">
@@ -144,57 +177,6 @@
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.solicitud.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Connected Services\FarmaSoftWS\EmpleadoWS.wsdl" />
-    <None Include="Connected Services\FarmaSoftWS\EmpleadoWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\FarmaSoftWS\FarmaciaAsociadaWS.wsdl" />
-    <None Include="Connected Services\FarmaSoftWS\FarmaciaAsociadaWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.actualizarEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.darDeAltaEmpleadosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.darDeBajaEmpleadosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.eliminarEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.empleado.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.farmaciaAsociada.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarEmpleadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodasFarmaciasAsociadasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.obtenerEmpleadoPorDniResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodasMedicinasGeneralesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodosTiposMedicamentosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.medicinaGeneral.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.tipoMedicamento1.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\FarmaSoftWS\MedicinaGeneralWS.wsdl" />
-    <None Include="Connected Services\FarmaSoftWS\MedicinaGeneralWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\FarmaSoftWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -282,6 +264,18 @@
     <None Include="Connected Services\FarmaSoftWS\DetalleSolicitudWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\FarmaSoftWS\EmpleadoWS.wsdl" />
+    <None Include="Connected Services\FarmaSoftWS\EmpleadoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FarmaSoftWS\FarmaciaAsociadaWS.wsdl" />
+    <None Include="Connected Services\FarmaSoftWS\FarmaciaAsociadaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\FarmaSoftWS\MedicinaGeneralWS.wsdl" />
+    <None Include="Connected Services\FarmaSoftWS\MedicinaGeneralWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\FarmaSoftWS\MedicinaPropiaWS.wsdl" />
     <None Include="Connected Services\FarmaSoftWS\MedicinaPropiaWS.xsd">
       <SubType>Designer</SubType>
@@ -296,10 +290,6 @@
     </None>
     <None Include="Connected Services\FarmaSoftWS\SolicitudWS.wsdl" />
     <None Include="Connected Services\FarmaSoftWS\SolicitudWS.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\FarmaSoftWS\TipoMedicamentoWS.wsdl" />
-    <None Include="Connected Services\FarmaSoftWS\TipoMedicamentoWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />

@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://localhost:32309/FarmaSoftWS/EmpleadoWS?xsd=1" namespace="http://services.FarmaSoft.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="insertarEmpleado">
-    <part name="parameters" element="tns:insertarEmpleado" />
-  </message>
-  <message name="insertarEmpleadoResponse">
-    <part name="parameters" element="tns:insertarEmpleadoResponse" />
-  </message>
   <message name="darDeBajaEmpleados">
     <part name="parameters" element="tns:darDeBajaEmpleados" />
   </message>
   <message name="darDeBajaEmpleadosResponse">
     <part name="parameters" element="tns:darDeBajaEmpleadosResponse" />
+  </message>
+  <message name="actualizarEmpleado">
+    <part name="parameters" element="tns:actualizarEmpleado" />
+  </message>
+  <message name="actualizarEmpleadoResponse">
+    <part name="parameters" element="tns:actualizarEmpleadoResponse" />
   </message>
   <message name="eliminarEmpleado">
     <part name="parameters" element="tns:eliminarEmpleado" />
@@ -23,17 +23,17 @@
   <message name="eliminarEmpleadoResponse">
     <part name="parameters" element="tns:eliminarEmpleadoResponse" />
   </message>
+  <message name="insertarEmpleado">
+    <part name="parameters" element="tns:insertarEmpleado" />
+  </message>
+  <message name="insertarEmpleadoResponse">
+    <part name="parameters" element="tns:insertarEmpleadoResponse" />
+  </message>
   <message name="darDeAltaEmpleados">
     <part name="parameters" element="tns:darDeAltaEmpleados" />
   </message>
   <message name="darDeAltaEmpleadosResponse">
     <part name="parameters" element="tns:darDeAltaEmpleadosResponse" />
-  </message>
-  <message name="actualizarEmpleado">
-    <part name="parameters" element="tns:actualizarEmpleado" />
-  </message>
-  <message name="actualizarEmpleadoResponse">
-    <part name="parameters" element="tns:actualizarEmpleadoResponse" />
   </message>
   <message name="obtenerEmpleadoPorDni">
     <part name="parameters" element="tns:obtenerEmpleadoPorDni" />
@@ -42,25 +42,25 @@
     <part name="parameters" element="tns:obtenerEmpleadoPorDniResponse" />
   </message>
   <portType name="EmpleadoWS">
-    <operation name="insertarEmpleado">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/insertarEmpleadoRequest" message="tns:insertarEmpleado" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/insertarEmpleadoResponse" message="tns:insertarEmpleadoResponse" />
-    </operation>
     <operation name="darDeBajaEmpleados">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/darDeBajaEmpleadosRequest" message="tns:darDeBajaEmpleados" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/darDeBajaEmpleadosResponse" message="tns:darDeBajaEmpleadosResponse" />
+    </operation>
+    <operation name="actualizarEmpleado">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/actualizarEmpleadoRequest" message="tns:actualizarEmpleado" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/actualizarEmpleadoResponse" message="tns:actualizarEmpleadoResponse" />
     </operation>
     <operation name="eliminarEmpleado">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/eliminarEmpleadoRequest" message="tns:eliminarEmpleado" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/eliminarEmpleadoResponse" message="tns:eliminarEmpleadoResponse" />
     </operation>
+    <operation name="insertarEmpleado">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/insertarEmpleadoRequest" message="tns:insertarEmpleado" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/insertarEmpleadoResponse" message="tns:insertarEmpleadoResponse" />
+    </operation>
     <operation name="darDeAltaEmpleados">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/darDeAltaEmpleadosRequest" message="tns:darDeAltaEmpleados" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/darDeAltaEmpleadosResponse" message="tns:darDeAltaEmpleadosResponse" />
-    </operation>
-    <operation name="actualizarEmpleado">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/actualizarEmpleadoRequest" message="tns:actualizarEmpleado" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/actualizarEmpleadoResponse" message="tns:actualizarEmpleadoResponse" />
     </operation>
     <operation name="obtenerEmpleadoPorDni">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/EmpleadoWS/obtenerEmpleadoPorDniRequest" message="tns:obtenerEmpleadoPorDni" />
@@ -69,7 +69,7 @@
   </portType>
   <binding name="EmpleadoWSPortBinding" type="tns:EmpleadoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarEmpleado">
+    <operation name="darDeBajaEmpleados">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -78,7 +78,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="darDeBajaEmpleados">
+    <operation name="actualizarEmpleado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -96,7 +96,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="darDeAltaEmpleados">
+    <operation name="insertarEmpleado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -105,7 +105,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarEmpleado">
+    <operation name="darDeAltaEmpleados">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

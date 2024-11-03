@@ -30,16 +30,17 @@
                     <asp:GridView ID="gvMedicinas" runat="server" AllowPaging="true" PageSize="6" AutoGenerateColumns="false" 
                         CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">
                         <Columns>
-                            <asp:BoundField HeaderText="Código" DataField="codigo"/>
-                            <asp:BoundField HeaderText="Nombre" DataField="nombre"/>
-                            <asp:BoundField HeaderText="Cantidad" DataField="cantidad"/>
+                            <asp:BoundField HeaderText="Código" DataField="medicina.ID"/>
+                            <asp:BoundField HeaderText="Nombre" DataField="medicina.nombre"/>
+                            <asp:BoundField HeaderText="Cantidad" DataField="cantidadPedida"/>
                         </Columns>
                     </asp:GridView>
                 </div>
             </div>
         </div>
-        <div class="card-footer">
-
+        <div class="card-footer clearfix">
+            <asp:LinkButton ID="lbRegresar" runat="server" Text="<i class='fa-solid fa-rotate-left'></i> Regresar" CssClass="float-start btn btn-secondary" OnClick="lbRegresar_Click"/>
+            <asp:LinkButton ID="lbGuardar" runat="server" Text="<i class='fa-regular fa-floppy-disk'></i> Guardar" CssClass="float-end btn btn-primary" OnClick="lbGuardar_Click"/>
         </div>
     </div>
     </div>
@@ -58,7 +59,7 @@
                             <div class="col-md-8">
                                 <asp:Label ID="lblMedicina" runat="server" 
                                     Text="Nombre:" CssClass="col-form-label fw-bold"></asp:Label>
-                                <asp:DropDownList ID="ddlMedicina" runat="server" AutoPostBack="true" CssClass="form-select" Enabled="true"></asp:DropDownList>
+                                <asp:DropDownList ID="ddlMedicina" runat="server" AutoPostBack="false" CssClass="form-select" Enabled="true"></asp:DropDownList>
                             </div>
                             <div class="col-md-1"></div>
                             <div class="col-md-3">
@@ -71,7 +72,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                    <asp:Button ID="bGuardado" runat="server" CssClass="btn btn-success" Text="Guardar Cambios" OnClick="bGuardado_Click"/>
                 </div>
             </div>
         </div>
