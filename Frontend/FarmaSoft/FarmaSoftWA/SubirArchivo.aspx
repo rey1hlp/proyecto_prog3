@@ -39,7 +39,8 @@
         </div>
 
         <div class="card-footer clearfix">
-            <asp:LinkButton ID="lbRegresar" runat="server" Text="<i class='fa-solid fa-rotate-left'></i> Regresar" CssClass="float-start btn btn-secondary" OnClick="lbRegresar_Click"/>
+            <asp:LinkButton ID="lbRegresar" runat="server" Text="<i class='fa-solid fa-rotate-left'></i> Devolver a pendiente" CssClass="float-start btn btn-secondary" OnClick="lbRegresar_Click"
+                OnClientClick="return confirm('¿Estás seguro de volver al listado de solicitudes? Ningún dato se guardará y la solicitud volverá a estar pendiente.');"/>
             <asp:LinkButton ID="lbContinuar" runat="server" Text="<i class='fa-regular fa-play'></i> Continuar" CssClass="float-end btn btn-primary" OnClick="lbContinuar_Click"/>
             
         </div>

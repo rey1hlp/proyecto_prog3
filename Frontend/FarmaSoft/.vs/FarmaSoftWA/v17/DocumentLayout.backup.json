@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\CarpetasPUCP\\6to_Ciclo\\PROG3\\FarmaSoft\\proyecto_prog3\\Frontend\\FarmaSoft\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CA81A759-8E85-4330-8D37-B20135AB5062}|FarmaSoftWA\\FarmaSoftWA.csproj|d:\\carpetaspucp\\6to_ciclo\\prog3\\farmasoft\\proyecto_prog3\\frontend\\farmasoft\\farmasoftwa\\generarpedidolima.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{CA81A759-8E85-4330-8D37-B20135AB5062}|FarmaSoftWA\\FarmaSoftWA.csproj|solutionrelative:farmasoftwa\\generarpedidolima.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA81A759-8E85-4330-8D37-B20135AB5062}|FarmaSoftWA\\FarmaSoftWA.csproj|d:\\carpetaspucp\\6to_ciclo\\prog3\\farmasoft\\proyecto_prog3\\frontend\\farmasoft\\farmasoftwa\\generarpedidolima.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA81A759-8E85-4330-8D37-B20135AB5062}|FarmaSoftWA\\FarmaSoftWA.csproj|solutionrelative:farmasoftwa\\generarpedidolima.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 97,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GenerarPedidoLima.aspx",
+              "DocumentMoniker": "D:\\CarpetasPUCP\\6to_Ciclo\\PROG3\\FarmaSoft\\proyecto_prog3\\Frontend\\FarmaSoft\\FarmaSoftWA\\GenerarPedidoLima.aspx",
+              "RelativeDocumentMoniker": "FarmaSoftWA\\GenerarPedidoLima.aspx",
+              "ToolTip": "D:\\CarpetasPUCP\\6to_Ciclo\\PROG3\\FarmaSoft\\proyecto_prog3\\Frontend\\FarmaSoft\\FarmaSoftWA\\GenerarPedidoLima.aspx",
+              "RelativeToolTip": "FarmaSoftWA\\GenerarPedidoLima.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-04T05:45:51.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GenerarPedidoLima.aspx.cs",
+              "DocumentMoniker": "D:\\CarpetasPUCP\\6to_Ciclo\\PROG3\\FarmaSoft\\proyecto_prog3\\Frontend\\FarmaSoft\\FarmaSoftWA\\GenerarPedidoLima.aspx.cs",
+              "RelativeDocumentMoniker": "FarmaSoftWA\\GenerarPedidoLima.aspx.cs",
+              "ToolTip": "D:\\CarpetasPUCP\\6to_Ciclo\\PROG3\\FarmaSoft\\proyecto_prog3\\Frontend\\FarmaSoft\\FarmaSoftWA\\GenerarPedidoLima.aspx.cs",
+              "RelativeToolTip": "FarmaSoftWA\\GenerarPedidoLima.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T05:47:28.616Z",
+              "EditorCaption": ""
             }
           ]
         }

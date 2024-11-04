@@ -2,6 +2,7 @@
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
@@ -18,15 +19,16 @@ namespace FarmaSoftWA
         {
             Application["listaDepartamentos"] = Enum.GetValues(typeof(departamento));
             Application["listaTiposMedicamentos"] = Enum.GetValues(typeof(tipoMedicamento));
-            Application["listaMedicamentos"] = medicinaGeneralWS.listarTodasMedicinasGenerales();
-            Application["listaFarmacias"] = farmaciaWS.listarTodasFarmaciasAsociadas();
+            Application["solicitudesEnAtencion"] = new BindingList<int>();
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
+            Session["solicitudAtendida"] = null;
             Session["direccion"] = null;
             Session["recetaMedicaFoto"] = null;
             Session["polizaFoto"] = null;
+            Session["detallesSolicitud"] = null;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

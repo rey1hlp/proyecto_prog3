@@ -42,27 +42,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-8">
-                    <div calss="row">
-
-                    </div>
-                    <div class="row">
-
-                        <asp:Label ID="lblDocumentos" runat="server" Text="Documentos:" CssClass="col-form-label fw-bold"></asp:Label>
-                        <div class="form-control">
-                            <div class="form-check form-check-inline">
-                                <asp:CheckBox ID="cbPoliza" runat="server" CssClass="form-check-label" />
-                                <label class="form-check-label" for="cbPoliza">POLIZA</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <asp:CheckBox ID="cbMedicina" runat="server" CssClass="form-check-label" />
-                                <label class="form-check-label" for="cbMedicina">MEDICINA</label>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
             </div>
         </div>
 

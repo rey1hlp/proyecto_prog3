@@ -27,12 +27,18 @@
             <!-- Esta es la sección del listado de medicinas-->
             <div class="row">
                 <div class="col-md-12 pb-md-3">
-                    <asp:GridView ID="gvMedicinas" runat="server" AllowPaging="true" PageSize="6" AutoGenerateColumns="false" 
+                    <asp:GridView ID="gvMedicinas" runat="server" AllowPaging="true" PageSize="5" OnPageIndexChanging="gvMedicinas_PageIndexChanging" AutoGenerateColumns="false" 
                         CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">
                         <Columns>
-                            <asp:BoundField HeaderText="Código" DataField="medicina.ID"/>
-                            <asp:BoundField HeaderText="Nombre" DataField="medicina.nombre"/>
-                            <asp:BoundField HeaderText="Cantidad" DataField="cantidadPedida"/>
+                            <asp:BoundField HeaderText="Código" DataField="medicina.ID" ItemStyle-CssClass="align-content-center"/>
+                            <asp:BoundField HeaderText="Nombre" DataField="medicina.nombre" ItemStyle-CssClass="align-content-center"/>
+                            <asp:BoundField HeaderText="Cantidad" DataField="cantidadPedida" ItemStyle-CssClass="align-content-center"/>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:Button ID="btnEliminarMedicina" runat="server" Text="Eliminar" CommandName="Eliminar" CommandArgument='<%# Eval("medicina.ID") %>'
+                                        OnClick="btnEliminarMedicina_Click" OnClientClick="return confirm('¿Estás seguro de que deseas eliminar este registro?');" CssClass="btn btn-danger"/>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                     </asp:GridView>
                 </div>

@@ -1,6 +1,7 @@
 ﻿using FarmaSoftWA.FarmaSoftWS;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,75 +11,100 @@ namespace FarmaSoftWA
 {
     public partial class ListarSolicitudes : System.Web.UI.Page
     {
+        private SolicitudWSClient solicitudWS = new SolicitudWSClient();
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             lblTitulo.Text = "Listado de solicitudes pendientes";
 
             if (!IsPostBack)
             {
-                CargarSolicitudesPendientes();
+                ViewState["listaSolicitudesPendientes"] = solicitudWS
+                    .listarTodasSolicitudes()
+                    .Where(s => s.estado == estadoSolicitud.PENDIENTE)
+                    .ToArray();
+
+                actualizarGvSolicitudes();
             }
         }
 
-        private void CargarSolicitudesPendientes()
+        private void actualizarGvSolicitudes()
         {
-            try
-            {
-                SolicitudWSClient solicitudWS = new SolicitudWSClient();
-                var solicitudes = solicitudWS.listarTodasSolicitudes();
-
-                //var solicitudesPendientes = solicitudes.Where(s => s.estado== estadoSolicitud.PENDIENTE && !s.completado).ToArray()
-                var solicitudesPendientes = solicitudes
-                .Where(s => s.estado == estadoSolicitud.PENDIENTE)
-                .Select(s => new
-                {
-                    ID = s.ID,
-                    Nombre = s.cliente.nombre,
-                    Apellido = (s.cliente.apellidoPaterno + " " + s.cliente.apellidoMaterno),
-                    Telefono = s.cliente.telefonoContacto,
-                    Fecha = s.fechayhoraCreacion
-                }).ToArray();
-                // Enlaza el GridView con las solicitudes pendientes
-                gvSolicitudes.DataSource = solicitudesPendientes;
-                gvSolicitudes.DataBind();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+            gvSolicitudes.DataSource = ViewState["listaSolicitudesPendientes"] as solicitud[];
+            gvSolicitudes.DataBind();
         }
-
 
         protected void lbAtender_Click(object sender, EventArgs e)
         {
-            // Obtiene la fila seleccionada
+            // Obtiene la solicitud seleccionada
             foreach (GridViewRow row in gvSolicitudes.Rows)
             {
-                RadioButton rbSeleccionado = (RadioButton)row.FindControl("rbSeleccionado");
+                RadioButton rbSeleccionado = (RadioButton) row.FindControl("rbSeleccionado");
                 if (rbSeleccionado != null && rbSeleccionado.Checked)
                 {
-                    int idSolicitud = Convert.ToInt32(gvSolicitudes.DataKeys[row.RowIndex].Value);
+                    int idSolicitudSelec = Convert.ToInt32(gvSolicitudes.DataKeys[row.RowIndex].Value);
 
-                    // Cambia el estado de la solicitud a "Atendiendo"
-                    try
+                    // verificar si la solicitud seleccionada no ha sido seleccionada antes
+                    // como es una var. compartida, se debe utilizar lock para manejar la race condition
+                    Application.Lock();
+                    BindingList<int> solEnAtencion = Application["solicitudesEnAtencion"] as BindingList<int>;
+                    if (solEnAtencion.Contains(idSolicitudSelec))
                     {
-                        SolicitudWSClient solicitudWS = new SolicitudWSClient();
+                        Application.UnLock();
+                        // Script de alerta de JavaScript
+                        string script = "alert('Solicitud seleccionada en atención. Haz click en Aceptar para mostrar nuevas solicitudes pendientes.');";
+                        ClientScript.RegisterStartupScript(this.GetType(), "alertScript", script, true);
+                        Response.Redirect(Request.RawUrl, true);
+                    }
+                    // si no está en atención, se añade a la lista y se libera la variable
+                    solEnAtencion.Add(idSolicitudSelec);
+                    Application.UnLock();
+                    
+                    // Buscamos en la lista de solicitudes pendientes a la seleccionada, para obtener
+                    // sus datos y actualizar el estado en la base de datos
+                    solicitud[] listaSolicitudes = ViewState["listaSolicitudesPendientes"] as solicitud[];
+                    
+                    foreach(solicitud sol in listaSolicitudes)
+                    {
+                        if(sol.ID == idSolicitudSelec)
+                        {
+                            sol.estado = estadoSolicitud.EN_ATENCION;
+                            Session["solicitudAtendida"] = sol;
+                            solicitudWS.actualizarSolicitud(sol);
+                            break;
+                        }
+                    }
 
-                        //Falta esta parte, porque debo pasarle un objeto solicitud, pero al colocar
-                        solicitud soli = solicitudWS.obtenerSolicitudPorId(idSolicitud);
-                        soli.estado = estadoSolicitud.EN_ATENCION;
-                        solicitudWS.actualizarSolicitud(soli);
-                    }
-                    catch (Exception ex)
-                    {
-                        // Manejo de errores
-                        Console.WriteLine(ex.Message);
-                    }
-                    // Redirige a SubirArchivo.aspx
-                    Response.Redirect("SubirArchivo.aspx");
-                    break; // Sal del bucle una vez que hayas encontrado la solicitud seleccionada
+                    // Finalmente, nos redirigimos a SubirArchivo.aspx
+                    Response.Redirect("SubirArchivo.aspx", true);
+                    break; // no debería llegar a ejecutarse ...
                 }
             }
+        }
+
+        protected void gvSolicitudes_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvSolicitudes.PageIndex = e.NewPageIndex;
+            actualizarGvSolicitudes();
+        }
+
+        protected void rbSeleccionado_CheckedChanged(object sender, EventArgs e)
+        {
+            // desmarcar todos los radio buttons que se pueden haber seleccionado antes
+            foreach (GridViewRow row in gvSolicitudes.Rows)
+            {
+                RadioButton rb = (RadioButton) row.FindControl("rbSeleccionado");
+                rb.Checked = false;
+            }
+
+            // Marcar el nuevo radio button seleccionado
+            RadioButton rbSelec = (RadioButton) sender;
+            rbSelec.Checked = true;
+        }
+
+        protected void lbRegresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Home.aspx");
         }
     }
 }

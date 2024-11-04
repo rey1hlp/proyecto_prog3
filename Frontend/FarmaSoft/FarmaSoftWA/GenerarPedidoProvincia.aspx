@@ -34,7 +34,7 @@
                     
                     <div class="col-md-12 pb-md-3">
                         <!--Aqui van la tabla-->
-                        <asp:GridView ID="gvFarmacias" runat="server" AllowPaging="true" PageSize="5" 
+                        <asp:GridView ID="gvFarmacias" runat="server" AllowPaging="true" PageSize="10" OnPageIndexChanging ="gvFarmacias_PageIndexChanging"
                             AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" 
                             ShowHeaderWhenEmpty="true">
                             <Columns>
@@ -52,7 +52,8 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:BoundField HeaderText="Telefono" DataField="telefono" />
-                            </columns>
+                                <asp:BoundField HeaderText="Correo" DataField="correo"/>
+                            </Columns>
                         </asp:GridView>
                     </div>
 

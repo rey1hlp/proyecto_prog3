@@ -114,33 +114,6 @@ namespace FarmaSoftWA
         protected global::System.Web.UI.WebControls.TextBox txtReferencia;
 
         /// <summary>
-        /// Control lblDocumentos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDocumentos;
-
-        /// <summary>
-        /// Control cbPoliza.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbPoliza;
-
-        /// <summary>
-        /// Control cbMedicina.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox cbMedicina;
-
-        /// <summary>
         /// Control lbRegresar.
         /// </summary>
         /// <remarks>
