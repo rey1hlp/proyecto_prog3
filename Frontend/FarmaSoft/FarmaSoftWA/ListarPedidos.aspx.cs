@@ -11,7 +11,7 @@ namespace FarmaSoftWA
 {
     public partial class ListarPedidos : System.Web.UI.Page
     {
-        private PedidoPropioWSClient pedidoPropioWS = new PedidoPropioWSClient
+        private PedidoPropioWSClient pedidoPropioWS = new PedidoPropioWSClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
