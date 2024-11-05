@@ -59,4 +59,19 @@ public class PedidoPropioWS {
         } 
         return pedidoPropio; 
     } 
+        
+    @WebMethod(operationName = "actualizarPedido")
+    public int actualizarPeiddo(@WebParam(name = "pedido") PedidoPropio pedidoPropio) {
+        int resultado = 0; 
+        try{ 
+            daoPedidoPropio = new PedidoPropioMySQL();
+            resultado = daoPedidoPropio.actualizar(pedidoPropio); 
+        }catch(Exception ex){ 
+            System.out.println(ex.getMessage()); 
+        } 
+        return resultado; 
+    }
+    
 }
+
+
