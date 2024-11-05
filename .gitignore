@@ -24,9 +24,6 @@
 hs_err_pid*
 replay_pid*
 
-# para la prog distribuida
-*.xml
-
 # ---------------------------------------------------------------------------------------------------
 
 ## Ignore Visual Studio temporary files, build results, and
