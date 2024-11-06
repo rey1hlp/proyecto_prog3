@@ -38,7 +38,11 @@
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:BoundField HeaderText="Fecha y hora" DataField="fechayHoraCreacion"/>
-                            <asp:BoundField HeaderText="Telefono" DataField="solicitudAsociada.cliente.telefonoContacto" />
+                            <asp:TemplateField HeaderText="Nombre y apellido">
+                                <ItemTemplate>
+                                    <%# Eval("solicitudAsociada.cliente.telefonoContacto") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </columns>
                     </asp:GridView>
                 </div>
