@@ -34,7 +34,7 @@
                             <asp:BoundField HeaderText="Id" DataField="id" />
                             <asp:TemplateField HeaderText="Nombre y apellido">
                                 <ItemTemplate>
-                                    <%# Eval("cliente.nombre") + ", " + Eval("cliente.apellido") %>
+                                    <%# Eval("solicitudAsociada.cliente.nombre") + ", " + Eval("solicitudAsociada.cliente.apellido") %>
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:BoundField HeaderText="Fecha y hora" DataField="fecha"/>
