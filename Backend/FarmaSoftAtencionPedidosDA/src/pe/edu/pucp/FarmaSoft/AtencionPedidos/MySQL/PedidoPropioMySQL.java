@@ -44,8 +44,9 @@ public class PedidoPropioMySQL implements PedidoPropioDAO{
                 PedidoPropio pedidoPropio = new PedidoPropio(); 
                 
                 pedidoPropio.setID(rs.getInt("ID"));
-                Solicitud solicitud = new Solicitud();
-                solicitud.setID(rs.getInt("ID_Solicitud"));
+                SolicitudDAO solicitudDao = new SolicitudMySQL();
+                Solicitud solicitud = solicitudDao.obtenerPorId(rs.getInt("ID_Solicitud"));
+                
                 pedidoPropio.setSolicitudAsociada(solicitud);
                 pedidoPropio.setFechayHoraCreacion(rs.getDate("fechaYHoraCreacion"));
                 pedidoPropio.setEstadoPedido(EstadoPedido.valueOf(rs.getString("estado")));
@@ -74,8 +75,10 @@ public class PedidoPropioMySQL implements PedidoPropioDAO{
             if(rs!=null && rs.next()){  
                 pedidoPropio = new PedidoPropio();
                 pedidoPropio.setID(rs.getInt("ID"));
-                Solicitud solicitud = new Solicitud();
-                solicitud.setID(rs.getInt("ID_Solicitud"));
+                
+                SolicitudDAO solicitudDao = new SolicitudMySQL();
+                Solicitud solicitud = solicitudDao.obtenerPorId(rs.getInt("ID_Solicitud"));
+
                 pedidoPropio.setSolicitudAsociada(solicitud);
                 pedidoPropio.setFechayHoraCreacion(rs.getDate("fechaYHoraCreacion"));
                 pedidoPropio.setEstadoPedido(EstadoPedido.valueOf(rs.getString("estado")));
