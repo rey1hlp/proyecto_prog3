@@ -12,7 +12,9 @@ import pe.edu.pucp.FarmaSoft.AtencionPedidos.DAO.PedidoPropioDAO;
 import pe.edu.pucp.FarmaSoft.AtencionPedidos.Model.EstadoPedido;
 import pe.edu.pucp.FarmaSoft.AtencionPedidos.Model.PedidoPropio;
 import pe.edu.pucp.FarmaSoft.AtencionPedidos.Model.Tecnico;
+import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.DAO.SolicitudDAO;
 import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.Model.Solicitud;
+import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.MySQL.SolicitudMySQL;
 import pe.edu.pucp.FarmaSoft.Usuario.Model.Usuario;
 /**
  *
@@ -44,8 +46,10 @@ public class PedidoPropioMySQL implements PedidoPropioDAO{
                 PedidoPropio pedidoPropio = new PedidoPropio(); 
                 
                 pedidoPropio.setID(rs.getInt("ID"));
-                Solicitud solicitud = new Solicitud();
-                solicitud.setID(rs.getInt("ID_Solicitud"));
+                
+                SolicitudDAO solicitudDao = new SolicitudMySQL();
+                Solicitud solicitud = solicitudDao.obtenerPorId(rs.getInt("ID_Solicitud"));
+                
                 pedidoPropio.setSolicitudAsociada(solicitud);
                 pedidoPropio.setFechayHoraCreacion(rs.getDate("fechaYHoraCreacion"));
                 pedidoPropio.setEstadoPedido(EstadoPedido.valueOf(rs.getString("estado")));
