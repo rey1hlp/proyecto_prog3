@@ -19,7 +19,7 @@ namespace FarmaSoftWA
 
             if (!IsPostBack)
             {
-                ViewState["listaPedidosPropiosPendientes"] = pedidoPropioWS.listarTodosPedidosPropios().Where(p => p.estadoPedido ==estadoPedido.PENDIENTE).ToArray();
+                ViewState["listaPedidosPropiosPendientes"] = pedidoPropioWS.listarTodosPedidosPropios().Where(p => p.estadoPedido == estadoPedido.PENDIENTE).ToArray();
 
                 actualizarGvPedidos();
             }
@@ -31,7 +31,7 @@ namespace FarmaSoftWA
         }
         protected void lbAtender_Click(object sender, EventArgs e)
         {
-            // Obtiene la solicitud seleccionada
+            
             foreach (GridViewRow row in gvPedidos.Rows)
             {
                 RadioButton rbSeleccionado = (RadioButton)row.FindControl("rbSeleccionado");
@@ -39,10 +39,10 @@ namespace FarmaSoftWA
                 {
                     int idPedidoSelec = Convert.ToInt32(gvPedidos.DataKeys[row.RowIndex].Value);
 
-                    // verificar si la solicitud seleccionada no ha sido seleccionada antes
+                    
                     // como es una var. compartida, se debe utilizar lock para manejar la race condition
                     Application.Lock();
-                    BindingList<int> pedEnAtencion = Application["pedidosPropiosEnAtencion"] as BindingList<int>; //revisar si "pedidosPropiosEnAtencion" es correcto
+                    BindingList<int> pedEnAtencion = Application["pedidosPropiosEnAtencion"] as BindingList<int>; 
                     if (pedEnAtencion.Contains(idPedidoSelec))
                     {
                         Application.UnLock();
@@ -55,8 +55,7 @@ namespace FarmaSoftWA
                     pedEnAtencion.Add(idPedidoSelec);
                     Application.UnLock();
 
-                    // Buscamos en la lista de solicitudes pendientes a la seleccionada, para obtener
-                    // sus datos y actualizar el estado en la base de datos
+                    
                     pedidoPropio[] listaPedidos = ViewState["listaPedidosPropiosPendientes"] as pedidoPropio[];
 
                     foreach (pedidoPropio ped in listaPedidos)
@@ -64,7 +63,7 @@ namespace FarmaSoftWA
                         if (ped.ID == idPedidoSelec)
                         {
                             ped.estadoPedido = estadoPedido.EN_ATENCION;
-                            Session["solicitudAtendida"] = ped;
+                            Session["pedidoAtendido"] = ped;
                             pedidoPropioWS.actualizarPedido(ped);
                             break;
                         }
@@ -77,7 +76,7 @@ namespace FarmaSoftWA
             }
         }
 
-        protected void gvSolicitudes_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        protected void gvPedidos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvPedidos.PageIndex = e.NewPageIndex;
             actualizarGvPedidos();
