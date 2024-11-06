@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.FarmaSoft.pucp.edu.pe" targetNamespace="http://services.FarmaSoft.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarPedido" type="tns:actualizarPedido" />
+  <xs:element name="actualizarPedidoResponse" type="tns:actualizarPedidoResponse" />
   <xs:element name="insertarPedidoPropio" type="tns:insertarPedidoPropio" />
   <xs:element name="insertarPedidoPropioResponse" type="tns:insertarPedidoPropioResponse" />
   <xs:element name="listarTodosPedidosPropios" type="tns:listarTodosPedidosPropios" />
@@ -154,6 +156,16 @@
   <xs:complexType name="obtenerPedidoPropioPorIdResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:pedidoPropio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pedido" type="tns:pedidoPropio" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarPedidoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarTodosPedidosPropios">

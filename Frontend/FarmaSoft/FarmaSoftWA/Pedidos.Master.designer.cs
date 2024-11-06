@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace FarmaSoft
+namespace FarmaSoftWA
 {
 
 
-    public partial class FarmaSoft
+    public partial class Pedidos
     {
 
         /// <summary>

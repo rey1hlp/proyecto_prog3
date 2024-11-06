@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/FarmaSoft.Master" AutoEventWireup="true" CodeBehind="ListarPedidos.aspx.cs" Inherits="FarmaSoftWA.ListarPedidos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pedidos.Master" AutoEventWireup="true" CodeBehind="ListarPedidos.aspx.cs" Inherits="FarmaSoftWA.ListarPedidos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
@@ -47,7 +47,7 @@
         </div>
 
         <div class="card-footer clearfix">
-            <asp:LinkButton ID="lbRegresar" runat="server" Text="<i class='fa-solid fa-rotate-left'></i> Regresar" CssClass="float-start btn btn-secondary" />
+            <asp:LinkButton ID="lbRegresar" runat="server" Text="<i class='fa-solid fa-rotate-left'></i> Regresar" CssClass="float-start btn btn-secondary" OnClick="lbRegresar_Click"/>
             <asp:LinkButton ID="lbAtender" runat="server" Text="<i class='fa-regular fa-play'></i> Atender" CssClass="float-end btn btn-primary" OnClick="lbAtender_Click"/>
             
         </div>

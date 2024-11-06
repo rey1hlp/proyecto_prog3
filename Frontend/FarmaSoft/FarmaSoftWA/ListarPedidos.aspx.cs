@@ -71,7 +71,7 @@ namespace FarmaSoftWA
                     }
 
                     // Finalmente, nos redirigimos a la siguiente pagina
-                    Response.Redirect(".aspx", true); //falta enlazar
+                    Response.Redirect("AgregarMedicinasPropias.aspx", true); //Enlazar con las paginas que faltan
                     break; // no debería llegar a ejecutarse ...
                 }
             }

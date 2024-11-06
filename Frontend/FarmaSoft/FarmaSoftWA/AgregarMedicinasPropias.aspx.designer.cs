@@ -11,7 +11,7 @@ namespace FarmaSoftWA
 {
 
 
-    public partial class GenerarPedidoLima
+    public partial class AgregarMedicinasPropias
     {
 
         /// <summary>
@@ -24,94 +24,121 @@ namespace FarmaSoftWA
         protected global::System.Web.UI.WebControls.Label lblTitulo;
 
         /// <summary>
-        /// Control lblDepartamento.
+        /// Control lblTituloContacto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDepartamento;
+        protected global::System.Web.UI.WebControls.Label lblTituloContacto;
 
         /// <summary>
-        /// Control ddlDepartamento.
+        /// Control lblNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlDepartamento;
+        protected global::System.Web.UI.WebControls.Label lblNombre;
 
         /// <summary>
-        /// Control Label1.
+        /// Control txtNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
-        /// Control txtProvincia.
+        /// Control lblTelefono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtProvincia;
+        protected global::System.Web.UI.WebControls.Label lblTelefono;
 
         /// <summary>
-        /// Control lblDistrito.
+        /// Control txtTelefono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDistrito;
+        protected global::System.Web.UI.WebControls.TextBox txtTelefono;
 
         /// <summary>
-        /// Control txtDistrito.
+        /// Control gvMedicinas.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDistrito;
+        protected global::System.Web.UI.WebControls.GridView gvMedicinas;
 
         /// <summary>
-        /// Control lblCalle.
+        /// Control lblTituloPago.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCalle;
+        protected global::System.Web.UI.WebControls.Label lblTituloPago;
 
         /// <summary>
-        /// Control txtCalle.
+        /// Control lblTotal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCalle;
+        protected global::System.Web.UI.WebControls.Label lblTotal;
 
         /// <summary>
-        /// Control lblReferencia.
+        /// Control txtTotal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblReferencia;
+        protected global::System.Web.UI.WebControls.TextBox txtTotal;
 
         /// <summary>
-        /// Control txtReferencia.
+        /// Control lblMontoCubierto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtReferencia;
+        protected global::System.Web.UI.WebControls.Label lblMontoCubierto;
+
+        /// <summary>
+        /// Control txtMontoCubierto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtMontoCubierto;
+
+        /// <summary>
+        /// Control lblTotalAPagar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblTotalAPagar;
+
+        /// <summary>
+        /// Control txtTotalAPagar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTotalAPagar;
 
         /// <summary>
         /// Control lbRegresar.
@@ -123,12 +150,12 @@ namespace FarmaSoftWA
         protected global::System.Web.UI.WebControls.LinkButton lbRegresar;
 
         /// <summary>
-        /// Control lbGuardar.
+        /// Control lbContinuar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbGuardar;
+        protected global::System.Web.UI.WebControls.LinkButton lbContinuar;
     }
 }

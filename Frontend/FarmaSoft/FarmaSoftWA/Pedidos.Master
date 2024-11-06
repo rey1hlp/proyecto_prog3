@@ -1,4 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FarmaSoft.Master.cs" Inherits="FarmaSoft.FarmaSoft" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Pedidos.master.cs" Inherits="FarmaSoftWA.Pedidos" %>
+
 <!DOCTYPE html>
 <html lang="es">
 <head runat="server">
@@ -32,7 +33,7 @@
             <ul class="mynav nav nav-pills flex-column mb-auto">
                 <li class="nav-item mb-1">
                     <!-- IRA A LA PAGINA GENERAR PEDIDO X DEFAULT -->
-                    <a href="ListarSolicitudes.aspx" class="navbar-text-color fw-bolder"><i class="fa-solid fa-calendar-days pe-2 navbar-text-color"></i>Atención de Solicitudes</a>
+                    <a href="ListarSolicitudes.aspx" class="navbar-text-color fw-bolder"><i class="fa-solid fa-calendar-days pe-2 navbar-text-color"></i>Atención de Pedidos</a>
                 </li>
                 <li class="nav-item mb-1">
                     <!-- IRA A LA PAGINA GENERAR REPORTES DE SOLICITUDES -->
