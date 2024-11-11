@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pedidos.Master" AutoEventWireup="true" CodeBehind="CompletarDatosPedido.aspx.cs" Inherits="FarmaSoftWA.CompletarDatosPedido" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Pedidos.Master" AutoEventWireup="true" CodeBehind="CompletarDatosPedido.aspx.cs" Inherits="FarmaSoftWA.CompletarDatosPedido" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
 </asp:Content>
@@ -81,8 +81,8 @@
                                 <asp:TextBox ID="txtNumeroPoliza" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                             </div>
                             <div class="col-md-4 pb-md-3">
-                                <asp:Label ID="lblMontoPagar" runat="server" Text="Monto a pagar" CssClass="col-form-label fw-bold"></asp:Label>
-                                <asp:TextBox ID="txtMontoPagar" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                                <asp:Label ID="lblTipoSeguro" runat="server" Text="Tipo de Seguro" CssClass="col-form-label fw-bold"></asp:Label>
+                                <asp:TextBox ID="txtTipoSeguro" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                             </div>
                             <div class="col-md-4 pb-md-3">
                                 <asp:Label ID="lblEstado" runat="server" Text="Estado" CssClass="col-form-label fw-bold"></asp:Label>
@@ -91,6 +91,18 @@
                                     <asp:ListItem Value="1"> CADUCADO </asp:ListItem>
                                     <asp:ListItem Value="2"> NO INGRESADO </asp:ListItem>
                                 </asp:DropDownList>
+                            </div>
+                            <div class="col-md-4 pb-md-3">
+                                <asp:Label ID="lblAseguradora" runat="server" Text="Aseguradora" CssClass="col-form-label fw-bold"></asp:Label>
+                                <asp:TextBox ID="txtAseguradora" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                            </div>
+                            <div class="col-md-4 pb-md-3">
+                                <asp:Label ID="lblDniAsegurado" runat="server" Text="DNI Asegurado" CssClass="col-form-label fw-bold"></asp:Label>
+                                <asp:TextBox ID="txtDniAsegurado" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+                            </div>
+                            <div class="col-md-4 pb-md-3">
+                                <asp:Label ID="lblPorcentajeCobertura" runat="server" Text="% Cobertura" CssClass="col-form-label fw-bold"></asp:Label>
+                                <asp:TextBox ID="txtPorcentajeCobertura" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
                             </div>
                             <div class="col-md-12 text-md-end pb-md-3">
                                 <asp:Panel ID="panelBotones" runat="server" CssClass="text-md-end">
