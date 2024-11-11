@@ -1,4 +1,4 @@
-﻿using FarmaSoftWA.FarmaSoftWS;
+using FarmaSoftWA.FarmaSoftWS;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -65,19 +65,7 @@ namespace FarmaSoftWA
                 }
                 else
                 {
-                    //Borrar esto, el monto cubierto va en la pantalla de agregar medicinas propias
                     txtEstado.SelectedValue = "0";
-                    double cubre = (poliza.porcentajeCobertura * pedidoPropio.montoTotal) / 100;
-                    if (poliza.coberturaMaxima >= cubre)
-                    {
-                        pedidoPropio.montoCubierto = cubre;
-                        pedidoPropio.montoTotal -= cubre;
-                    }
-                    else
-                    {
-                        pedidoPropio.montoCubierto = pedidoPropio.solicitudAsociada.cliente.poliza.coberturaMaxima;
-                        pedidoPropio.montoTotal -= pedidoPropio.montoCubierto;
-                    }
                     lbRegistrar.Visible = false;
                     lbActualizar.Visible = true;
                     lbDescargar.Visible = true;
@@ -94,8 +82,10 @@ namespace FarmaSoftWA
                     txtPedDniAsegurado.Text = poliza.DNIAsegurado.ToString();
                     txtPedNombreAsegurado.Text = poliza.nombreAsegurado.ToString();
                     txtNumeroPoliza.Text = poliza.codigo.ToString();
-                    txtMontoPagar.Text = pedidoPropio.montoCubierto.ToString();
-
+                    txtTipoSeguro.Text = poliza.tipoSeguro.ToString();
+                    txtAseguradora.Text = poliza.aseguradora.ToString() ;
+                    txtDniAsegurado.Text = poliza.DNIAsegurado.ToString();
+                    txtPorcentajeCobertura.Text = (poliza.porcentajeCobertura * 100).ToString();
                 }
             }
         }
@@ -110,8 +100,11 @@ namespace FarmaSoftWA
             dtpFechaNacimiento.Disabled = true;
             txtTelefono.Enabled = false;
             txtNumeroPoliza.Enabled = false;
-            txtMontoPagar.Enabled = false;
+            txtTipoSeguro.Enabled = false;
             txtEstado.Enabled = false;
+            txtAseguradora.Enabled = false;
+            txtDniAsegurado.Enabled = false;
+            txtPorcentajeCobertura.Enabled = false; 
         }
         protected void lbRegistrar_Click(object sender, EventArgs e)
         {
@@ -145,7 +138,7 @@ namespace FarmaSoftWA
             int resultado = daoPoliza.actualizarPoliza(poliza);
             if (resultado != 0)
             {
-                Response.Write("Se ha registrado con exito...");
+                Response.Redirect(Request.RawUrl);
             }
         }
 
