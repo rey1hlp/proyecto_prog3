@@ -66,6 +66,7 @@
   <ItemGroup>
     <Content Include="AgregarMedicinasGenericas.aspx" />
     <Content Include="AgregarMedicinasPropias.aspx" />
+    <Content Include="CompletarDatosPedido.aspx" />
     <Content Include="CompletarDireccionEnvio.aspx" />
     <None Include="Connected Services\FarmaSoftWS\archivo.disco" />
     <None Include="Connected Services\FarmaSoftWS\configuration91.svcinfo" />
@@ -151,9 +152,6 @@
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarTodosPedidosPropiosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.medicinaGeneral.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.medicinaPropia.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -184,6 +182,41 @@
     <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.actualizarPedidoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.actualizarPolizaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarPolizaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.medicinaGeneral1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.obtenerPolizaPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.poliza.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.obtenerPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.transformarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.listarDetallesSolicitudPorIDSolicitudResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\FarmaSoftWS\DetallePedidoWS.wsdl" />
+    <None Include="Connected Services\FarmaSoftWS\DetallePedidoWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Connected Services\FarmaSoftWS\FarmaSoftWA.FarmaSoftWS.insertarDetallePedidoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Connected Services\FarmaSoftWS\PolizaWS.wsdl" />
+    <None Include="Connected Services\FarmaSoftWS\PolizaWS.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\FarmaSoftWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -238,6 +271,7 @@
     <Content Include="ListarPedidos.aspx" />
     <Content Include="ListarSolicitudes.aspx" />
     <Content Include="ProcesamientoPago.aspx" />
+    <Content Include="ResumenPedido.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -326,6 +360,13 @@
     <Compile Include="AgregarMedicinasPropias.aspx.designer.cs">
       <DependentUpon>AgregarMedicinasPropias.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CompletarDatosPedido.aspx.cs">
+      <DependentUpon>CompletarDatosPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompletarDatosPedido.aspx.designer.cs">
+      <DependentUpon>CompletarDatosPedido.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CompletarDireccionEnvio.aspx.cs">
       <DependentUpon>CompletarDireccionEnvio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -398,6 +439,13 @@
       <DependentUpon>ProcesamientoPago.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResumenPedido.aspx.cs">
+      <DependentUpon>ResumenPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ResumenPedido.aspx.designer.cs">
+      <DependentUpon>ResumenPedido.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SubirArchivo.aspx.cs">
       <DependentUpon>SubirArchivo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

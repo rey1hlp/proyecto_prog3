@@ -23,7 +23,7 @@ public class MedicinaGeneralMySQL implements MedicinaGeneralDAO{
     @Override 
     public int insertar(MedicinaGeneral medicinaGeneral) { 
         HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
-        parametrosEntrada.put("idi", medicinaGeneral.getID()); 
+        parametrosEntrada.put("idi", medicinaGeneral.getIDP()); 
         parametrosEntrada.put("nombre", medicinaGeneral.getNombre()); 
         parametrosEntrada.put("id_TipoMedicamento", medicinaGeneral.getTipoMedicamento());
 
@@ -44,7 +44,7 @@ public class MedicinaGeneralMySQL implements MedicinaGeneralDAO{
             while(rs.next()){ 
                 MedicinaGeneral medicina = new MedicinaGeneral();
                 
-                medicina.setID(rs.getString("ID"));
+                medicina.setIDP(rs.getString("ID"));
                 medicina.setNombre(rs.getString("nombre"));
                 TipoMedicamento tipoMed = daoTipoMed.obtenerPorId(rs.getInt("ID_TipoMedicamento"));
                 medicina.setTipoMedicamento(tipoMed);
@@ -82,35 +82,24 @@ public class MedicinaGeneralMySQL implements MedicinaGeneralDAO{
 //        return eventos; 
 //    }
 //
-//    @Override 
-//    public MedicinaPropia obtenerPorId(int idEvento) { 
-//        Evento evento = new Evento(); 
-//        HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
-//        parametrosEntrada.put("_id_evento", idEvento); 
-//        rs = DBManager.getInstance().ejecutarProcedimientoLectura("OBTENER_EVENTO_X_ID", 
-//    parametrosEntrada); 
-//        try{ 
-//            if(rs.next()){  
-//               evento.setIdEvento(rs.getInt("id_evento")); 
-//               evento.setClasificacion(rs.getString("id_clasificacion").charAt(0)); 
-//               evento.setCostoRealizacion(rs.getDouble("costo_realizacion")); 
-//               evento.setTipoEvento(TipoEvento.valueOf(rs.getString("tipo_evento"))); 
-//               evento.setNombre(rs.getString("nombre_evento")); 
-//               evento.setDescripcion(rs.getString("descripcion")); 
-//               evento.setBannerPromocional(rs.getBytes("banner_promocional")); 
-//               evento.setPermiteGrabacion(rs.getBoolean("permite_grabacion")); 
-//               evento.setPermiteReingreso(rs.getBoolean("permite_reingreso")); 
-//               evento.setFechaRealizacion(rs.getDate("fecha_realizacion")); 
-//               Productora productora = new Productora(); 
-//               productora.setIdProductora(rs.getInt("id_productora")); 
-//               productora.setNombre(rs.getString("nombre_productora")); 
-//               evento.setProductora(productora); 
-//               evento.setActivo(true); 
-//            } 
-//        }catch(SQLException ex){ 
-//            System.out.println("Error leyendo datos: " + ex.getMessage()); 
-//        } 
-//        return evento; 
-//    } 
+    @Override 
+    public MedicinaGeneral obtenerPorId(String idMedicina) { 
+        MedicinaGeneral medicina = new MedicinaGeneral(); 
+        HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
+        parametrosEntrada.put("p_id", idMedicina); 
+        rs = DBManager.getInstance().ejecutarProcedimientoLectura("obtenerPorId_medicina_general", 
+    parametrosEntrada); 
+        try{ 
+            if(rs.next()){  
+               medicina.setIDP(rs.getString("ID")); 
+               medicina.setNombre(rs.getString("nombre")); 
+               int tipoMedicamentoId = rs.getInt("ID_TipoMedicamento");
+               medicina.setTipoMedicamento(TipoMedicamento.values()[tipoMedicamentoId]);
+            } 
+        }catch(SQLException ex){ 
+            System.out.println("Error leyendo datos: " + ex.getMessage()); 
+        } 
+        return medicina; 
+    } 
     
 }

@@ -39,6 +39,7 @@
       <xs:element minOccurs="0" name="apellidoPaterno" type="xs:string" />
       <xs:element name="completado" type="xs:boolean" />
       <xs:element minOccurs="0" name="correoContacto" type="xs:string" />
+      <xs:element minOccurs="0" name="direccion" type="tns:direccion" />
       <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
       <xs:element name="ID" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
@@ -49,16 +50,30 @@
       <xs:element minOccurs="0" name="tipoDocumento" type="tns:tipoDocumento" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="direccion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="calle" type="xs:string" />
+      <xs:element name="completado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="departamento" type="tns:departamento" />
+      <xs:element minOccurs="0" name="distrito" type="xs:string" />
+      <xs:element name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="provincia" type="xs:string" />
+      <xs:element minOccurs="0" name="referencia" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="poliza">
     <xs:sequence>
       <xs:element minOccurs="0" name="aseguradora" type="xs:string" />
       <xs:element name="coberturaMaxima" type="xs:double" />
       <xs:element name="codigo" type="xs:int" />
+      <xs:element name="completado" type="xs:boolean" />
+      <xs:element name="DNIAsegurado" type="xs:int" />
       <xs:element name="esValida" type="xs:boolean" />
       <xs:element minOccurs="0" name="fechaEmision" type="xs:dateTime" />
       <xs:element minOccurs="0" name="fechaVencimiento" type="xs:dateTime" />
       <xs:element name="ID" type="xs:int" />
       <xs:element minOccurs="0" name="imagen" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="nombreAsegurado" type="xs:string" />
       <xs:element name="porcentajeCobertura" type="xs:double" />
       <xs:element minOccurs="0" name="tipoSeguro" type="xs:string" />
     </xs:sequence>
@@ -71,7 +86,7 @@
   </xs:complexType>
   <xs:complexType name="medicinaGeneral">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ID" type="xs:string" />
+      <xs:element minOccurs="0" name="IDP" type="xs:string" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="tipoMedicamento" type="tns:tipoMedicamento" />
     </xs:sequence>
@@ -83,17 +98,6 @@
       <xs:element name="ID" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element name="telefono" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="direccion">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="calle" type="xs:string" />
-      <xs:element name="completado" type="xs:boolean" />
-      <xs:element minOccurs="0" name="departamento" type="tns:departamento" />
-      <xs:element minOccurs="0" name="distrito" type="xs:string" />
-      <xs:element name="ID" type="xs:int" />
-      <xs:element minOccurs="0" name="provincia" type="xs:string" />
-      <xs:element minOccurs="0" name="referencia" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="usuario">
@@ -134,33 +138,6 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:solicitud" />
     </xs:sequence>
   </xs:complexType>
-  <xs:simpleType name="tipoDocumento">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="DNI" />
-      <xs:enumeration value="CE" />
-      <xs:enumeration value="PASAPORTE" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="tipoMedicamento">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="ANALGESICO" />
-      <xs:enumeration value="ANTIBIOTICO" />
-      <xs:enumeration value="ANTIVIRAL" />
-      <xs:enumeration value="ANTIFUNGICO" />
-      <xs:enumeration value="ANTIHISTAMINICO" />
-      <xs:enumeration value="ANTIDEPRESIVO" />
-      <xs:enumeration value="VITAMINAS_Y_SUPLEMENTOS" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="estadoSolicitud">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="PENDIENTE" />
-      <xs:enumeration value="EN_ATENCION" />
-      <xs:enumeration value="DESCARTADA" />
-      <xs:enumeration value="A_PROPIA" />
-      <xs:enumeration value="A_ASOCIADA" />
-    </xs:restriction>
-  </xs:simpleType>
   <xs:simpleType name="departamento">
     <xs:restriction base="xs:string">
       <xs:enumeration value="AMAZONAS" />
@@ -187,6 +164,33 @@
       <xs:enumeration value="TACNA" />
       <xs:enumeration value="TUMBES" />
       <xs:enumeration value="UCAYALI" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoDocumento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DNI" />
+      <xs:enumeration value="CE" />
+      <xs:enumeration value="PASAPORTE" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoMedicamento">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ANALGESICO" />
+      <xs:enumeration value="ANTIBIOTICO" />
+      <xs:enumeration value="ANTIVIRAL" />
+      <xs:enumeration value="ANTIFUNGICO" />
+      <xs:enumeration value="ANTIHISTAMINICO" />
+      <xs:enumeration value="ANTIDEPRESIVO" />
+      <xs:enumeration value="VITAMINAS_Y_SUPLEMENTOS" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="estadoSolicitud">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PENDIENTE" />
+      <xs:enumeration value="EN_ATENCION" />
+      <xs:enumeration value="DESCARTADA" />
+      <xs:enumeration value="A_PROPIA" />
+      <xs:enumeration value="A_ASOCIADA" />
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

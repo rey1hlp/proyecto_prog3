@@ -4,7 +4,39 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
+    <div class="container">
+        <asp:Label ID="lblSubtitulo" runat="server" Text="Detalles del Cliente" CssClass="h5"></asp:Label><br />
 
+        <div class="row">
+            <div class="col-md-4">
+                <asp:Label ID="lblIdCliente" runat="server" Text="ID Cliente:" CssClass="text-muted"></asp:Label><br />
+                <asp:TextBox ID="txtIdCliente" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+            </div>
+            <div class="col-md-4">
+                <asp:Label ID="lblDni" runat="server" Text="DNI:" CssClass="text-muted"></asp:Label><br />
+                <asp:TextBox ID="txtDni" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+            </div>
+            <div class="col-md-4">
+                <asp:Label ID="lblNombre" runat="server" Text="Nombre:" CssClass="text-muted"></asp:Label><br />
+                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <asp:Label ID="lblApellidos" runat="server" Text="Apellidos:" CssClass="text-muted"></asp:Label><br />
+                <asp:TextBox ID="txtApellidos" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+            </div>
+            <div class="col-md-4">
+                <asp:Label ID="lblTelefono" runat="server" Text="Teléfono:" CssClass="text-muted"></asp:Label><br />
+                <asp:TextBox ID="txtTelefono" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+            </div>
+            <div class="col-md-4">
+                <asp:Label ID="lblCorreo" runat="server" Text="Correo Electrónico:" CssClass="text-muted"></asp:Label><br />
+                <asp:TextBox ID="txtCorreo" runat="server" CssClass="form-control" ReadOnly="true"></asp:TextBox>
+            </div>
+        </div>
+    </div>
+    <br/>
     <div class="container">
     <div class="card">
         <div class="card-header">

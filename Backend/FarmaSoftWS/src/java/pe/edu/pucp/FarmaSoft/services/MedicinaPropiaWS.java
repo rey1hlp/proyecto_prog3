@@ -28,18 +28,17 @@ public class MedicinaPropiaWS {
 //    } 
     
     @WebMethod(operationName = "insertarMedicinaPropia") 
-    public int insertarMedicinaPropia() { 
-        MedicinaPropia medicinaPropia;
+    public int insertarMedicinaPropia(MedicinaPropia medicinaPropia) { 
         int resultado = 0; 
         try{ 
             daoMedicinaPropia = new MedicinaPropiaMySQL();
-            medicinaPropia=new MedicinaPropia();
-            medicinaPropia.setCodigo(1);
-            medicinaPropia.setID("X86");
-            medicinaPropia.setNombre("PARACETAMOL");
-            medicinaPropia.setPrecio(12.99);
-            medicinaPropia.setStock(20);
-            medicinaPropia.setTipoMedicamento(TipoMedicamento.ANTIBIOTICO);
+//            medicinaPropia=new MedicinaPropia();
+//            medicinaPropia.setId(1);
+//            medicinaPropia.setIDP("X86");
+//            medicinaPropia.setNombre("PARACETAMOL");
+//            medicinaPropia.setPrecio(12.99);
+//            medicinaPropia.setStock(20);
+//            medicinaPropia.setTipoMedicamento(TipoMedicamento.ANTIBIOTICO);
             resultado = daoMedicinaPropia.insertar(medicinaPropia); 
         }catch(Exception ex){ 
             System.out.println(ex.getMessage()); 
@@ -59,16 +58,16 @@ public class MedicinaPropiaWS {
         return medicinas; 
     } 
     
-//    @WebMethod(operationName = "obtenerEventoPorId") 
-//    public Evento obtenerEventoPorId(@WebParam(name = "idEvento") int idEvento) { 
-//        Evento evento = null; 
-//        try{ 
-//            daoEvento = new EventoMySQL(); 
-//            evento = daoEvento.obtenerPorId(idEvento); 
-//        }catch(Exception ex){ 
-//            System.out.println(ex.getMessage()); 
-//        } 
-//        return evento; 
-//    } 
+    @WebMethod(operationName = "obtenerPorId") 
+    public MedicinaPropia obtenerMedicinaPorId(@WebParam(name = "idMedicina") String idMedicina) { 
+        MedicinaPropia medicina = null; 
+        try{ 
+            daoMedicinaPropia = new MedicinaPropiaMySQL(); 
+            medicina = daoMedicinaPropia.obtenerPorId(idMedicina); 
+        }catch(Exception ex){ 
+            System.out.println(ex.getMessage()); 
+        } 
+        return medicina; 
+    } 
     
 } 

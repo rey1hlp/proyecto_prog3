@@ -8,42 +8,42 @@ public class Poliza implements IConsultable {
     private int ID;
     private String tipoSeguro;
     private int codigo;
+    private String aseguradora;
+    private int DNIAsegurado;
+    private String NombreAsegurado;
     private Date fechaEmision;
     private Date fechaVencimiento;
     private double coberturaMaxima;
     private double porcentajeCobertura;
-    private String aseguradora;
     private boolean esValida;
     private byte imagen[];
-
+    private boolean completado;
+ 
+    
+    
+    
+    
+    
     public Poliza() {
         
     }
+    @Override
+    public void consultarDatos() {
+        
+    }
     
-    /**
-     * @return the ID
-     */
     public int getID() {
         return ID;
     }
 
-    /**
-     * @param ID the ID to set
-     */
     public void setID(int ID) {
         this.ID = ID;
     }
-    
-    /**
-     * @return the tipoSeguro
-     */
+
     public String getTipoSeguro() {
         return tipoSeguro;
     }
 
-    /**
-     * @param tipoSeguro the tipoSeguro to set
-     */
     public void setTipoSeguro(String tipoSeguro) {
         this.tipoSeguro = tipoSeguro;
     }
@@ -71,17 +71,11 @@ public class Poliza implements IConsultable {
     public void setFechaVencimiento(Date fechaVencimiento) {
         this.fechaVencimiento = fechaVencimiento;
     }
-    
-    /**
-     * @return the coberturaMaxima
-     */
+
     public double getCoberturaMaxima() {
         return coberturaMaxima;
     }
 
-    /**
-     * @param coberturaMaxima the coberturaMaxima to set
-     */
     public void setCoberturaMaxima(double coberturaMaxima) {
         this.coberturaMaxima = coberturaMaxima;
     }
@@ -102,40 +96,52 @@ public class Poliza implements IConsultable {
         this.aseguradora = aseguradora;
     }
 
-    /**
-     * @return the esValida
-     */
     public boolean isEsValida() {
         return esValida;
     }
 
-    /**
-     * @param esValida the esValida to set
-     */
     public void setEsValida(boolean esValida) {
         this.esValida = esValida;
     }
 
-    /**
-     * @return the imagen
-     */
     public byte[] getImagen() {
         return imagen;
     }
 
-    /**
-     * @param imagen the imagen to set
-     */
     public void setImagen(byte[] imagen) {
         this.imagen = imagen;
     }
-    
-    @Override
-    public void consultarDatos(){
 
+    public int getDNIAsegurado() {
+        return DNIAsegurado;
+    }
+
+    public void setDNIAsegurado(int DNIAsegurado) {
+        this.DNIAsegurado = DNIAsegurado;
+    }
+
+    public String getNombreAsegurado() {
+        return NombreAsegurado;
+    }
+
+    public void setNombreAsegurado(String NombreAsegurado) {
+        this.NombreAsegurado = NombreAsegurado;
+    }
+
+    public boolean isCompletado() {
+        return completado;
+    }
+
+    public void setCompletado(boolean completado) {
+        this.completado = completado;
     }
     
-    public double calcularCobertura(double monto){
-        return 0;
-    }
+    
+
+    
+    
+    /**
+     * @return the ID
+     */
+    
 }

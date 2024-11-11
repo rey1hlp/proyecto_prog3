@@ -16,17 +16,20 @@ namespace FarmaSoftWA
         private static pago pagoAux;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (nuevoPago != null)
+            if (!IsPostBack)
             {
-                //Para recuperar los datos al retroceder
-                pagoAux = (pago)Session["pago"];
-                txtNumeroOperacion.Text = pagoAux.numOperaciones;
-                txtMetodoPago.Text = pagoAux.metodoPago;
-                txtMontoPagado.Text = pagoAux.montoPagado.ToString();
+                if (nuevoPago != null)
+                {
+                    //Para recuperar los datos al retroceder
+                    pagoAux = (pago)Session["pago"];
+                    txtNumeroOperacion.Text = pagoAux.numOperaciones.ToString();
+                    txtMetodoPago.Text = pagoAux.metodoPago;
+                    txtMontoPagado.Text = pagoAux.montoPagado.ToString();
+                }
+                if (Session["comprobantePago"] != null)
+                    comprobantePago = (byte[])Session["comprobantePago"];
+                cargarComprobante(sender, e);
             }
-            if (Session["comprobantePago"] != null)
-                comprobantePago = (byte[])Session["comprobantePago"];
-            cargarComprobante(sender, e);
         }
         private void cargarComprobante(object sender, EventArgs e)
         {
@@ -51,9 +54,12 @@ namespace FarmaSoftWA
         }
         protected void lbContinuar_Click(object sender, EventArgs e)
         {
-            if (fileUploadComprobante.HasFile)
+            //if (fileUploadComprobante.HasFile)
+            //{
+            //private int idField;   me lo da la base de datos
+            if (!string.IsNullOrEmpty(txtNumeroOperacion.Text) && !string.IsNullOrEmpty(txtMetodoPago.Text)
+                && !string.IsNullOrEmpty(txtMontoPagado.Text)) 
             {
-                //private int idField;   me lo da la base de datos
                 nuevoPago = new pago();
                 nuevoPago.numOperaciones = txtNumeroOperacion.Text;
                 nuevoPago.metodoPago = txtMetodoPago.Text;
@@ -61,14 +67,16 @@ namespace FarmaSoftWA
                 nuevoPago.completado = true;
                 nuevoPago.pedidoPropio = new pedidoPropio();
                 nuevoPago.comprobante = comprobantePago;        //Solo se asigna cuando ya hay un comprobante
-                if (Session["pedidoPropio"] != null)
+                if (Session["pedidoAtendido"] != null)
                 {
-                    //private pedidoPropio pedidoPropioField ;    DE ALGUNA VARIABLE SESSION GUARDADA POR AHI
-                    nuevoPago.pedidoPropio = (pedidoPropio)Session["pedidoPropio"];
+                    //private pedidoPropio pedidoPropioField ;
+                    nuevoPago.pedidoPropio = (pedidoPropio)Session["pedidoAtendido"];
                 }
                 Session["pago"] = nuevoPago;       //Guardamos el pago en un session
+                                                   //}
+                                                   //Caso contrario mostrar mensaje de error ya que no hay un archivo
+                Response.Redirect("ResumenPedido.aspx");
             }
-            //Caso contrario mostrar mensaje de error ya que no hay un archivo
         }
     }
     //En otras pantallas usar el Session["pago"] que contiene toda la información importante de esta parte

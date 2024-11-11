@@ -1,7 +1,8 @@
 package pe.edu.pucp.FarmaSoft.Medicina.Model;
 
 public class MedicinaPropia extends MedicinaGeneral {
-    private int codigo;
+    //private int codigo;    //Este no funciona en el C#
+    private int id;
     private double precio;
     private int stock;
     
@@ -9,19 +10,19 @@ public class MedicinaPropia extends MedicinaGeneral {
             super();
     }
    
-    /**
-     * @return the codigo
-     */
-    public int getcodigo() {
-        return codigo;
+    public int getId() {
+        return id;
     }
-
-    /**
-     * @param codigo the codigo to set
-     */
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setId(int id) {
+        this.id = id;
     }
+    
+//    public int getcodigo() {
+//        return codigo;
+//    }
+//    public void setCodigo(int codigo) {
+//        this.codigo = codigo;
+//    }
 
     /**
      * @return the precio

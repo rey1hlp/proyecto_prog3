@@ -7,5 +7,5 @@ public interface MedicinaPropiaDAO {
     int insertar(MedicinaPropia medicinaPropia);
     ArrayList<MedicinaPropia> listarTodas();
     //ArrayList<MedicinaPropia> listarPorNombre(String nombre);
-    //MedicinaPropia obtenerPorId(int idEvento);
+    MedicinaPropia obtenerPorId(String idMedicina);
 }

@@ -29,10 +29,11 @@
     <MetadataFile FileName="PedidoPropioWS.xsd" MetadataType="Schema" ID="aa4b910d-f60d-4a59-854f-504f023ebea2" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/PedidoPropioWS?xsd=1" />
     <MetadataFile FileName="EmpleadoWS.xsd" MetadataType="Schema" ID="81de1d82-d4a4-4f77-9cb1-76baa67bd8c2" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/EmpleadoWS?xsd=1" />
     <MetadataFile FileName="AdministradorWS.wsdl" MetadataType="Wsdl" ID="cab5c454-50ae-43d6-9c69-079edf77e4ea" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/AdministradorWS?WSDL" />
-    <MetadataFile FileName="SolicitudWS.xsd" MetadataType="Schema" ID="9fbbf076-a650-4182-8eb7-7e395ac84dff" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/SolicitudWS?xsd=1" />
-    <MetadataFile FileName="MedicinaGeneralWS.wsdl" MetadataType="Wsdl" ID="9221f6bd-b6f2-4015-b12b-334210455f13" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/MedicinaGeneralWS?WSDL" />
+    <MetadataFile FileName="DetallePedidoWS.wsdl" MetadataType="Wsdl" ID="697730d4-efe7-4158-9282-2caf3b190f06" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/DetallePedidoWS?WSDL" />
+    <MetadataFile FileName="PolizaWS.wsdl" MetadataType="Wsdl" ID="29366ae2-aa86-41b6-9a59-f0423282d8ee" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/PolizaWS?WSDL" />
     <MetadataFile FileName="PedidoPropioWS.wsdl" MetadataType="Wsdl" ID="d79350b7-5ced-45dd-a9a9-dd0d9678c162" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/PedidoPropioWS?WSDL" />
     <MetadataFile FileName="MedicinaPropiaWS.xsd" MetadataType="Schema" ID="d448edeb-062c-4c9a-9a10-3b4b5fec88f2" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/MedicinaPropiaWS?xsd=1" />
+    <MetadataFile FileName="MedicinaGeneralWS.wsdl" MetadataType="Wsdl" ID="9221f6bd-b6f2-4015-b12b-334210455f13" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/MedicinaGeneralWS?WSDL" />
     <MetadataFile FileName="archivo.disco" MetadataType="Disco" ID="0580f278-955f-410f-9bb5-bbf219612507" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/archivo.disco" />
     <MetadataFile FileName="SolicitudWS.wsdl" MetadataType="Wsdl" ID="57a6e026-1968-439d-80d3-74abf3601ff2" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/SolicitudWS?WSDL" />
     <MetadataFile FileName="MedicinaPropiaWS.wsdl" MetadataType="Wsdl" ID="d1387db3-f2ca-4b7a-bc03-8119d1402a3e" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/MedicinaPropiaWS?WSDL" />
@@ -41,7 +42,10 @@
     <MetadataFile FileName="PagoWS.wsdl" MetadataType="Wsdl" ID="4fc94268-650f-4032-9b8c-0f9bac53428f" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/PagoWS?WSDL" />
     <MetadataFile FileName="EmpleadoWS.wsdl" MetadataType="Wsdl" ID="24d6369e-cc14-4a09-bd31-8552951ffdce" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/EmpleadoWS?WSDL" />
     <MetadataFile FileName="DetalleSolicitudWS.wsdl" MetadataType="Wsdl" ID="5ff7441f-efa0-4c4e-8c10-0e93c72a5e21" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/DetalleSolicitudWS?WSDL" />
+    <MetadataFile FileName="SolicitudWS.xsd" MetadataType="Schema" ID="9fbbf076-a650-4182-8eb7-7e395ac84dff" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/SolicitudWS?xsd=1" />
+    <MetadataFile FileName="DetallePedidoWS.xsd" MetadataType="Schema" ID="c1a6e38f-f9e1-4113-b2b4-aee0a4a52dfa" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/DetallePedidoWS?xsd=1" />
     <MetadataFile FileName="PagoWS.xsd" MetadataType="Schema" ID="27eb6d28-c42b-4721-9f47-9b1330d772d6" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/PagoWS?xsd=1" />
+    <MetadataFile FileName="PolizaWS.xsd" MetadataType="Schema" ID="e5041004-f966-406d-985a-f67c2179069f" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/PolizaWS?xsd=1" />
     <MetadataFile FileName="FarmaciaAsociadaWS.wsdl" MetadataType="Wsdl" ID="671f7969-cef1-4e29-908d-06a8cb63ac27" SourceId="1" SourceUrl="http://localhost:8080/FarmaSoftWS/FarmaciaAsociadaWS?WSDL" />
   </Metadata>
   <Extensions>

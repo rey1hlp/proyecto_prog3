@@ -35,26 +35,26 @@
                     <div class="col-md-12 pb-md-3">
                         <!--Aqui van la tabla-->
                         <asp:GridView ID="gvFarmacias" runat="server" AllowPaging="true" PageSize="10" OnPageIndexChanging ="gvFarmacias_PageIndexChanging"
-                            AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" 
-                            ShowHeaderWhenEmpty="true">
-                            <Columns>
-                                <asp:TemplateField HeaderText="">
-                                    <ItemStyle Width="5%" />
-                                    <ItemTemplate>
-                                        <input type="radio" name="ProveedorSeleccionado" />
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:BoundField HeaderText="Id" DataField="ID" />
-                                <asp:BoundField HeaderText="Nombre" DataField="nombre"/>
-                                <asp:TemplateField HeaderText="Dirección">
-                                    <ItemTemplate>
-                                        <%# Eval("direccion.calle") + ", " + Eval("direccion.distrito") + ", " + Eval("direccion.provincia") %>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:BoundField HeaderText="Telefono" DataField="telefono" />
-                                <asp:BoundField HeaderText="Correo" DataField="correo"/>
-                            </Columns>
-                        </asp:GridView>
+                        AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" 
+                        ShowHeaderWhenEmpty="true" DataKeyNames="ID">
+                        <Columns>
+                            <asp:TemplateField HeaderText="">
+                                <ItemStyle Width="5%" />
+                                <ItemTemplate>
+                                    <asp:RadioButton ID="rbSeleccionado" runat="server"/>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:BoundField HeaderText="Id" DataField="ID" />
+                            <asp:BoundField HeaderText="Nombre" DataField="nombre" />
+                            <asp:TemplateField HeaderText="Dirección">
+                                <ItemTemplate>
+                                    <%# Eval("direccion.calle") + ", " + Eval("direccion.distrito") + ", " + Eval("direccion.provincia") %>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:BoundField HeaderText="Telefono" DataField="telefono" />
+                            <asp:BoundField HeaderText="Correo" DataField="correo" />
+                        </Columns>
+                    </asp:GridView>
                     </div>
 
                 </div>
@@ -62,7 +62,7 @@
 
             <div class="card-footer clearfix">
                 <asp:LinkButton ID="lbRegresar" runat="server" Text="<i class='fa-solid fa-rotate-left'></i> Regresar" CssClass="float-start btn btn-secondary" OnClick="lbRegresar_Click"/>
-                <asp:LinkButton ID="lbGuardar" runat="server" Text="<i class='fa-regular fa-floppy-disk'></i> Guardar" CssClass="float-end btn btn-primary"/>
+                <asp:LinkButton ID="lbGuardar" runat="server" Text="<i class='fa-regular fa-floppy-disk'></i> Guardar" CssClass="float-end btn btn-primary" OnClick="lbGuardar_Click"/>
             </div>
 
 

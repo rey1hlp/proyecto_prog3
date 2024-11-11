@@ -140,3 +140,10 @@
 .custom-checkbox input[type="checkbox"] {
     margin-right: 10px; /* Ajusta este valor según sea necesario */
 }
+
+.custom-border {
+    border: 2px solid #222; /* Ajusta el grosor y el color */
+    border-radius: 8px; /* Redondear esquinas si lo deseas */
+    padding: 30px; /* Añadir espacio interior */
+    margin-bottom: 15px; /* Añadir espacio inferior opcional */
+}

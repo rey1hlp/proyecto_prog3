@@ -5,17 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/FarmaSoftWS/PedidoPropioWS?xsd=1" namespace="http://services.FarmaSoft.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="actualizarPedido">
-    <part name="parameters" element="tns:actualizarPedido" />
+  <message name="obtenerPedidoPropioPorId">
+    <part name="parameters" element="tns:obtenerPedidoPropioPorId" />
   </message>
-  <message name="actualizarPedidoResponse">
-    <part name="parameters" element="tns:actualizarPedidoResponse" />
-  </message>
-  <message name="listarTodosPedidosPropios">
-    <part name="parameters" element="tns:listarTodosPedidosPropios" />
-  </message>
-  <message name="listarTodosPedidosPropiosResponse">
-    <part name="parameters" element="tns:listarTodosPedidosPropiosResponse" />
+  <message name="obtenerPedidoPropioPorIdResponse">
+    <part name="parameters" element="tns:obtenerPedidoPropioPorIdResponse" />
   </message>
   <message name="insertarPedidoPropio">
     <part name="parameters" element="tns:insertarPedidoPropio" />
@@ -23,42 +17,49 @@
   <message name="insertarPedidoPropioResponse">
     <part name="parameters" element="tns:insertarPedidoPropioResponse" />
   </message>
-  <message name="obtenerPedidoPropioPorId">
-    <part name="parameters" element="tns:obtenerPedidoPropioPorId" />
+  <message name="listarTodosPedidosPropios">
+    <part name="parameters" element="tns:listarTodosPedidosPropios" />
   </message>
-  <message name="obtenerPedidoPropioPorIdResponse">
-    <part name="parameters" element="tns:obtenerPedidoPropioPorIdResponse" />
+  <message name="listarTodosPedidosPropiosResponse">
+    <part name="parameters" element="tns:listarTodosPedidosPropiosResponse" />
+  </message>
+  <message name="actualizarPedido">
+    <part name="parameters" element="tns:actualizarPedido" />
+  </message>
+  <message name="actualizarPedidoResponse">
+    <part name="parameters" element="tns:actualizarPedidoResponse" />
+  </message>
+  <message name="transformar">
+    <part name="parameters" element="tns:transformar" />
+  </message>
+  <message name="transformarResponse">
+    <part name="parameters" element="tns:transformarResponse" />
   </message>
   <portType name="PedidoPropioWS">
-    <operation name="actualizarPedido">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/actualizarPedidoRequest" message="tns:actualizarPedido" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/actualizarPedidoResponse" message="tns:actualizarPedidoResponse" />
-    </operation>
-    <operation name="listarTodosPedidosPropios">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosRequest" message="tns:listarTodosPedidosPropios" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosResponse" message="tns:listarTodosPedidosPropiosResponse" />
+    <operation name="obtenerPedidoPropioPorId">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/obtenerPedidoPropioPorIdRequest" message="tns:obtenerPedidoPropioPorId" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/obtenerPedidoPropioPorIdResponse" message="tns:obtenerPedidoPropioPorIdResponse" />
     </operation>
     <operation name="insertarPedidoPropio">
       <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/insertarPedidoPropioRequest" message="tns:insertarPedidoPropio" />
       <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/insertarPedidoPropioResponse" message="tns:insertarPedidoPropioResponse" />
     </operation>
-    <operation name="obtenerPedidoPropioPorId">
-      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/obtenerPedidoPropioPorIdRequest" message="tns:obtenerPedidoPropioPorId" />
-      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/obtenerPedidoPropioPorIdResponse" message="tns:obtenerPedidoPropioPorIdResponse" />
+    <operation name="listarTodosPedidosPropios">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosRequest" message="tns:listarTodosPedidosPropios" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/listarTodosPedidosPropiosResponse" message="tns:listarTodosPedidosPropiosResponse" />
+    </operation>
+    <operation name="actualizarPedido">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/actualizarPedidoRequest" message="tns:actualizarPedido" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/actualizarPedidoResponse" message="tns:actualizarPedidoResponse" />
+    </operation>
+    <operation name="transformar">
+      <input wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/transformarRequest" message="tns:transformar" />
+      <output wsam:Action="http://services.FarmaSoft.pucp.edu.pe/PedidoPropioWS/transformarResponse" message="tns:transformarResponse" />
     </operation>
   </portType>
   <binding name="PedidoPropioWSPortBinding" type="tns:PedidoPropioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="actualizarPedido">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTodosPedidosPropios">
+    <operation name="obtenerPedidoPropioPorId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,7 +77,25 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerPedidoPropioPorId">
+    <operation name="listarTodosPedidosPropios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarPedido">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="transformar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

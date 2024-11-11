@@ -13,6 +13,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.DAO.DireccionDAO;
+import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.DAO.PolizaDAO;
+import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.Model.Direccion;
+import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.Model.Poliza;
 import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.Model.TipoDocumento;
 import pe.edu.pucp.FarmaSoft.config.DBManager;
 
@@ -31,13 +35,28 @@ public class ClienteMySQL implements ClienteDAO {
             if(rs != null && rs.next()) {
                 cliente = new Cliente();
                 cliente.setID(rs.getInt("ID"));
-                String tipoDocStr = rs.getString("tipoDocumento");
-                cliente.setTipoDocumento(TipoDocumento.valueOf(tipoDocStr.toUpperCase()));
+                cliente.setTipoDocumento(TipoDocumento.valueOf(rs.getString("tipoDocumento")));
                 cliente.setNumDocumento(rs.getInt("numDocumento"));
                 cliente.setNombre(rs.getString("nombre"));
                 cliente.setApellidoPaterno(rs.getString("apellidoPaterno"));
                 cliente.setApellidoMaterno(rs.getString("apellidoMaterno"));
                 cliente.setTelefonoContacto(rs.getInt("telefonoContacto"));
+                cliente.setFechaNacimiento(rs.getDate("fechaNacimiento"));
+                cliente.setCorreoContacto(rs.getString("correoContacto"));
+                cliente.setTienePoliza(rs.getBoolean("tienePoliza"));
+                
+                if(cliente.isTienePoliza()){
+                    PolizaDAO polizaDA = new PolizaMySQL();
+                    Poliza poliza = polizaDA.obtenerPorId(rs.getInt("ID_Poliza"));
+                    cliente.setPoliza(poliza);
+                }
+                int id_dir = rs.getInt("ID_Direccion");
+                if(id_dir != 0){
+                    DireccionDAO direccioDA = new DireccionMySQL();
+                    Direccion direccion = direccioDA.obtenerPorId(id_dir);
+                    cliente.setDireccion(direccion);
+                }
+                cliente.setCompletado(rs.getBoolean("completado"));
             }
         }
         catch(SQLException ex) {

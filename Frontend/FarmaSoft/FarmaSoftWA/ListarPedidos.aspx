@@ -1,4 +1,4 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/FarmaSoft.Master" AutoEventWireup="true" CodeBehind="ListarPedidos.aspx.cs" Inherits="FarmaSoftWA.ListarPedidos" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Pedidos.Master" AutoEventWireup="true" CodeBehind="ListarPedidos.aspx.cs" Inherits="FarmaSoftWA.ListarPedidos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
@@ -39,6 +39,7 @@
                             </asp:TemplateField>
                             <asp:BoundField HeaderText="Fecha y hora" DataField="fechayHoraCreacion"/>
                             <asp:BoundField HeaderText="Telefono" DataField="solicitudAsociada.cliente.telefonoContacto" />
+                            
                         </columns>
                     </asp:GridView>
                 </div>

@@ -17,6 +17,7 @@ public class Cliente implements IConsultable {
     private Poliza poliza;
     private boolean completado;
 
+    
     public Cliente() {
         
     }
@@ -202,4 +203,14 @@ public class Cliente implements IConsultable {
         //Sube los archivos de receta médica y póliza asignados a un cliente y se devuelve un boolean: válidos o inválidos
         return true;
     }
+    
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
+    private Direccion direccion;
+
 }

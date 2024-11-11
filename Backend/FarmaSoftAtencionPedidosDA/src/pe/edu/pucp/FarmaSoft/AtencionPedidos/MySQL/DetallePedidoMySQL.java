@@ -11,65 +11,55 @@ import pe.edu.pucp.FarmaSoft.Medicina.Model.MedicinaGeneral;
 //import pe.edu.pucp.eventmastersoft.model.Productora;
 //import pe.edu.pucp.eventmastersoft.model.TipoEvento;
 import java.sql.Types;
+import pe.edu.pucp.FarmaSoft.AtencionPedidos.DAO.DetallePedidoDAO;
+import pe.edu.pucp.FarmaSoft.AtencionPedidos.Model.DetallePedido;
 import pe.edu.pucp.FarmaSoft.Medicina.Model.TipoMedicamento;
 import pe.edu.pucp.FarmaSoft.Medicina.DAO.MedicinaGeneralDAO;
 import pe.edu.pucp.FarmaSoft.Medicina.DAO.MedicinaPropiaDAO;
 import pe.edu.pucp.FarmaSoft.Medicina.MySQL.MedicinaGeneralMySQL;
 
-public class DetallePedidoMySQL implements MedicinaPropiaDAO{
+public class DetallePedidoMySQL implements DetallePedidoDAO{
     //en rs y rsi se guardaran los resultados de las consultas a la base de datos
     private ResultSet rs;
     private int rsi;
     private MedicinaGeneralDAO daoMedicinaGeneral;
     @Override 
-    public int insertar(MedicinaPropia medicinaPropia) {
-        try{
-            //Primero debemos insertar la información de la medicina general
-            daoMedicinaGeneral = new MedicinaGeneralMySQL();
-            MedicinaGeneral medicinaGeneral = new MedicinaPropia();
-            medicinaGeneral.setID(medicinaPropia.getID());
-            medicinaGeneral.setNombre(medicinaPropia.getNombre());
-            medicinaGeneral.setTipoMedicamento(medicinaPropia.getTipoMedicamento());
-            daoMedicinaGeneral.insertar(medicinaGeneral);
-            
-        } catch(Exception ex){
-            System.out.println(ex.getMessage());
-        }
-        HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
-        parametrosEntrada.put("codigoi", medicinaPropia.getcodigo()); 
-        parametrosEntrada.put("id_Medicina", medicinaPropia.getID()); 
-        parametrosEntrada.put("precio", medicinaPropia.getPrecio()); 
-        parametrosEntrada.put("stock", medicinaPropia.getStock()); 
+    public int insertar(DetallePedido detallePedido,int idPedido) {
+        //Primero debemos insertar la información de la medicina general
+        HashMap<String,Object> parametrosEntrada = new HashMap<>();
 
-        //HashMap<String,Object> parametrosSalida = new HashMap<>(); 
-        //parametrosSalida.put("_id_evento", Types.INTEGER); 
+        //parametrosEntrada.put("id", usuario.getId());
+        parametrosEntrada.put("ID_PedidoPropioi", idPedido); 
+        parametrosEntrada.put("ID_MedicinaPropiai", detallePedido.getMedicina().getId()); 
+        parametrosEntrada.put("cantidadPedida", detallePedido.getCantidadPedida()); 
+        parametrosEntrada.put("precioUnitario", detallePedido.getPrecioUnitario()); 
 
-        rsi = DBManager.getInstance().ejecutarProcedimiento("insertar_medicina_propia", 
-                parametrosEntrada,null); 
-        return rsi; 
+        int resultado = DBManager.getInstance().ejecutarProcedimiento("insertar_detalle_pedido",
+                parametrosEntrada, null);
+        return resultado;
     } 
     
-    @Override 
-    public ArrayList<MedicinaPropia> listarTodas() { 
-        ArrayList<MedicinaPropia> medicinas = new ArrayList<>(); 
-        rs = DBManager.getInstance().ejecutarProcedimientoLectura("listar_medicina_propia", null); 
-        try{ 
-            while(rs.next()){ 
-                MedicinaPropia medicinaPropia = new MedicinaPropia(); 
-                medicinaPropia.setCodigo(rs.getInt("codigo")); 
-                medicinaPropia.setPrecio(rs.getDouble("precio")); 
-                medicinaPropia.setStock(rs.getInt("stock"));
-                medicinaPropia.setID(rs.getString("ID"));
-                medicinaPropia.setNombre(rs.getString("nombre"));
-                String tipo=rs.getString("tipo_medicamento");
-                medicinaPropia.setTipoMedicamento(TipoMedicamento.valueOf(tipo));
-                medicinas.add(medicinaPropia); 
-            } 
-        }catch(SQLException ex){ 
-            System.out.println("Error leyendo datos: " + ex.getMessage()); 
-        } 
-        return medicinas; 
-    }    
+//    @Override 
+//    public ArrayList<DetallePedido> listarTodas() { 
+//        ArrayList<DetallePedido> detallePedidos = new ArrayList<>(); 
+//        rs = DBManager.getInstance().ejecutarProcedimientoLectura("listar_detalle_pedido", null); 
+//        try{ 
+//            while(rs.next()){ 
+//                DetallePedido detallePedido = new DetallePedido(); 
+//                medicinaPropia.setCodigo(rs.getInt("codigo")); 
+//                medicinaPropia.setPrecio(rs.getDouble("precio")); 
+//                medicinaPropia.setStock(rs.getInt("stock"));
+//                medicinaPropia.setIDP(rs.getString("ID"));
+//                medicinaPropia.setNombre(rs.getString("nombre"));
+//                String tipo=rs.getString("tipo_medicamento");
+//                medicinaPropia.setTipoMedicamento(TipoMedicamento.valueOf(tipo));
+//                medicinas.add(medicinaPropia); 
+//            } 
+//        }catch(SQLException ex){ 
+//            System.out.println("Error leyendo datos: " + ex.getMessage()); 
+//        } 
+//        return detallePedidos; 
+//    }    
 //    @Override 
 //    public ArrayList<MedicinaPropia> listarPorNombre(String nombre) { 
 //        ArrayList<Evento> eventos = new ArrayList<>(); 
@@ -125,5 +115,4 @@ public class DetallePedidoMySQL implements MedicinaPropiaDAO{
 //        } 
 //        return evento; 
 //    } 
-    
 }

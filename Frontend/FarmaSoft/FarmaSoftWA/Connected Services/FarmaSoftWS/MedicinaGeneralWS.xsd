@@ -12,7 +12,7 @@
   </xs:complexType>
   <xs:complexType name="medicinaGeneral">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ID" type="xs:string" />
+      <xs:element minOccurs="0" name="IDP" type="xs:string" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="tipoMedicamento" type="tns:tipoMedicamento" />
     </xs:sequence>

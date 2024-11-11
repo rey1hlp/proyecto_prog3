@@ -31,7 +31,6 @@ namespace FarmaSoftWA
         }
         protected void lbAtender_Click(object sender, EventArgs e)
         {
-            
             foreach (GridViewRow row in gvPedidos.Rows)
             {
                 RadioButton rbSeleccionado = (RadioButton)row.FindControl("rbSeleccionado");
@@ -39,23 +38,28 @@ namespace FarmaSoftWA
                 {
                     int idPedidoSelec = Convert.ToInt32(gvPedidos.DataKeys[row.RowIndex].Value);
 
-                    
-                    // como es una var. compartida, se debe utilizar lock para manejar la race condition
                     Application.Lock();
-                    BindingList<int> pedEnAtencion = Application["pedidosPropiosEnAtencion"] as BindingList<int>; 
+                    BindingList<int> pedEnAtencion = Application["pedidosPropiosEnAtencion"] as BindingList<int>;
+
+                    // Verifica si la lista es nula, y si lo es, la inicializa
+                    if (pedEnAtencion == null)
+                    {
+                        pedEnAtencion = new BindingList<int>();
+                        Application["pedidosPropiosEnAtencion"] = pedEnAtencion;
+                    }
+
                     if (pedEnAtencion.Contains(idPedidoSelec))
                     {
                         Application.UnLock();
-                        // Script de alerta de JavaScript
                         string script = "alert('Pedido seleccionado en atención. Haz click en Aceptar para mostrar nuevos pedidos pendientes.');";
                         ClientScript.RegisterStartupScript(this.GetType(), "alertScript", script, true);
                         Response.Redirect(Request.RawUrl, true);
                     }
-                    // si no está en atención, se añade a la lista y se libera la variable
+
+                    // Si no está en atención, se añade a la lista y se libera la variable
                     pedEnAtencion.Add(idPedidoSelec);
                     Application.UnLock();
 
-                    
                     pedidoPropio[] listaPedidos = ViewState["listaPedidosPropiosPendientes"] as pedidoPropio[];
 
                     foreach (pedidoPropio ped in listaPedidos)
@@ -65,16 +69,15 @@ namespace FarmaSoftWA
                             ped.estadoPedido = estadoPedido.EN_ATENCION;
                             Session["pedidoAtendido"] = ped;
                             pedidoPropioWS.actualizarPedido(ped);
+                            Response.Redirect("CompletarDatosPedido.aspx", true);
                             break;
                         }
                     }
-
-                    // Finalmente, nos redirigimos a la siguiente pagina
-                    Response.Redirect("AgregarMedicinasPropias.aspx", true); //Enlazar con las paginas que faltan
-                    break; // no debería llegar a ejecutarse ...
+                    break;
                 }
             }
         }
+
 
         protected void gvPedidos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {

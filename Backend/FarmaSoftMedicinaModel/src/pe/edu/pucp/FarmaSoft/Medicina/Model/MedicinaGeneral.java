@@ -3,23 +3,23 @@ package pe.edu.pucp.FarmaSoft.Medicina.Model;
 //import pe.edu.pucp.FarmaSoft.Util.Model.IConsultable;
 
 public class MedicinaGeneral implements IConsultable {
-    private String ID;
+    private String IDP;
     private String nombre;
     private TipoMedicamento tipoMedicamento;
     
     public MedicinaGeneral(){};
     
     public MedicinaGeneral(String ID, String nombre){
-            this.ID=ID;
+            this.IDP=ID;
             this.nombre=nombre;
     }
     
-    public String getID() {
-        return ID;
+    public String getIDP() {
+        return IDP;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
+    public void setIDP(String ID) {
+        this.IDP = ID;
     }
 
     public String getNombre() {

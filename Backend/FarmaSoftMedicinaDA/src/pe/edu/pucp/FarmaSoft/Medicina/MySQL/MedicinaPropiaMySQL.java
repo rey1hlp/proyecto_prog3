@@ -11,7 +11,6 @@ import pe.edu.pucp.FarmaSoft.Medicina.Model.MedicinaGeneral;
 //import pe.edu.pucp.eventmastersoft.model.Productora;
 //import pe.edu.pucp.eventmastersoft.model.TipoEvento;
 import java.sql.Types;
-import pe.edu.pucp.FarmaSoft.Medicina.Model.TipoMedicamento;
 import pe.edu.pucp.FarmaSoft.Medicina.DAO.MedicinaGeneralDAO;
 import pe.edu.pucp.FarmaSoft.Medicina.DAO.MedicinaPropiaDAO;
 
@@ -26,7 +25,7 @@ public class MedicinaPropiaMySQL implements MedicinaPropiaDAO{
             //Primero debemos insertar la información de la medicina general
             daoMedicinaGeneral = new MedicinaGeneralMySQL();
             MedicinaGeneral medicinaGeneral = new MedicinaPropia();
-            medicinaGeneral.setID(medicinaPropia.getID());
+            medicinaGeneral.setIDP(medicinaPropia.getIDP());
             medicinaGeneral.setNombre(medicinaPropia.getNombre());
             medicinaGeneral.setTipoMedicamento(medicinaPropia.getTipoMedicamento());
             daoMedicinaGeneral.insertar(medicinaGeneral);
@@ -35,8 +34,8 @@ public class MedicinaPropiaMySQL implements MedicinaPropiaDAO{
             System.out.println(ex.getMessage());
         }
         HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
-        parametrosEntrada.put("codigoi", medicinaPropia.getcodigo()); 
-        parametrosEntrada.put("id_Medicina", medicinaPropia.getID()); 
+        parametrosEntrada.put("codigoi", medicinaPropia.getId()); 
+        parametrosEntrada.put("id_Medicina", medicinaPropia.getIDP()); 
         parametrosEntrada.put("precio", medicinaPropia.getPrecio()); 
         parametrosEntrada.put("stock", medicinaPropia.getStock()); 
 
@@ -55,13 +54,17 @@ public class MedicinaPropiaMySQL implements MedicinaPropiaDAO{
         try{ 
             while(rs.next()){ 
                 MedicinaPropia medicinaPropia = new MedicinaPropia(); 
-                medicinaPropia.setCodigo(rs.getInt("codigo")); 
+                medicinaPropia.setId(rs.getInt("codigo")); 
                 medicinaPropia.setPrecio(rs.getDouble("precio")); 
                 medicinaPropia.setStock(rs.getInt("stock"));
-                medicinaPropia.setID(rs.getString("ID"));
-                medicinaPropia.setNombre(rs.getString("nombre"));
-                String tipo=rs.getString("tipo_medicamento");
-                medicinaPropia.setTipoMedicamento(TipoMedicamento.valueOf(tipo));
+                //Obtenemos la medicina general asociada a la medicina propia
+                daoMedicinaGeneral = new MedicinaGeneralMySQL();
+                MedicinaGeneral medicina = daoMedicinaGeneral.obtenerPorId(rs.getString("ID_Medicina"));
+                medicinaPropia.setIDP(medicina.getIDP());
+                medicinaPropia.setNombre(medicina.getNombre());
+                medicinaPropia.setTipoMedicamento(medicina.getTipoMedicamento());
+                //String tipo=rs.getString("tipo_medicamento");
+                //medicinaPropia.setTipoMedicamento(TipoMedicamento.valueOf(tipo));
                 medicinas.add(medicinaPropia); 
             } 
         }catch(SQLException ex){ 
@@ -69,6 +72,26 @@ public class MedicinaPropiaMySQL implements MedicinaPropiaDAO{
         } 
         return medicinas; 
     }    
+    
+    @Override 
+    public MedicinaPropia obtenerPorId(String idMedicina) { 
+        MedicinaPropia medicina = new MedicinaPropia(); 
+        HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
+        parametrosEntrada.put("p_id", idMedicina); 
+        rs = DBManager.getInstance().ejecutarProcedimientoLectura("obtener_Medicina_Propia_PorId_medicina_general", 
+            parametrosEntrada); 
+        try{ 
+            if(rs.next()){  
+               medicina.setId(rs.getInt("codigo")); 
+               medicina.setIDP(rs.getString("ID_Medicina")); 
+               medicina.setPrecio(rs.getDouble("precio")); 
+               medicina.setStock(rs.getInt("stock"));  
+            } 
+        }catch(SQLException ex){ 
+            System.out.println("Error leyendo datos: " + ex.getMessage()); 
+        } 
+        return medicina; 
+    } 
 //    @Override 
 //    public ArrayList<MedicinaPropia> listarPorNombre(String nombre) { 
 //        ArrayList<Evento> eventos = new ArrayList<>(); 

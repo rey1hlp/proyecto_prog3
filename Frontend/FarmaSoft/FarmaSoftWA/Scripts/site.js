@@ -23,3 +23,8 @@ function openModal() {
     var myModal = new bootstrap.Modal(document.getElementById('modalMedicinas'));
     myModal.show();
 }
+
+function openModalPoliza() {
+    var myModal = new bootstrap.Modal(document.getElementById('modalPoliza'));
+    myModal.show();
+}

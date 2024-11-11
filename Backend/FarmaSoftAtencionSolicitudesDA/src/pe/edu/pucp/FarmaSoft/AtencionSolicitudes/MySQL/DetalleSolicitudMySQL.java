@@ -13,6 +13,7 @@ import pe.edu.pucp.FarmaSoft.Medicina.Model.TipoMedicamento;
 import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.DAO.DetalleSolicitudDAO;
 import pe.edu.pucp.FarmaSoft.Medicina.DAO.MedicinaGeneralDAO;
 import pe.edu.pucp.FarmaSoft.Medicina.DAO.MedicinaPropiaDAO;
+import pe.edu.pucp.FarmaSoft.Medicina.MySQL.MedicinaGeneralMySQL;
 
 public class DetalleSolicitudMySQL implements DetalleSolicitudDAO{
     //en rs y rsi se guardaran los resultados de las consultas a la base de datos
@@ -24,7 +25,7 @@ public class DetalleSolicitudMySQL implements DetalleSolicitudDAO{
         
         HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
         parametrosEntrada.put("id_Solicitudi", idSolicitud); 
-        parametrosEntrada.put("id_MedicinaGenerali", detalleSolicitud.getMedicina().getID()); 
+        parametrosEntrada.put("id_MedicinaGenerali", detalleSolicitud.getMedicina().getIDP()); 
         parametrosEntrada.put("cantidadPedida", detalleSolicitud.getCantidadPedida()); 
 
         //HashMap<String,Object> parametrosSalida = new HashMap<>(); 
@@ -46,7 +47,7 @@ public class DetalleSolicitudMySQL implements DetalleSolicitudDAO{
                 DetalleSolicitud detalle = new DetalleSolicitud(); 
                 detalle.setCantidadPedida(rs.getInt("cantidadPedida")); 
                 MedicinaGeneral medicina = new MedicinaPropia();
-                medicina.setID(rs.getString("ID_MedicinaGeneral"));
+                medicina.setIDP(rs.getString("ID_MedicinaGeneral"));
                 //Deberia completar los otros datos de la medicina leyendo las medicinas de la base de datos
                 detalle.setMedicina(medicina);
                 detalles.add(detalle); 
@@ -57,7 +58,30 @@ public class DetalleSolicitudMySQL implements DetalleSolicitudDAO{
         return detalles; 
     }  
     
-    
+    @Override 
+    public ArrayList<DetalleSolicitud> listarPorId(int idSoli) { 
+        ArrayList<DetalleSolicitud> detalles = new ArrayList<>();
+        //Obtenemos todos los detalles de una solicitud
+        HashMap<String,Object> parametrosEntrada = new HashMap<>(); 
+        parametrosEntrada.put("solicitudID", idSoli); 
+        rs = DBManager.getInstance().ejecutarProcedimientoLectura("ObtenerDetalleSolicitudPorID", parametrosEntrada); 
+        daoMedicinaGeneral = new MedicinaGeneralMySQL();
+        try{
+            while(rs.next()){ 
+                DetalleSolicitud detalle = new DetalleSolicitud();
+                detalle.setCantidadPedida(rs.getInt("cantidadPedida")); 
+                String id = rs.getString("ID_MedicinaGeneral");
+                MedicinaGeneral medicina = daoMedicinaGeneral.obtenerPorId(id);
+                //medicina.setID(rs.getString("ID_MedicinaGeneral"));
+                //Deberia completar los otros datos de la medicina leyendo las medicinas de la base de datos
+                detalle.setMedicina(medicina);
+                detalles.add(detalle); 
+            } 
+        }catch(SQLException ex){ 
+            System.out.println("Error leyendo datos: " + ex.getMessage()); 
+        } 
+        return detalles; 
+    }
 //    @Override 
 //    public ArrayList<MedicinaPropia> listarPorNombre(String nombre) { 
 //        ArrayList<Evento> eventos = new ArrayList<>(); 

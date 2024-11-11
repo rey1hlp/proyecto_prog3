@@ -5,6 +5,8 @@ import java.util.Date;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import pe.edu.pucp.FarmaSoft.Usuario.Model.Usuario;
+import pe.edu.pucp.FarmaSoft.AtencionSolicitudes.Model.DetalleSolicitud;
+import pe.edu.pucp.FarmaSoft.Medicina.Model.MedicinaPropia;
 
 public class PedidoPropio {
     private int ID;
@@ -20,6 +22,39 @@ public class PedidoPropio {
 
     public PedidoPropio() {
         
+    }
+    
+    //AGREGAR ESTE METODO
+    public void convertirMedicinasGenericasAPropias(){
+        //Este metodo solo pasa los datos de un detalle de solicitud a uno de pedido
+        ArrayList<DetalleSolicitud> detalles = solicitudAsociada.getDetallesSolicitud();
+        //Creamos una nueva lista de detalles de pedido
+	ArrayList<DetallePedido> detallesPed = new ArrayList<DetallePedido>();
+        for(DetalleSolicitud detalle : detalles){
+            //Pasamos de detalle de solicitud a pedido
+            DetallePedido detallePed = transformarDetalleSolicitudADetallePedido(detalle);
+            //Agregamos a la nueva lista de detalles de pedido
+            detallesPed.add(detallePed);
+        }
+        setDetallesPedido(detallesPed);
+    }
+    //AGREGAR ESTE METODO
+    public DetallePedido transformarDetalleSolicitudADetallePedido(DetalleSolicitud detalleSoli){
+        DetallePedido detalle = new DetallePedido();
+        MedicinaPropia medicina = new MedicinaPropia();
+        
+        //Paso de datos de medicina de detalle solicitud a medicina de pedido
+        //medicina.setCodigo(detalleSoli.getMedicina().getCodigo);   esto va en el WS
+        medicina.setIDP(detalleSoli.getMedicina().getIDP());         //Con esto buscamos datos en el WS
+        medicina.setNombre(detalleSoli.getMedicina().getNombre());
+        //medicina.setPrecio(precio);     esto va en el WS
+        medicina.setTipoMedicamento(detalleSoli.getMedicina().getTipoMedicamento());
+        
+        detalle.setMedicina(medicina);
+        detalle.setCantidadPedida(detalleSoli.getCantidadPedida());
+        //detallePedido.setPrecioUnitario(precio);   esto va en el WS
+        
+        return detalle;
     }
     
     /**

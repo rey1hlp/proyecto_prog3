@@ -1,6 +1,7 @@
 ﻿using FarmaSoftWA.FarmaSoftWS;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.UI.WebControls;
 
 
@@ -42,6 +43,30 @@ namespace FarmaSoft
             Response.Redirect("CompletarDireccionEnvio.aspx");
         }
 
-        
+        protected void lbGuardar_Click(object sender, EventArgs e)
+        {
+            // Buscar el radio button seleccionado en el GridView
+
+            foreach (GridViewRow row in gvFarmacias.Rows)
+            {
+                RadioButton rbSeleccionado = (RadioButton)row.FindControl("rbSeleccionado");
+                if (rbSeleccionado != null && rbSeleccionado.Checked)
+                {
+                    // Obtener el ID de la farmacia seleccionada(de tipo int)
+                    int farmaciaID = Convert.ToInt32(gvFarmacias.DataKeys[row.RowIndex].Value);
+
+                    farmaciaAsociada[] listaFarmacias= ViewState["listaFarmacias"] as farmaciaAsociada[];
+                    farmaciaAsociada farmaciaSeleccionada = listaFarmacias.FirstOrDefault(f => f.ID == farmaciaID);
+                    Session["FarmaciaSeleccionada"] = farmaciaSeleccionada;
+                    
+                    Response.Redirect("ResumenSolicitud.aspx");
+                    return;
+                }
+            }
+
+            // Si no se seleccionó ninguna farmacia, muestra un mensaje de error
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Por favor seleccione una farmacia.');", true);
+            
+        }
     }
 }

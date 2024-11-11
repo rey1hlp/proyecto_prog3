@@ -72,6 +72,15 @@ public class PedidoPropioWS {
         return resultado; 
     }
     
+    @WebMethod(operationName = "transformar")
+    public PedidoPropio transformar(@WebParam(name = "pedido") PedidoPropio pedidoPropio) {
+        try{ 
+            pedidoPropio.convertirMedicinasGenericasAPropias();
+        }catch(Exception ex){ 
+            System.out.println(ex.getMessage()); 
+        } 
+        return pedidoPropio; 
+    }
+    
 }
-
 

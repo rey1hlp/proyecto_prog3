@@ -2,20 +2,16 @@
 <xs:schema xmlns:tns="http://services.FarmaSoft.pucp.edu.pe" targetNamespace="http://services.FarmaSoft.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="insertarDetalleSolicitud" type="tns:insertarDetalleSolicitud" />
   <xs:element name="insertarDetalleSolicitudResponse" type="tns:insertarDetalleSolicitudResponse" />
+  <xs:element name="listarDetallesSolicitudPorIDSolicitud" type="tns:listarDetallesSolicitudPorIDSolicitud" />
+  <xs:element name="listarDetallesSolicitudPorIDSolicitudResponse" type="tns:listarDetallesSolicitudPorIDSolicitudResponse" />
   <xs:element name="listarTodosDetalleSolicitud" type="tns:listarTodosDetalleSolicitud" />
   <xs:element name="listarTodosDetalleSolicitudResponse" type="tns:listarTodosDetalleSolicitudResponse" />
-  <xs:complexType name="insertarDetalleSolicitud">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="insertarDetalleSolicitudResponse">
+  <xs:complexType name="listarDetallesSolicitudPorIDSolicitud">
     <xs:sequence>
-      <xs:element name="return" type="xs:int" />
+      <xs:element name="idSoli" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarTodosDetalleSolicitud">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarTodosDetalleSolicitudResponse">
+  <xs:complexType name="listarDetallesSolicitudPorIDSolicitudResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:detalleSolicitud" />
     </xs:sequence>
@@ -28,9 +24,28 @@
   </xs:complexType>
   <xs:complexType name="medicinaGeneral">
     <xs:sequence>
-      <xs:element minOccurs="0" name="ID" type="xs:string" />
+      <xs:element minOccurs="0" name="IDP" type="xs:string" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
       <xs:element minOccurs="0" name="tipoMedicamento" type="tns:tipoMedicamento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarDetalleSolicitud">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:detalleSolicitud" />
+      <xs:element name="arg1" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarDetalleSolicitudResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosDetalleSolicitud">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosDetalleSolicitudResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:detalleSolicitud" />
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="tipoMedicamento">

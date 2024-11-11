@@ -15,6 +15,17 @@ namespace FarmaSoftWA
         private MedicinaGeneralWSClient medicinaGeneralWS = new MedicinaGeneralWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
+            solicitud solicitudEnProgreso = Session["solicitudAtendida"] as solicitud;
+            if (solicitudEnProgreso != null)
+            {
+                // Asignar los valores a los TextBox en lugar de los Labels
+                txtIdCliente.Text = solicitudEnProgreso.cliente.ID.ToString();
+                txtNombre.Text = solicitudEnProgreso.cliente.nombre + " " + solicitudEnProgreso.cliente.apellidoPaterno;
+                txtTelefono.Text = solicitudEnProgreso.cliente.telefonoContacto.ToString();
+                txtDni.Text = solicitudEnProgreso.cliente.numDocumento.ToString(); // Si tienes un TextBox para DNI
+                txtApellidos.Text = solicitudEnProgreso.cliente.apellidoPaterno; // Si tienes un TextBox para Apellidos
+                txtCorreo.Text = solicitudEnProgreso.cliente.correoContacto; // Si tienes un TextBox para Correo
+            }
             if (!IsPostBack)
             {
                 ViewState["listaMedicinas"] = medicinaGeneralWS.listarTodasMedicinasGenerales();
@@ -25,7 +36,7 @@ namespace FarmaSoftWA
 
                 ddlMedicina.Items.Insert(0, new ListItem("-- Selecciona una opción --", ""));
 
-                if(Session["detallesSolicitud"] == null)
+                if (Session["detallesSolicitud"] == null)
                     Session["detallesSolicitud"] = new BindingList<detalleSolicitud>();
                 else
                 {
@@ -44,22 +55,22 @@ namespace FarmaSoftWA
         {
             string codMedicina = ddlMedicina.SelectedValue;
             string cantidadIngresada = txtCantidad.Text;
-            int cantMedicina = int.Parse( string.IsNullOrEmpty(cantidadIngresada)? "0" : cantidadIngresada );
+            int cantMedicina = int.Parse(string.IsNullOrEmpty(cantidadIngresada) ? "0" : cantidadIngresada);
 
             medicinaGeneral[] medicinasGenerales = ViewState["listaMedicinas"] as medicinaGeneral[];
             BindingList<detalleSolicitud> listaDetalles = Session["detallesSolicitud"] as BindingList<detalleSolicitud>;
 
             foreach (medicinaGeneral medicinaGen in medicinasGenerales)
             {
-                if (medicinaGen.ID == codMedicina)
+                if (medicinaGen.IDP == codMedicina)
                 {
                     listaDetalles.Add(new detalleSolicitud()
                     {
-                        medicina = new medicinaGeneral1()
+                        medicina = new medicinaGeneral()
                         {
-                            ID = codMedicina,
+                            IDP = codMedicina,
                             nombre = medicinaGen.nombre,
-                            tipoMedicamento = transformarTipoMedicamento(medicinaGen.tipoMedicamento),
+                            tipoMedicamento = medicinaGen.tipoMedicamento,
                             tipoMedicamentoSpecified = true
                         },
                         cantidadPedida = cantMedicina
@@ -98,12 +109,12 @@ namespace FarmaSoftWA
         protected void btnEliminarMedicina_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            string codigoSelec = (string) btn.CommandArgument;
+            string codigoSelec = (string)btn.CommandArgument;
 
             BindingList<detalleSolicitud> listaDetalles = Session["detallesSolicitud"] as BindingList<detalleSolicitud>;
             for (int i = 0; i < listaDetalles.Count; i++)
             {
-                if (listaDetalles[i].medicina.ID.Equals(codigoSelec))
+                if (listaDetalles[i].medicina.IDP.Equals(codigoSelec))
                 {
                     listaDetalles.RemoveAt(i);
                     break;

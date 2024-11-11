@@ -15,15 +15,11 @@ public class DetalleSolicitudWS {
     private DetalleSolicitudDAO daoDetalleSolicitud; 
     
     @WebMethod(operationName = "insertarDetalleSolicitud") 
-    public int insertarDetalleSolicitud() { 
-        DetalleSolicitud detalleSolicitud;
+    public int insertarDetalleSolicitud(DetalleSolicitud detalleSolicitud,int id) { 
         int resultado = 0; 
         try{ 
             daoDetalleSolicitud = new DetalleSolicitudMySQL();
-            detalleSolicitud=new DetalleSolicitud();
-            detalleSolicitud.setCantidadPedida(10);
-            detalleSolicitud.getMedicina().setID("X86");
-            resultado = daoDetalleSolicitud.insertar(detalleSolicitud,1);   //El 1 es el id del pedido
+            resultado = daoDetalleSolicitud.insertar(detalleSolicitud,id);  
             //En front end una lista de detalles de solicitud deberían
             //ser insertadas con un id de la solicitud a la que le corresponden
         }catch(Exception ex){ 
@@ -45,16 +41,16 @@ public class DetalleSolicitudWS {
     } 
     
     
-//    @WebMethod(operationName = "obtenerEventoPorId") 
-//    public Evento obtenerEventoPorId(@WebParam(name = "idEvento") int idEvento) { 
-//        Evento evento = null; 
-//        try{ 
-//            daoEvento = new EventoMySQL(); 
-//            evento = daoEvento.obtenerPorId(idEvento); 
-//        }catch(Exception ex){ 
-//            System.out.println(ex.getMessage()); 
-//        } 
-//        return evento; 
-//    } 
+    @WebMethod(operationName = "listarDetallesSolicitudPorIDSolicitud") 
+    public ArrayList<DetalleSolicitud> listarDetallesSolicitudPorIDSolicitud(@WebParam(name = "idSoli") int idSoli) { 
+        ArrayList<DetalleSolicitud> detalles = null; 
+        try{ 
+            daoDetalleSolicitud = new DetalleSolicitudMySQL(); 
+            detalles = daoDetalleSolicitud.listarPorId(idSoli); 
+        }catch(Exception ex){ 
+            System.out.println(ex.getMessage()); 
+        } 
+        return detalles; 
+    } 
     
 } 
